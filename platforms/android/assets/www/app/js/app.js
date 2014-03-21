@@ -19,6 +19,8 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/logout', {templateUrl: 'partials/logout.html', controller: 'logoutController'});
   $routeProvider.when('/menu', {templateUrl: 'partials/menu.html', controller: 'MenuController'});
   $routeProvider.when('/instrumentouno', {templateUrl: 'partials/instrumentouno.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/editarInstrumentouno/:id', {templateUrl: 'partials/editInstrumentoUno.html', controller: 'editarEncuestaController'});
+  $routeProvider.when('/listencuestas', {templateUrl: 'partials/listEncuestas.html', controller: 'listadoInstrumentosController'});
   
   $routeProvider.otherwise({redirectTo: '/login'});
 }]);

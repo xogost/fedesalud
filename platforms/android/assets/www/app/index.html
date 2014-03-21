@@ -2,7 +2,7 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Fredesalud App</title>
   <link rel="stylesheet" href="css/app.css"/>
   <link rel="stylesheet" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css">
   <link rel="stylesheet" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css">
@@ -15,6 +15,7 @@
       <div class="list-group" toggle="off" bubble target="mainSidebar">
         <a class="list-group-item" href="#/login">Iniciar Sesión<i class="fa fa-chevron-right pull-right"></i></a>
         <a class="list-group-item" href="#/menu">Menu<i class="fa fa-chevron-right pull-right"></i></a>
+        <a class="list-group-item" href="#/listencuestas">Listado de Encuestas<i class="fa fa-chevron-right pull-right"></i></a>
         <a class="list-group-item" href="#/logout">Cerrar Sesión<i class="fa fa-chevron-right pull-right"></i></a>
         <!-- ... -->
       </div>
@@ -47,7 +48,7 @@
 
   
 
-  <div class="app-body">
+  <div style='background: url(img/cream_pixels.png);' class="app-body">
       <ng-view class="app-content"></ng-view>
   </div>
 </div>

@@ -1,0 +1,25 @@
+<form ng-controller="editarEncuestaController" ng-init="cargarEncuesta();" ng-submit="guardar();">
+    <label>Nombre Encuesta</label>
+    <br/>
+    <input type='text' name='nombreEncuesta' ng-model="formData.nombreEncuesta" />
+    <br/>
+    <label>Pregunta No. 1</label>
+    <br/>
+    <input type='text' name='txtpregunta1' ng-model="formData.txtpregunta1" />
+    <br/>
+    <label>Pregunta No. 2</label>
+    <br/>
+    <input type='radio' name='radiogroup' value='0' ng-model="formData.radiogroup" />
+    <br/>
+    <input type='radio' name='radiogroup' value='1' ng-model="formData.radiogroup" />
+    <br/>
+    <label>Pregunta No. 4</label>
+    <br/>
+    <textarea name='textarea1' ng-model="formData.textarea1"></textarea>
+    <br/>
+    <label>Pregunta No. 4</label>
+    <br/>
+    <select name='select1' ng-model="formData.select1"><option>Seleccione</option><option value='1'>Opcion 1</option></select>
+    <br/>
+    <input type='submit' class='btn btn-success btn-lg' value='Guardar' />
+</form>
