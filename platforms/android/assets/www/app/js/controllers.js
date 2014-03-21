@@ -12,7 +12,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
     $scope.formData = {};
 
     $scope.guardar = function(){
-      console.log(this.formData);
+      //console.log(this.formData);
 
       var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000);
       db.transaction($scope.querySaveEncuesta, $scope.errorDB);
@@ -21,7 +21,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
     //En caso de error
     $scope.querySaveEncuesta = function(tx) {
       var arrayData =  $scope.formData;
-      console.log($cookies.iduser);
+      //console.log($cookies.iduser);
       for(var item in arrayData){
         var sql = "INSERT INTO ENCUESTAS (IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES ('" + item + "','" + arrayData[item] + "', 0, '" + $cookies.user + "')";
         //console.log(sql);
