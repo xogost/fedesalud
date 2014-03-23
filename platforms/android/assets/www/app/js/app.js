@@ -9,6 +9,7 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.directives',
   'myApp.controllers',
+  'sync.controllers',
   'ui.bootstrap',
   'mobile-angular-ui',
   'mobile-angular-ui.touch',
@@ -21,6 +22,7 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/instrumentouno', {templateUrl: 'partials/instrumentouno.html', controller: 'instrumentounoController'});
   $routeProvider.when('/editarInstrumentouno/:id', {templateUrl: 'partials/editInstrumentoUno.html', controller: 'editarEncuestaController'});
   $routeProvider.when('/listencuestas', {templateUrl: 'partials/listEncuestas.html', controller: 'listadoInstrumentosController'});
+  $routeProvider.when('/sincronizar', {templateUrl: 'partials/sincronizar.html', controller: 'sincronizarController'});
   
   $routeProvider.otherwise({redirectTo: '/login'});
 }]);

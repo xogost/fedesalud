@@ -21,21 +21,14 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
     //En caso de error
     $scope.querySaveEncuesta = function(tx) {
       var arrayData =  $scope.formData;
-      //console.log($cookies.iduser);
       var usercookie = window.localStorage.getItem("user");
-
       var nombreEncuesta = arrayData["nombreEncuesta"];
-      console.log(nombreEncuesta);
       var sql = "INSERT INTO ENCUESTAS (NOMBRE, SINCRONIZADO, USUARIO) VALUES ('" + nombreEncuesta + "',0, '" + usercookie + "')";
-        //console.log(sql);
       tx.executeSql(sql, [], function(error){ console.log(error); });
-
-
       tx.executeSql("SELECT MAX(ID) as ID FROM ENCUESTAS",[], 
         function(tx, result) { 
           for(var item in arrayData){
             var sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + result.rows.item(0).ID + ",'" + item + "','" + arrayData[item] + "', 0, '" + usercookie + "')";
-            console.log(sql);
             tx.executeSql(sql);
           }
         }, 
@@ -77,7 +70,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       //tx.executeSql("DROP TABLE DATAENCUESTAS");
       tx.executeSql("CREATE TABLE IF NOT EXISTS ENCUESTAS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOMBRE TEXT NOT NULL, SINCRONIZADO INTEGER NOT NULL, USUARIO TEXT NOT NULL)");
       tx.executeSql("CREATE TABLE IF NOT EXISTS DATAENCUESTAS (ID INTEGER PRIMARY KEY AUTOINCREMENT, IDENCUESTA INTEGER NOT NULL, IDCAMPO TEXT NOT NULL, VALOR TEXT NOT NULL, SINCRONIZADO INTEGER NOT NULL, USUARIO TEXT NOT NULL)");
-      var query = "SELECT * FROM USUARIOS WHERE USUARIOS.NOMBRE = 'ADMIN'";
+      var query = "SELECT * FROM USUARIOS";
       tx.executeSql(query, [], $scope.CreateAmdin, $scope.errorDB);
     };
 
@@ -102,7 +95,6 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
 
     $scope.CreateAmdin = function (tx, resultados) {
       var encontroUsuario = resultados.rows.length;
-
       if(encontroUsuario == 0){
         tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Administrador', '123456')");
         tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador1', 'Encuestador#1')");
@@ -157,7 +149,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
   }]);
 
   //=================================================================
-  //=============            Logout Controller         ================
+  //=============            Logout Controller         ==============
   //=================================================================
 
   ModuleMyApp.controller('logoutController', ['$scope', function($scope) {
@@ -166,48 +158,55 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       window.location = "#/login";
     };
   }]);
-
+  //=================================================================
+  //=============            Listado Controller         =============
+  //=================================================================
   ModuleMyApp.controller('listadoInstrumentosController', ['$scope', function($scope) {
-    $scope.refresh = function(){
-      window.location = '#/listencuestas';
-    };   
+    if(window.localStorage.getItem("user") == undefined){
+      window.location = '#/login';
+    }
+    else{
+      $scope.refresh = function(){
+        window.location = '#/listencuestas';
+      };   
 
-    $scope.obtenerEncuestas = function(){
-      var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalid DB", 200000);
-      db.transaction($scope.queryEncuestas, $scope.errorDB);
+      $scope.obtenerEncuestas = function(){
+        var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalid DB", 200000);
+        db.transaction($scope.queryEncuestas, $scope.errorDB);
 
-      var div = document.getElementById("tablaEncuestas");
-      div.innerHTML = localStorage.getItem("htmlEncuestas");
-      localStorage.removeItem("htmlEncuestas");
-    };
-    
-    $scope.editarEncuesta = function(id){
-      window.location = '#/editarInstrumentouno/' + id;
-    };
-
-    $scope.queryEncuestas = function(tx){ 
-      var sql = 'select * from ENCUESTAS';
-      tx.executeSql(sql, [], 
-        function(tx, result){
-          var html = '';
-          for(var i = 0; i < result.rows.length; i++){
-            html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td><a href='#/editarInstrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
-          }
-
-          localStorage.setItem("htmlEncuestas", html);
-        },
-        function(error){
-          console.log(error.code);
-        }
-      );
-      console.log(localStorage.getItem("htmlEncuestas"));
+        var div = document.getElementById("tablaEncuestas");
+        div.innerHTML = localStorage.getItem("htmlEncuestas");
+        localStorage.removeItem("htmlEncuestas");
+      };
       
-    };
+      $scope.editarEncuesta = function(id){
+        window.location = '#/editarInstrumentouno/' + id;
+      };
 
-    //En caso de error
-    $scope.errorDB = function(error) {
-      alert("Error BD: " + error.code);
-    };
+      $scope.queryEncuestas = function(tx){ 
+        var sql = 'select ID,NOMBRE from ENCUESTAS';
+        tx.executeSql(sql, [], 
+          function(tx, result){
+            var html = '';
+            for(var i = 0; i < result.rows.length; i++){
+              html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td><a href='#/editarInstrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
+            }
+
+            localStorage.setItem("htmlEncuestas", html);
+          },
+          function(error){
+            console.log(error.code);
+          }
+        );
+        console.log(localStorage.getItem("htmlEncuestas"));
+        
+      };
+
+      //En caso de error
+      $scope.errorDB = function(error) {
+        alert("Error BD: " + error.code);
+      };
+    }
   }]);
 
   //=================================================================
@@ -230,7 +229,6 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
           tx.executeSql(sql, [],function(tx, result){
             for(var i = 0; i < result.rows.length; i++){
               var objControl = document.getElementsByName(result.rows.item(i).IDCAMPO);
-              console.log(objControl);
               for(var itemControl in objControl){
                 if(objControl[itemControl].type == 'radio'){
                   if(objControl[itemControl].value == result.rows.item(i).VALOR)
@@ -241,8 +239,6 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               }
               
               $scope[result.rows.item(i).IDCAMPO] = result.rows.item(i).VALOR;
-              console.log($scope[result.rows.item(i).IDCAMPO])
-              console.log(result.rows.item(i));
             }
           },$scope.errorDB); 
       }, $scope.errorDB);
@@ -253,18 +249,12 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
     //En caso de error
     $scope.queryUpdateEncuesta = function(tx) {
       var arrayData =  $scope.formData;
-      
       var usercookie = window.localStorage.getItem("user");
-
       var nombreEncuesta = arrayData["nombreEncuesta"];
-      
-      var sql = "UPDATE ENCUESTAS SET NOMBRE = '" + nombreEncuesta + "' WHERE ID = " + $scope.idEncuesta;
-        //console.log(sql);
+      var sql = "UPDATE ENCUESTAS SET SINCRONIZADO = 0, NOMBRE = '" + nombreEncuesta + "' WHERE ID = " + $scope.idEncuesta;
       tx.executeSql(sql, [], function(error){ console.log(error); });
-
       for(var item in arrayData){
-        var sql = "UPDATE DATAENCUESTAS SET VALOR = '" + arrayData[item] + "' WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + item + "'";
-        console.log(sql);
+        var sql = "UPDATE DATAENCUESTAS SET SINCRONIZADO = 0, VALOR = '" + arrayData[item] + "' WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + item + "'";
         tx.executeSql(sql);
       }
 
