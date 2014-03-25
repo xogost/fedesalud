@@ -4,7 +4,6 @@
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
   'ngRoute',
-  'ngCookies',
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
@@ -21,6 +20,8 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/menu', {templateUrl: 'partials/menu.html', controller: 'MenuController'});
   $routeProvider.when('/instrumentouno', {templateUrl: 'partials/instrumentouno.html', controller: 'instrumentounoController'});
   $routeProvider.when('/editarInstrumentouno/:id', {templateUrl: 'partials/editInstrumentoUno.html', controller: 'editarEncuestaController'});
+  $routeProvider.when('/instrumentodos', {templateUrl: 'partials/instrumentodos.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/editarInstrumentodos/:id', {templateUrl: 'partials/editInstrumentoDos.html', controller: 'editarEncuestaController'});
   $routeProvider.when('/listencuestas', {templateUrl: 'partials/listEncuestas.html', controller: 'listadoInstrumentosController'});
   $routeProvider.when('/sincronizar', {templateUrl: 'partials/sincronizar.html', controller: 'sincronizarController'});
   

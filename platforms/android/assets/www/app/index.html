@@ -2,6 +2,7 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
+  <meta name='viewport' content='width="device-width"'/>
   <title>Fredesalud App</title>
   <link rel="stylesheet" href="css/app.css"/>
   <link rel="stylesheet" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css">
@@ -69,7 +70,11 @@
   <script src="../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui-scrollable-overthrow.min.js">
   </script>
   <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-  <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script>
+    jQuery.noConflict();
+  </script>
   
 
 </body>
