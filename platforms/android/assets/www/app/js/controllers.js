@@ -486,9 +486,11 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
 
     $scope.guardar = function(){
       //console.log(this.formData);
-
-      var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000);
-      db.transaction($scope.querySaveEncuesta, $scope.errorDB);
+      var confirmarGuardado = confirm("Esta seguro que desea almacenar la encuesta!");
+      if(confirmarGuardado){
+        var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000);
+        db.transaction($scope.querySaveEncuesta, $scope.errorDB);
+      }
     };
 
     //En caso de error
@@ -620,6 +622,11 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
   //=================================================================
 
   ModuleMyApp.controller('MenuController', ['$scope', function($scope) {
+    
+    jQuery(".btn").click(function(){
+      jQuery("#waiting").css("display", "block");
+    });
+
     if(window.localStorage.getItem("user") == undefined){
       window.location = '#/login';
     }
@@ -1121,8 +1128,11 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
     };
 
     $scope.guardar = function(){
-      var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000); 
-      db.transaction($scope.queryUpdateEncuesta, $scope.errorDB);
+      var confirmarGuardado = confirm("Esta seguro que desea almacenar la encuesta!");
+      if(confirmarGuardado){
+        var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000); 
+        db.transaction($scope.queryUpdateEncuesta, $scope.errorDB);
+      }
     };
 
     $scope.cargarEncuesta = function(){
