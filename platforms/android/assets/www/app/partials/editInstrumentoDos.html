@@ -1,0 +1,1472 @@
+<style>
+  .form-container {
+    text-align: center;
+    width: 100%;
+    padding: 3em;
+    margin: 0 auto;
+  }
+  .form-container label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .form-container input[type='text'] {
+
+  }
+  .radio { width: 100%; clear: both;}
+  .radio input[type='radio']{
+    display: inline-block;
+    width: 30%;
+    float: right;
+  }
+  .radio label{
+    display: inline-block;
+    width: 69%;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #9c9c9c;
+  }
+  div{
+    clear: both;
+  }
+</style>
+<form class="form-container scrollable-content ng-scope ng-pristine ng-valid" ng-controller="editarEncuestaController" ng-init="cargarEncuesta();" ng-submit="guardar();" style="overflow: auto; -webkit-overflow-scrolling: touch;">
+  <label>
+    Nombre Encuesta
+  </label>
+  <br>
+  <input type="text" name="nombreEncuesta" ng-model="formData.nombreEncuesta" class="form-control ng-pristine ng-valid needsclick"/>
+  <br/>
+  <input type="hidden" value='2' id="tipoEncuesta" name="tipoEncuesta" ng-model="formData.tipoEncuesta" class="form-control ng-pristine ng-valid needsclick"/>
+  <br>
+  <div class="form-vertical">
+    <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+      <div id="tabs-0" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+        <div class="acordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
+          <div id="aco-0-93" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
+              <div class="labeladd">
+                <label for="labeladicional6251" class="text-success tbold">
+                  I. Identificación
+                </label>
+              </div>
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3034" class="text-info tnormal">
+                    1. Fecha:
+                  </label>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="input-group">
+                            <input type="text" id="idaliascampo3034" name="namealiascampo3034" class="dinamic Cfecha hasDatepicker form-control needsclick" value="" title="Formulario prescriptores " tipo="I" aliasid="3034" size="10" ng-model="formData.namealiascampo3034"  datepicker-popup=""   ng-required="true" close-text="Close" >
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                          </span>
+                        </p>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo2898" class="text-info tnormal">
+                    2. Municipio:
+                  </label>
+                </div>
+                <div class="control">
+                  <select id="idaliascampo2898" name="namealiascampo2898" class="dinamic form-control needsclick" title="Formulario usuarios" tipo="I" aliasid="2898" data-placeholder="Seleccione..." style="display: inline-block;" ng-model="formData.namealiascampo2898">
+                    <option value="" selected="selected">SELECCIONE</option>
+                  <option value="466">AGUA DE DIOS</option>
+                  <option value="467">ALBÁN</option>
+                  <option value="468">ANAPOIMA</option>
+                  <option value="469">ANOLAIMA</option>
+                  <option value="470">ARBELÁEZ</option>
+                  <option value="471">BELTRÁN</option>
+                  <option value="472">BITUIMA</option>
+                  <option value="473">BOJACÁ</option>
+                  <option value="474">CABRERA</option>
+                  <option value="475">CACHIPAY</option>
+                  <option value="476">CAJICÁ</option>
+                  <option value="477">CAPARRAPÍ</option>
+                  <option value="478">CAQUEZA</option>
+                  <option value="479">CARMEN DE CARUPA</option>
+                  <option value="480">CHAGUANÍ</option>
+                  <option value="481">CHÍA</option>
+                  <option value="482">CHIPAQUE</option>
+                  <option value="483">CHOACHÍ</option>
+                  <option value="484">CHOCONTÁ</option>
+                  <option value="485">COGUA</option>
+                  <option value="486">COTA</option>
+                  <option value="487">CUCUNUBÁ</option>
+                  <option value="488">EL COLEGIO</option>
+                  <option value="489">EL PEÑÓN</option>
+                  <option value="490">EL ROSAL</option>
+                  <option value="491">FACATATIVÁ</option>
+                  <option value="492">FOMEQUE</option>
+                  <option value="493">FOSCA</option>
+                  <option value="494">FUNZA</option>
+                  <option value="495">FÚQUENE</option>
+                  <option value="496">FUSAGASUGÁ</option>
+                  <option value="497">GACHALA</option>
+                  <option value="498">GACHANCIPÁ</option>
+                  <option value="499">GACHETÁ</option>
+                  <option value="500">GAMA</option>
+                  <option value="501">GIRARDOT</option>
+                  <option value="502">GRANADA</option>
+                  <option value="503">GUACHETÁ</option>
+                  <option value="504">GUADUAS</option>
+                  <option value="505">GUASCA</option>
+                  <option value="506">GUATAQUÍ</option>
+                  <option value="507">GUATAVITA</option>
+                  <option value="508">GUAYABAL DE SIQUIMA</option>
+                  <option value="509">GUAYABETAL</option>
+                  <option value="510">GUTIÉRREZ</option>
+                  <option value="511">JERUSALÉN</option>
+                  <option value="512">JUNÍN</option>
+                  <option value="513">LA CALERA</option>
+                  <option value="514">LA MESA</option>
+                  <option value="515">LA PALMA</option>
+                  <option value="516">LA PEÑA</option>
+                  <option value="517">LA VEGA</option>
+                  <option value="518">LENGUAZAQUE</option>
+                  <option value="519">MACHETA</option>
+                  <option value="520">MADRID</option>
+                  <option value="521">MANTA</option>
+                  <option value="522">MEDINA</option>
+                  <option value="523">MOSQUERA</option>
+                  <option value="524">NARIÑO</option>
+                  <option value="525">NEMOCÓN</option>
+                  <option value="526">NILO</option>
+                  <option value="527">NIMAIMA</option>
+                  <option value="528">NOCAIMA</option>
+                  <option value="529">VENECIA</option>
+                  <option value="530">PACHO</option>
+                  <option value="531">PAIME</option>
+                  <option value="532">PANDI</option>
+                  <option value="533">PARATEBUENO</option>
+                  <option value="534">PASCA</option>
+                  <option value="535">PUERTO SALGAR</option>
+                  <option value="536">PULÍ</option>
+                  <option value="537">QUEBRADANEGRA</option>
+                  <option value="538">QUETAME</option>
+                  <option value="539">QUIPILE</option>
+                  <option value="540">APULO</option>
+                  <option value="541">RICAURTE</option>
+                  <option value="542">SAN ANTONIO DEL TEQUENDAMA</option>
+                  <option value="543">SAN BERNARDO</option>
+                  <option value="544">SAN CAYETANO</option>
+                  <option value="545">SAN FRANCISCO</option>
+                  <option value="546">SAN JUAN DE RÍO SECO</option>
+                  <option value="547">SASAIMA</option>
+                  <option value="548">SESQUILÉ</option>
+                  <option value="549">SIBATÉ</option>
+                  <option value="550">SILVANIA</option>
+                  <option value="551">SIMIJACA</option>
+                  <option value="552">SOACHA</option>
+                  <option value="553">SOPÓ</option>
+                  <option value="554">SUBACHOQUE</option>
+                  <option value="555">SUESCA</option>
+                  <option value="556">SUPATÁ</option>
+                  <option value="557">SUSA</option>
+                  <option value="558">SUTATAUSA</option>
+                  <option value="559">TABIO</option>
+                  <option value="560">TAUSA</option>
+                  <option value="561">TENA</option>
+                  <option value="562">TENJO</option>
+                  <option value="563">TIBACUY</option>
+                  <option value="564">TIBIRITA</option>
+                  <option value="565">TOCAIMA</option>
+                  <option value="566">TOCANCIPÁ</option>
+                  <option value="567">TOPAIPÍ</option>
+                  <option value="568">UBALÁ</option>
+                  <option value="569">UBAQUE</option>
+                  <option value="570">VILLA DE SAN DIEGO DE UBATE</option>
+                  <option value="571">UNE</option>
+                  <option value="572">ÚTICA</option>
+                  <option value="573">VERGARA</option>
+                  <option value="574">VIANÍ</option>
+                  <option value="575">VILLAGÓMEZ</option>
+                  <option value="576">VILLAPINZÓN</option>
+                  <option value="577">VILLETA</option>
+                  <option value="578">VIOTÁ</option>
+                  <option value="579">YACOPÍ</option>
+                  <option value="580">ZIPACÓN</option>
+                  <option value="581">ZIPAQUIRÁ</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3035" class="text-info tnormal">
+                    3. Sexo:
+                  </label>
+                </div>
+                <div id="idaliascampo3035" name="namealiascampo3035" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3035" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo303513608" name="namealiascampo3035" value="13608" title="Formulario prescriptores" ng-model="formData.namealiascampo3035">
+                    <label class="labelradio" for="idradiosaliascampo303513608">
+                      Masculino
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo303513609" name="namealiascampo3035" value="13609" title="Formulario prescriptores" ng-model="formData.namealiascampo3035">
+                    <label class="labelradio" for="idradiosaliascampo303513609">
+                      Femenino
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3036" class="text-info tnormal">
+                    4. Es:
+                  </label>
+                </div>
+                <div id="idaliascampo3036" name="namealiascampo3036" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3036" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo303613610" name="namealiascampo3036" value="13610" title="Formulario prescriptores" ng-model="formData.namealiascampo3036">
+                    <label class="labelradio" for="idradiosaliascampo303613610">
+                      Médico general
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo303613611" name="namealiascampo3036" value="13611" title="Formulario prescriptores" ng-model="formData.namealiascampo3036">
+                    <label class="labelradio" for="idradiosaliascampo303613611">
+                      Médico especialista
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div id="idaliascampo3039" name="namealiascampo3039" class="dinamic Cchecked" title="Formulario prescriptores" tipo="I" aliasid="3039" fielddiv="true">
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo303913612" name="namealiascampo3039[]" value="13612" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo303913612">
+                    <label class="labelchecked" for="idchecksaliascampo303913612">
+                      No aplica
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3037" class="text-info tnormal">
+                    5. Año de Grado como Médico:
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3037" name="namealiascampo3037" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3037" ng-model="formData.namealiascampo3037">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3038" class="text-info tnormal">
+                    6. Año de Grado como Especialista:
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3038" name="namealiascampo3038" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3038" ng-model="formData.namealiascampo3038">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3040" class="text-info tnormal">
+                    7. Nombre de la IPS o ESE:
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3040" name="namealiascampo3040" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores" tipo="I" aliasid="3040" ng-model="formData.namealiascampo3040">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3041" class="text-info tnormal">
+                    8. Consultorio particular:
+                  </label>
+                </div>
+                <div id="idaliascampo3041" name="namealiascampo3041" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3041" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304113613" name="namealiascampo3041" value="13613" title="Formulario prescriptores" ng-model="formData.namealiascampo3041">
+                    <label class="labelradio" for="idradiosaliascampo304113613">
+                      Si
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304113614" name="namealiascampo3041" value="13614" title="Formulario prescriptores" ng-model="formData.namealiascampo3041">
+                    <label class="labelradio" for="idradiosaliascampo304113614">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="labeladd">
+                <label for="labeladicional6259" class="text-success tbold">
+                  9. Tipos de usuarios que atiende, escribir porcentaje aproximado mensual según régimen:
+                </label>
+              </div>
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3042" class="text-info tnormal">
+                    a. Medicina Pre-pagada
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3042" name="namealiascampo3042" class="dinamic Cnumero number form-control needsclick" value="" title="Formularioprescriptores" tipo="I" aliasid="3042" style="width: 48px;" ng-model="formData.namealiascampo3042">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3043" class="text-info tnormal">
+                    b. Régimen contributivo
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3043" name="namealiascampo3043" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3043" style="width: 48px;" ng-model="formData.namealiascampo3043">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3044" class="text-info tnormal">
+                    c. Régimen subsidiado
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3044" name="namealiascampo3044" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3044" style="width: 48px;" ng-model="formData.namealiascampo3044">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3045" class="text-info tnormal">
+                    d. Vinculados
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3045" name="namealiascampo3045" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3045" style="width: 48px;" ng-model="formData.namealiascampo3045">
+                </div>
+              </div>
+              <div class="labeladd">
+                <label for="labeladicional6263" class="text-success tbold">
+                  II. Capitulo 2
+                </label>
+              </div>
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3046" class="text-info tnormal">
+                    1. Ante la siguiente afirmación: "Los conocimientos adquiridos durante la etapa de estudiante de PREGRADO y/o POSGRADO sobre la farmacología y la utilización de los medicamentos, le permiten en la actualidad prescribir siempre cumpliendo con los principios del uso racional de medicamentos", usted está:
+                  </label>
+                </div>
+                <div id="idaliascampo3046" name="namealiascampo3046" class="dinamic Cradios" title="Formularioprescriptores" tipo="I" aliasid="3046" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304613615" name="namealiascampo3046" value="13615" title="Formularioprescriptores" ng-model="formData.namealiascampo3046">
+                    <label class="labelradio" for="idradiosaliascampo304613615">
+                      Totalmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304613616" name="namealiascampo3046" value="13616" title="Formularioprescriptores" ng-model="formData.namealiascampo3046">
+                    <label class="labelradio" for="idradiosaliascampo304613616">
+                      De Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304613617" name="namealiascampo3046" value="13617" title="Formularioprescriptores" ng-model="formData.namealiascampo3046">
+                    <label class="labelradio" for="idradiosaliascampo304613617">
+                      Parcialmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304613618" name="namealiascampo3046" value="13618" title="Formularioprescriptores" ng-model="formData.namealiascampo3046">
+                    <label class="labelradio" for="idradiosaliascampo304613618">
+                      En Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304613619" name="namealiascampo3046" value="13619" title="Formularioprescriptores" ng-model="formData.namealiascampo3046">
+                    <label class="labelradio" for="idradiosaliascampo304613619">
+                      Totalmente en Desacuerdo
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3047" class="text-info tnormal">
+                    2. Frente a la siguiente afirmación: "Las Guías de la práctica clínica que orientan la prescripción terapéutica deben seguirse estrictamente y en todos los casos", usted está:
+                  </label>
+                </div>
+                <div id="idaliascampo3047" name="namealiascampo3047" class="dinamic Cradios" title="Formularioprescriptores" tipo="I" aliasid="3047" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304713620" name="namealiascampo3047" value="13620" title="Formularioprescriptores" ng-model="formData.namealiascampo3047">
+                    <label class="labelradio" for="idradiosaliascampo304713620">
+                      Totalmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304713621" name="namealiascampo3047" value="13621" title="Formularioprescriptores" ng-model="formData.namealiascampo3047">
+                    <label class="labelradio" for="idradiosaliascampo304713621">
+                      De Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304713622" name="namealiascampo3047" value="13622" title="Formularioprescriptores" ng-model="formData.namealiascampo3047">
+                    <label class="labelradio" for="idradiosaliascampo304713622">
+                      Parcialmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304713623" name="namealiascampo3047" value="13623" title="Formularioprescriptores" ng-model="formData.namealiascampo3047">
+                    <label class="labelradio" for="idradiosaliascampo304713623">
+                      En Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304713624" name="namealiascampo3047" value="13624" title="Formularioprescriptores" ng-model="formData.namealiascampo3047">
+                    <label class="labelradio" for="idradiosaliascampo304713624">
+                      Totalmente en Desacuerdo
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3048" class="text-info tnormal">
+                    3. Si usted es médico del área de Consulta Externa o del área de Urgencias, responda a la siguiente afirmación: "En la IPS donde laboro, en el área de Consulta Externa se restringe la prescripción de medicamentos y solo se pueden formular los que están disponibles en la farmacia de la institución", usted está:
+                  </label>
+                </div>
+                <div id="idaliascampo3048" name="namealiascampo3048" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3048" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304813625" name="namealiascampo3048" value="13625" title="Formulario prescriptores" ng-model="formData.namealiascampo3048">
+                    <label class="labelradio" for="idradiosaliascampo304813625">
+                      Totalmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304813626" name="namealiascampo3048" value="13626" title="Formulario prescriptores" ng-model="formData.namealiascampo3048">
+                    <label class="labelradio" for="idradiosaliascampo304813626">
+                      De Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304813627" name="namealiascampo3048" value="13627" title="Formulario prescriptores" ng-model="formData.namealiascampo3048">
+                    <label class="labelradio" for="idradiosaliascampo304813627">
+                      Parcialmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304813628" name="namealiascampo3048" value="13628" title="Formulario prescriptores" ng-model="formData.namealiascampo3048">
+                    <label class="labelradio" for="idradiosaliascampo304813628">
+                      En Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304813629" name="namealiascampo3048" value="13629" title="Formulario prescriptores" ng-model="formData.namealiascampo3048">
+                    <label class="labelradio" for="idradiosaliascampo304813629">
+                      Totalmente en Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304813630" name="namealiascampo3048" value="13630" title="Formulario prescriptores" ng-model="formData.namealiascampo3048">
+                    <label class="labelradio" for="idradiosaliascampo304813630">
+                      NO APLICA por no disponer de servicios farmacéuticos en la IPS
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3049" class="text-info tnormal">
+                    4. Si usted es médico del área Hospitalaria responda a la siguiente afirmación: "En la IPS donde laboro, en el área de Hospitalización se restringe la prescripción de medicamentos y solo se pueden formular los que están disponibles en la farmacia de la institución", usted está:
+                  </label>
+                </div>
+                <div id="idaliascampo3049" name="namealiascampo3049" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3049" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304913631" name="namealiascampo3049" value="13631" title="Formulario prescriptores" ng-model="formData.namealiascampo3049">
+                    <label class="labelradio" for="idradiosaliascampo304913631">
+                      Totalmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304913632" name="namealiascampo3049" value="13632" title="Formulario prescriptores" ng-model="formData.namealiascampo3049">
+                    <label class="labelradio" for="idradiosaliascampo304913632">
+                      De Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304913633" name="namealiascampo3049" value="13633" title="Formulario prescriptores" ng-model="formData.namealiascampo3049">
+                    <label class="labelradio" for="idradiosaliascampo304913633">
+                      Parcialmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304913634" name="namealiascampo3049" value="13634" title="Formulario prescriptores" ng-model="formData.namealiascampo3049">
+                    <label class="labelradio" for="idradiosaliascampo304913634">
+                      En Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304913635" name="namealiascampo3049" value="13635" title="Formulario prescriptores" ng-model="formData.namealiascampo3049">
+                    <label class="labelradio" for="idradiosaliascampo304913635">
+                      Totalmente en Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304913636" name="namealiascampo3049" value="13636" title="Formulario prescriptores" ng-model="formData.namealiascampo3049">
+                    <label class="labelradio" for="idradiosaliascampo304913636">
+                      NO APLICA por no disponer de servicios farmacéuticos en la IPS
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3050" class="text-info tnormal">
+                    5. Para la siguiente afirmación, referida a los médicos en general y no particularmente a su actuación como prescriptor: "En la práctica clínica la publicidad y mercadeo de la industria farmacéutica influye en la prescripción de medicamentos", usted está:
+                  </label>
+                </div>
+                <div id="idaliascampo3050" name="namealiascampo3050" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3050" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3050-13637" name="namealiascampo3050" value="13637" title="Formulario prescriptores" ng-model="formData.namealiascampo3050">
+                    <label class="labelradio" for="idradiosaliascampo3050-13637">
+                      Totalmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3050-13638" name="namealiascampo3050" value="13638" title="Formulario prescriptores" ng-model="formData.namealiascampo3050">
+                    <label class="labelradio" for="idradiosaliascampo3050-13638">
+                      De Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3050-13639" name="namealiascampo3050" value="13639" title="Formulario prescriptores" ng-model="formData.namealiascampo3050">
+                    <label class="labelradio" for="idradiosaliascampo3050-13639">
+                      Parcialmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3050-13640" name="namealiascampo3050" value="13640" title="Formulario prescriptores" ng-model="formData.namealiascampo3050">
+                    <label class="labelradio" for="idradiosaliascampo3050-13640">
+                      En Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3050-13641" name="namealiascampo3050" value="13641" title="Formulario prescriptores" ng-model="formData.namealiascampo3050">
+                    <label class="labelradio" for="idradiosaliascampo3050-13641">
+                      Totalmente en Desacuerdo
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3051" class="text-info tnormal">
+                    6. Ante la siguiente afirmación "Los pacientes consideran que si se les formula tres o menos medicamentos, están mal formulados", usted está:
+                  </label>
+                </div>
+                <div id="idaliascampo3051" name="namealiascampo3051" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3051" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305113642" name="namealiascampo3051" value="13642" title="Formulario prescriptores" ng-model="formData.namealiascampo3051">
+                    <label class="labelradio" for="idradiosaliascampo305113642">
+                      Totalmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305113643" name="namealiascampo3051" value="13643" title="Formulario prescriptores" ng-model="formData.namealiascampo3051">
+                    <label class="labelradio" for="idradiosaliascampo305113643">
+                      De Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305113644" name="namealiascampo3051" value="13644" title="Formulario prescriptores" ng-model="formData.namealiascampo3051">
+                    <label class="labelradio" for="idradiosaliascampo305113644">
+                      Parcialmente de Acuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305113645" name="namealiascampo3051" value="13645" title="Formulario prescriptores" ng-model="formData.namealiascampo3051">
+                    <label class="labelradio" for="idradiosaliascampo305113645">
+                      En Desacuerdo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305113646" name="namealiascampo3051" value="13646" title="Formulario prescriptores" ng-model="formData.namealiascampo3051">
+                    <label class="labelradio" for="idradiosaliascampo305113646">
+                      Totalmente en Desacuerdo
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3052" class="text-info tnormal">
+                    7. En cuanto a la actualización técnico científica en el campo de los medicamentos, señale las dos fuentes de información más frecuentemente por usted utilizadas:
+                  </label>
+                </div>
+                <div id="idaliascampo3052" name="namealiascampo3052" class="dinamic Cchecked" title="Formulario prescriptores" tipo="I" aliasid="3052" fielddiv="true">
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213647" name="namealiascampo3052[]" value="13647" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213647">
+                    <label class="labelchecked" for="idchecksaliascampo305213647">
+                      a. Consultas por internet,
+                    </label>
+                  </div>
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213648" name="namealiascampo3052[]" value="13648" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213648">
+                    <label class="labelchecked" for="idchecksaliascampo305213648">
+                      b. Sitio web del INVIMA
+                    </label>
+                  </div>
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213649" name="namealiascampo3052[]" value="13649" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213649">
+                    <label class="labelchecked" for="idchecksaliascampo305213649">
+                      c. Revistas médicas especializadas,
+                    </label>
+                  </div>
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213650" name="namealiascampo3052[]" value="13650" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213650">
+                    <label class="labelchecked" for="idchecksaliascampo305213650">
+                      d. Congresos médicos
+                    </label>
+                  </div>
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213651" name="namealiascampo3052[]" value="13651" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213651">
+                    <label class="labelchecked" for="idchecksaliascampo305213651">
+                      e. Información por otro(s) colega(s)
+                    </label>
+                  </div>
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213652" name="namealiascampo3052[]" value="13652" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213652">
+                    <label class="labelchecked" for="idchecksaliascampo305213652">
+                      f. Vademecum
+                    </label>
+                  </div>
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213653" name="namealiascampo3052[]" value="13653" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213653">
+                    <label class="labelchecked" for="idchecksaliascampo305213653">
+                      g. Comité de Farmacia y terapéutica de la IPS/ESE
+                    </label>
+                  </div>
+                  <div class="checked">
+                    <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213654" name="namealiascampo3052[]" value="13654" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213654">
+                    <label class="labelchecked" for="idchecksaliascampo305213654">
+                      h. Otra,
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3053" class="text-info tnormal">
+                    sitio:
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3053" name="namealiascampo3053" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 7. En cuanto a la actualización técnico científica - a. Consultas por internet," tipo="I" aliasid="3053" disabled="disabled" ng-model="formData.namealiascampo3053">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3054" class="text-info tnormal">
+                    ¿cuál?
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3054" name="namealiascampo3054" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 7. En cuanto a la actualización técnico científica - c. Revistas médicas especializadas" tipo="I" aliasid="3054" disabled="disabled" ng-model="formData.namealiascampo3054">
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3055" class="text-info tnormal">
+                    8. En lo referente a los visitadores médicos de las diferentes casas farmacéuticas, en el sitio de su trabajo usted recibe dichas visitas en las horas laborales:
+                  </label>
+                </div>
+                <div id="idaliascampo3055" name="namealiascampo3055" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3055" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305513655" name="namealiascampo3055" value="13655" title="Formulario prescriptores" ng-model="formData.namealiascampo3055">
+                    <label class="labelradio" for="idradiosaliascampo305513655">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305513656" name="namealiascampo3055" value="13656" title="Formulario prescriptores" ng-model="formData.namealiascampo3055">
+                    <label class="labelradio" for="idradiosaliascampo305513656">
+                      Algunas veces
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305513657" name="namealiascampo3055" value="13657" title="Formulario prescriptores" ng-model="formData.namealiascampo3055">
+                    <label class="labelradio" for="idradiosaliascampo305513657">
+                      No los recibo
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305513658" name="namealiascampo3055" value="13658" title="Formulario prescriptores" ng-model="formData.namealiascampo3055">
+                    <label class="labelradio" for="idradiosaliascampo305513658">
+                      No están permitidas en la IPS
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3056" class="text-info tnormal">
+                    9. Según su opinión, la prescripción de medicamentos en el sistema general de seguridad social en salud, está condicionada principalmente por:
+                  </label>
+                </div>
+                <div id="idaliascampo3056" name="namealiascampo3056" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3056" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305613659" name="namealiascampo3056" value="13659" title="Formulario prescriptores" ng-model="formData.namealiascampo3056">
+                    <label class="labelradio" for="idradiosaliascampo305613659">
+                      Intereses de las EPS
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305613660" name="namealiascampo3056" value="13660" title="Formulario prescriptores" ng-model="formData.namealiascampo3056">
+                    <label class="labelradio" for="idradiosaliascampo305613660">
+                      Intereses de la IPS
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305613661" name="namealiascampo3056" value="13661" title="Formulario prescriptores" ng-model="formData.namealiascampo3056">
+                    <label class="labelradio" for="idradiosaliascampo305613661">
+                      Incentivos de la industria farmacéutica
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305613662" name="namealiascampo3056" value="13662" title="Formulario prescriptores" ng-model="formData.namealiascampo3056">
+                    <label class="labelradio" for="idradiosaliascampo305613662">
+                      Listado de medicamentos del POS
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305613663" name="namealiascampo3056" value="13663" title="Formulario prescriptores" ng-model="formData.namealiascampo3056">
+                    <label class="labelradio" for="idradiosaliascampo305613663">
+                      Por los distribuidores de medicamentos
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3057" class="text-info tnormal">
+                    10. En el momento del acto médico para la formulación terapéutica recomendada al paciente, señale la principal razón por la que usted selecciona el medicamento:
+                  </label>
+                </div>
+                <div id="idaliascampo3057" name="namealiascampo3057" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3057" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305713664" name="namealiascampo3057" value="13664" title="Formulario prescriptores" ng-model="formData.namealiascampo3057">
+                    <label class="labelradio" for="idradiosaliascampo305713664">
+                      Sugerencias del laboratorio farmacéutico
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305713665" name="namealiascampo3057" value="13665" title="Formulario prescriptores" ng-model="formData.namealiascampo3057">
+                    <label class="labelradio" for="idradiosaliascampo305713665">
+                      Menor costo del medicamento
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305713666" name="namealiascampo3057" value="13666" title="Formulario prescriptores" ng-model="formData.namealiascampo3057">
+                    <label class="labelradio" for="idradiosaliascampo305713666">
+                      Efectos secundarios del medicamento
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305713667" name="namealiascampo3057" value="13667" title="Formulario prescriptores" ng-model="formData.namealiascampo3057">
+                    <label class="labelradio" for="idradiosaliascampo305713667">
+                      Eficacia del medicamento
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305713668" name="namealiascampo3057" value="13668" title="Formulario prescriptores" ng-model="formData.namealiascampo3057">
+                    <label class="labelradio" for="idradiosaliascampo305713668">
+                      Exigencias de los pacientes
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305713669" name="namealiascampo3057" value="13669" title="Formulario prescriptores" ng-model="formData.namealiascampo3057">
+                    <label class="labelradio" for="idradiosaliascampo305713669">
+                      Estado general del paciente
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="labeladd">
+                <label for="labeladicional6275" class="text-success tbold">
+                  11. Diga si es diferente la formulación entre los siguientes regímenes:
+                </label>
+              </div>
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3058" class="text-info tnormal">
+                    a. Pacientes de Medicina Prepagada vs. Pacientes del Régimen Contributivo
+                  </label>
+                </div>
+                <div id="idaliascampo3058" name="namealiascampo3058" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3058" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305813670" name="namealiascampo3058" value="13670" title="Formulario prescriptores" ng-model="formData.namealiascampo3058">
+                    <label class="labelradio" for="idradiosaliascampo305813670">
+                      Si
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305813671" name="namealiascampo3058" value="13671" title="Formulario prescriptores" ng-model="formData.namealiascampo3058">
+                    <label class="labelradio" for="idradiosaliascampo305813671">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3059" class="text-info tnormal">
+                    b. Pacientes del Régimen Contributivo vs. Pacientes del Régimen Subsidiado
+                  </label>
+                </div>
+                <div id="idaliascampo3059" name="namealiascampo3059" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3059" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305913672" name="namealiascampo3059" value="13672" title="Formulario prescriptores" ng-model="formData.namealiascampo3059">
+                    <label class="labelradio" for="idradiosaliascampo305913672">
+                      Si
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo305913673" name="namealiascampo3059" value="13673" title="Formulario prescriptores" ng-model="formData.namealiascampo3059">
+                    <label class="labelradio" for="idradiosaliascampo305913673">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3060" class="text-info tnormal">
+                    12. En la práctica diaria ¿Usted prescribe medicamentos que están por fuera del Plan Obligatorio de Salud POS?
+                  </label>
+                </div>
+                <div id="idaliascampo3060" name="namealiascampo3060" class="dinamic Cradios" title="Formulario prescroptores" tipo="I" aliasid="3060" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3060-13674" name="namealiascampo3060" value="13674" title="Formulario prescroptores" ng-model="formData.namealiascampo3060">
+                    <label class="labelradio" for="idradiosaliascampo3060-13674">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3060-13675" name="namealiascampo3060" value="13675" title="Formulario prescroptores" ng-model="formData.namealiascampo3060">
+                    <label class="labelradio" for="idradiosaliascampo3060-13675">
+                      Casi siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3060-13676" name="namealiascampo3060" value="13676" title="Formulario prescroptores" ng-model="formData.namealiascampo3060">
+                    <label class="labelradio" for="idradiosaliascampo3060-13676">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3060-13677" name="namealiascampo3060" value="13677" title="Formulario prescroptores" ng-model="formData.namealiascampo3060">
+                    <label class="labelradio" for="idradiosaliascampo3060-13677">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3061" class="text-info tnormal">
+                    13. En la prescripción de medicamentos, al formular usted prefiere hacerlo en:
+                  </label>
+                </div>
+                <div id="idaliascampo3061" name="namealiascampo3061" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3061" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306113678" name="namealiascampo3061" value="13678" title="Formulario prescriptores" ng-model="formData.namealiascampo3061">
+                    <label class="labelradio" for="idradiosaliascampo306113678">
+                      Denominación común de la molécula (genérica)
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306113679" name="namealiascampo3061" value="13679" title="Formulario prescriptores" ng-model="formData.namealiascampo3061">
+                    <label class="labelradio" for="idradiosaliascampo306113679">
+                      Denominación de marca del laboratorio farmacéutico
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306113680" name="namealiascampo3061" value="13680" title="Formulario prescriptores" ng-model="formData.namealiascampo3061">
+                    <label class="labelradio" for="idradiosaliascampo306113680">
+                      Le es indiferente, puede ser en cualquier denominación
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="labeladd">
+                <label for="labeladicional6279" class="text-success tbold">
+                  14. En la siguiente tabla que se refiere a cinco (5) diferentes tipos de medicamentos señale para cada uno su preferencia en la prescripción de acuerdo si se trata de un medicamento original, un medicamento de marca o un medicamento genérico.
+                </label>
+              </div>
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3062" class="text-info tnormal">
+                    a. Anticonvulsivos
+                  </label>
+                </div>
+                <div id="idaliascampo3062" name="namealiascampo3062" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3062" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306213681" name="namealiascampo3062" value="13681" title="Formulario prescriptores" ng-model="formData.namealiascampo3062">
+                    <label class="labelradio" for="idradiosaliascampo306213681">
+                      Molécula original
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306213682" name="namealiascampo3062" value="13682" title="Formulario prescriptores" ng-model="formData.namealiascampo3062">
+                    <label class="labelradio" for="idradiosaliascampo306213682">
+                      Nombre de marca
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306213683" name="namealiascampo3062" value="13683" title="Formulario prescriptores" ng-model="formData.namealiascampo3062">
+                    <label class="labelradio" for="idradiosaliascampo306213683">
+                      Genérico de nombre común
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3063" class="text-info tnormal">
+                    b. Antibióticos
+                  </label>
+                </div>
+                <div id="idaliascampo3063" name="namealiascampo3063" class="dinamic Cradios" title="Formulario  prescriptores" tipo="I" aliasid="3063" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306313684" name="namealiascampo3063" value="13684" title="Formulario  prescriptores" ng-model="formData.namealiascampo3063">
+                    <label class="labelradio" for="idradiosaliascampo306313684">
+                      Molécula original
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306313685" name="namealiascampo3063" value="13685" title="Formulario  prescriptores" ng-model="formData.namealiascampo3063">
+                    <label class="labelradio" for="idradiosaliascampo306313685">
+                      Nombre de marca
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306313686" name="namealiascampo3063" value="13686" title="Formulario  prescriptores" ng-model="formData.namealiascampo3063">
+                    <label class="labelradio" for="idradiosaliascampo306313686">
+                      Genérico de nombre común
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3064" class="text-info tnormal">
+                    c. Analgésicos
+                  </label>
+                </div>
+                <div id="idaliascampo3064" name="namealiascampo3064" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3064" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306413687" name="namealiascampo3064" value="13687" title="Formulario prescriptores" ng-model="formData.namealiascampo3064">
+                    <label class="labelradio" for="idradiosaliascampo306413687">
+                      Molécula original
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306413688" name="namealiascampo3064" value="13688" title="Formulario prescriptores" ng-model="formData.namealiascampo3064">
+                    <label class="labelradio" for="idradiosaliascampo306413688">
+                      Nombre de marca
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306413689" name="namealiascampo3064" value="13689" title="Formulario prescriptores" ng-model="formData.namealiascampo3064">
+                    <label class="labelradio" for="idradiosaliascampo306413689">
+                      Genérico de nombre común
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3065" class="text-info tnormal">
+                    d. Anticoagulantes
+                  </label>
+                </div>
+                <div id="idaliascampo3065" name="namealiascampo3065" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3065" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306513690" name="namealiascampo3065" value="13690" title="Formulario prescriptores" ng-model="formData.namealiascampo3065">
+                    <label class="labelradio" for="idradiosaliascampo306513690">
+                      Molécula original
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306513691" name="namealiascampo3065" value="13691" title="Formulario prescriptores" ng-model="formData.namealiascampo3065">
+                    <label class="labelradio" for="idradiosaliascampo306513691">
+                      Nombre de marca
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306513692" name="namealiascampo3065" value="13692" title="Formulario prescriptores" ng-model="formData.namealiascampo3065">
+                    <label class="labelradio" for="idradiosaliascampo306513692">
+                      Genérico de nombre común
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3066" class="text-info tnormal">
+                    e. Antiinflamatorios
+                  </label>
+                </div>
+                <div id="idaliascampo3066" name="namealiascampo3066" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3066" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306613693" name="namealiascampo3066" value="13693" title="Formulario prescriptores" ng-model="formData.namealiascampo3066">
+                    <label class="labelradio" for="idradiosaliascampo306613693">
+                      Molécula original
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306613694" name="namealiascampo3066" value="13694" title="Formulario prescriptores" ng-model="formData.namealiascampo3066">
+                    <label class="labelradio" for="idradiosaliascampo306613694">
+                      Nombre de marca
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306613695" name="namealiascampo3066" value="13695" title="Formulario prescriptores" ng-model="formData.namealiascampo3066">
+                    <label class="labelradio" for="idradiosaliascampo306613695">
+                      Genérico de nombre común
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3067" class="text-info tnormal">
+                    15. Si algunas respuesta a la pregunta anterior fueron de preferencia la molécula original o para los medicamentos de marca señale cuál de las siguientes afirmaciones respaldan mejor su respuesta:
+                  </label>
+                </div>
+                <div id="idaliascampo3067" name="namealiascampo3067" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3067" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306713696" name="namealiascampo3067" value="13696" title="Formulario prescriptores" ng-model="formData.namealiascampo3067">
+                    <label class="labelradio" for="idradiosaliascampo306713696">
+                      a. Fácil identificación del nombre del medicamento
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306713697" name="namealiascampo3067" value="13697" title="Formulario prescriptores" ng-model="formData.namealiascampo3067">
+                    <label class="labelradio" for="idradiosaliascampo306713697">
+                      b. Prestigio del laboratorio farmacéutico que lo produce
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306713698" name="namealiascampo3067" value="13698" title="Formulario prescriptores" ng-model="formData.namealiascampo3067">
+                    <label class="labelradio" for="idradiosaliascampo306713698">
+                      c. Los genéricos suelen ser de mala calidad
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306713699" name="namealiascampo3067" value="13699" title="Formulario prescriptores" ng-model="formData.namealiascampo3067">
+                    <label class="labelradio" for="idradiosaliascampo306713699">
+                      d. Los originale de marca comercial ofrecen mejor biodisponibilidad
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306713700" name="namealiascampo3067" value="13700" title="Formulario prescriptores" ng-model="formData.namealiascampo3067">
+                    <label class="labelradio" for="idradiosaliascampo306713700">
+                      e. Existen diferencias en cuanto a biodisponibilidad y bioequivalencias
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306713701" name="namealiascampo3067" value="13701" title="Formulario prescriptores" ng-model="formData.namealiascampo3067">
+                    <label class="labelradio" for="idradiosaliascampo306713701">
+                      f. NO APLICA por tener respuestas a la pregunta anterior solamente como genéricos
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3068" class="text-info tnormal">
+                    16. Señale de las siguientes opciones cuál o cuáles otras alternativas de prescripción utiliza en su práctica médica:
+                  </label>
+                </div>
+                <div id="idaliascampo3068" name="namealiascampo3068" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3068" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813702" name="namealiascampo3068" value="13702" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813702">
+                      a. Homeopatía
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813703" name="namealiascampo3068" value="13703" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813703">
+                      b. Terapia Neural
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813704" name="namealiascampo3068" value="13704" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813704">
+                      c. Acupuntura
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813705" name="namealiascampo3068" value="13705" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813705">
+                      d. Bioenergética
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813706" name="namealiascampo3068" value="13706" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813706">
+                      e. Esencias florales
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813707" name="namealiascampo3068" value="13707" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813707">
+                      f. Medicina tradicional
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813708" name="namealiascampo3068" value="13708" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813708">
+                      g. Medicamentos naturales
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813709" name="namealiascampo3068" value="13709" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813709">
+                      h. Otra.
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo306813710" name="namealiascampo3068" value="13710" title="Formulario prescriptores" ng-model="formData.namealiascampo3068">
+                    <label class="labelradio" for="idradiosaliascampo306813710">
+                      i. Ninguna de las anteriores
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3069" class="text-info tnormal">
+                    ¿Cuál?
+                  </label>
+                </div>
+                <div class="control">
+                  <input type="text" id="idaliascampo3069" name="namealiascampo3069" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 16. Señale de las siguientes opciones - h. Otra." tipo="I" aliasid="3069" disabled="disabled" ng-model="formData.namealiascampo3069">
+                </div>
+              </div>
+              <div class="labeladd">
+                <label for="labeladicional6287" class="text-success tbold">
+                  17. Con el tiempo disponible para la atención de los pacientes, responda :  ¿Cuáles de las siguientes recomendaciones le hace al paciente al entregarle la fórmula?:
+                </label>
+              </div>
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3070" class="text-info tnormal">
+                    a. Para qué sirve el medicamento. Explica al paciente el objetivo terapéutico perseguido y la eficacia esperada.
+                  </label>
+                </div>
+                <div id="idaliascampo3070" name="namealiascampo3070" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3070" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3070-13711" name="namealiascampo3070" value="13711" title="Formulario prescriptores" ng-model="formData.namealiascampo3070">
+                    <label class="labelradio" for="idradiosaliascampo3070-13711">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3070-13712" name="namealiascampo3070" value="13712" title="Formulario prescriptores" ng-model="formData.namealiascampo3070">
+                    <label class="labelradio" for="idradiosaliascampo3070-13712">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo3070-13713" name="namealiascampo3070" value="13713" title="Formulario prescriptores" ng-model="formData.namealiascampo3070">
+                    <label class="labelradio" for="idradiosaliascampo3070-13713">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3071" class="text-info tnormal">
+                    b. Efectos secundarios del medicamento
+                  </label>
+                </div>
+                <div id="idaliascampo3071" name="namealiascampo3071" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3071" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307113714" name="namealiascampo3071" value="13714" title="Formulario prescriptores" ng-model="formData.namealiascampo3071">
+                    <label class="labelradio" for="idradiosaliascampo307113714">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307113715" name="namealiascampo3071" value="13715" title="Formulario prescriptores" ng-model="formData.namealiascampo3071">
+                    <label class="labelradio" for="idradiosaliascampo307113715">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307113716" name="namealiascampo3071" value="13716" title="Formulario prescriptores" ng-model="formData.namealiascampo3071">
+                    <label class="labelradio" for="idradiosaliascampo307113716">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3072" class="text-info tnormal">
+                    c. Efectos adversos posibles
+                  </label>
+                </div>
+                <div id="idaliascampo3072" name="namealiascampo3072" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3072" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307213717" name="namealiascampo3072" value="13717" title="Formulario prescriptores" ng-model="formData.namealiascampo3072">
+                    <label class="labelradio" for="idradiosaliascampo307213717">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307213718" name="namealiascampo3072" value="13718" title="Formulario prescriptores" ng-model="formData.namealiascampo3072">
+                    <label class="labelradio" for="idradiosaliascampo307213718">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307213719" name="namealiascampo3072" value="13719" title="Formulario prescriptores" ng-model="formData.namealiascampo3072">
+                    <label class="labelradio" for="idradiosaliascampo307213719">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3073" class="text-info tnormal">
+                    d. Cantidad total del medicamento a ser tomado. Dosis diaria y tiempo de duración del tratamiento
+                  </label>
+                </div>
+                <div id="idaliascampo3073" name="namealiascampo3073" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3073" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307313720" name="namealiascampo3073" value="13720" title="Formulario prescriptores" ng-model="formData.namealiascampo3073">
+                    <label class="labelradio" for="idradiosaliascampo307313720">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307313721" name="namealiascampo3073" value="13721" title="Formulario prescriptores" ng-model="formData.namealiascampo3073">
+                    <label class="labelradio" for="idradiosaliascampo307313721">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307313722" name="namealiascampo3073" value="13722" title="Formulario prescriptores" ng-model="formData.namealiascampo3073">
+                    <label class="labelradio" for="idradiosaliascampo307313722">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3074" class="text-info tnormal">
+                    e. Vía de administración del medicamento
+                  </label>
+                </div>
+                <div id="idaliascampo3074" name="namealiascampo3074" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3074" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307413723" name="namealiascampo3074" value="13723" title="Formulario prescriptores" ng-model="formData.namealiascampo3074">
+                    <label class="labelradio" for="idradiosaliascampo307413723">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307413724" name="namealiascampo3074" value="13724" title="Formulario prescriptores" ng-model="formData.namealiascampo3074">
+                    <label class="labelradio" for="idradiosaliascampo307413724">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307413725" name="namealiascampo3074" value="13725" title="Formulario prescriptores" ng-model="formData.namealiascampo3074">
+                    <label class="labelradio" for="idradiosaliascampo307413725">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3075" class="text-info tnormal">
+                    f. Preparación del medicamento y conservación en casa
+                  </label>
+                </div>
+                <div id="idaliascampo3075" name="namealiascampo3075" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3075" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307513726" name="namealiascampo3075" value="13726" title="Formulario prescriptores" ng-model="formData.namealiascampo3075">
+                    <label class="labelradio" for="idradiosaliascampo307513726">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307513727" name="namealiascampo3075" value="13727" title="Formulario prescriptores" ng-model="formData.namealiascampo3075">
+                    <label class="labelradio" for="idradiosaliascampo307513727">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307513728" name="namealiascampo3075" value="13728" title="Formulario prescriptores" ng-model="formData.namealiascampo3075">
+                    <label class="labelradio" for="idradiosaliascampo307513728">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3076" class="text-info tnormal">
+                    g. Interacciones entre los medicamentos formulados y los que toma el paciente
+                  </label>
+                </div>
+                <div id="idaliascampo3076" name="namealiascampo3076" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3076" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307613729" name="namealiascampo3076" value="13729" title="Formulario prescriptores" ng-model="formData.namealiascampo3076">
+                    <label class="labelradio" for="idradiosaliascampo307613729">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307613730" name="namealiascampo3076" value="13730" title="Formulario prescriptores" ng-model="formData.namealiascampo3076">
+                    <label class="labelradio" for="idradiosaliascampo307613730">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307613731" name="namealiascampo3076" value="13731" title="Formulario prescriptores" ng-model="formData.namealiascampo3076">
+                    <label class="labelradio" for="idradiosaliascampo307613731">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3077" class="text-info tnormal">
+                    h. Refiere al personal de enfermería para que suministre la información
+                  </label>
+                </div>
+                <div id="idaliascampo3077" name="namealiascampo3077" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3077" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307713732" name="namealiascampo3077" value="13732" title="Formulario prescriptores" ng-model="formData.namealiascampo3077">
+                    <label class="labelradio" for="idradiosaliascampo307713732">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307713733" name="namealiascampo3077" value="13733" title="Formulario prescriptores" ng-model="formData.namealiascampo3077">
+                    <label class="labelradio" for="idradiosaliascampo307713733">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307713734" name="namealiascampo3077" value="13734" title="Formulario prescriptores" ng-model="formData.namealiascampo3077">
+                    <label class="labelradio" for="idradiosaliascampo307713734">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3078" class="text-info tnormal">
+                    i. Refiere al farmacéutico responsable de la entrega para que suministre la información
+                  </label>
+                </div>
+                <div id="idaliascampo3078" name="namealiascampo3078" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3078" fielddiv="true">
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307813735" name="namealiascampo3078" value="13735" title="Formulario prescriptores" ng-model="formData.namealiascampo3078">
+                    <label class="labelradio" for="idradiosaliascampo307813735">
+                      Siempre
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307813736" name="namealiascampo3078" value="13736" title="Formulario prescriptores" ng-model="formData.namealiascampo3078">
+                    <label class="labelradio" for="idradiosaliascampo307813736">
+                      Ocasionalmente
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo307813737" name="namealiascampo3078" value="13737" title="Formulario prescriptores" ng-model="formData.namealiascampo3078">
+                    <label class="labelradio" for="idradiosaliascampo307813737">
+                      Nunca
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="Rfilas">
+                <div class="labelE">
+                  <label for="idaliascampo3079" class="text-info tnormal">
+                    Observaciones:
+                  </label>
+                </div>
+                <div class="control">
+                  <textarea rows="2" cols="20" id="idaliascampo3079" name="namealiascampo3079" maxlength="2500" class="dinamic Ctextarea form-control needsclick" title="Formulario prescriptores" tipo="I" aliasid="3079" ng-model="formData.namealiascampo3079">                  </textarea>
+                </div>
+              </div>
+              
+              <div class="boton">
+                
+              </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input id="ecrid" type="hidden" value="0" class="form-control needsclick">
+        <input id="encid" type="hidden" value="131" class="form-control needsclick">
+      </div>
+      <div id="tabs-ne" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+      </div>
+    </div>
+  </div>
+  <input type="submit" class="btn btn-success form-control needsclick" value="Guardar">
+</form>
