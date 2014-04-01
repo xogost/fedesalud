@@ -10,7 +10,7 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http' , function($s
   }
   else{
     $scope.sincronizar = function(){
-      jQuery("#sincronizando").html("Se esta realizando el proceso de sincronización por favor espere...");
+      jQuery("#sincronizando").html("El proceso de sincronizacón esta en ejecución por favor espere...");
       var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000);
         db.transaction($scope.queryGetSync, $scope.errorDB);
     };
@@ -60,6 +60,7 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http' , function($s
         var sqlUpdate = "UPDATE DATAENCUESTAS SET SINCRONIZADO = 1 WHERE ID = " + result.rows.item(i).ID;
         tx.executeSql(sqlUpdate ,[], function(err){ console.log(err); });         
       }
+      jQuery("#sincronizando").html("El proceso de sincronizacón finalizó correctamente");
     };
 
     $scope.errorDB = function(error){

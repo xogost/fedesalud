@@ -20,16 +20,8 @@
     clear: both;
   }
 </style>
-<form class='form-container scrollable-content' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar();">
-  <label>
-    Nombre Encuesta
-  </label>
-  <br>
-  <input type="text" name="nombreEncuesta" ng-model="formData.nombreEncuesta" class="form-control ng-pristine ng-valid needsclick" />
-  <br>
-  <input type="hidden" value='1' id="tipoEncuesta" name="tipoEncuesta" ng-model="formData.tipoEncuesta" class="form-control ng-pristine ng-valid needsclick"/>
+<form class='form-container scrollable-content' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('ultima');">
 <div class="formvertical">
-  
   <div id="tabs" class="uitabs uiwidget uiwidgetcontent uicornerall">
     <div id="tabs0" class="uitabspanel uiwidgetcontent uicornerbottom">
       <div class="acordion uiaccordion uiwidget uihelperreset uiaccordionicons" role="tablist">
