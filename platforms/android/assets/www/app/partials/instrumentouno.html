@@ -1,6 +1,6 @@
 <style>
   .form-container { text-align: center; width: 100%; padding: 3em; margin: 0 auto;}
-  .form-container label {display: block; width: 100%; text-align: center;}
+  .form-container label {display: block; width: 100%; text-align: left;}
   .radio { width: 100%; clear: both;}
   .radio input[type='radio']{
     display: inline-block;
@@ -11,7 +11,6 @@
     display: inline-block;
     width: 69%;
     float: left;
-    height: 40px;
     line-height: 40px;
     border-bottom: 1px dashed #9c9c9c;
   }
@@ -20,15 +19,7 @@
   }
 </style>
 <form class='form-container scrollable-content' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentounopgdos');">
-  <label for='nombreEncuesta'>
-    Nombre Encuesta
-  </label>
-  <br>
-  <input type="text" id='nombreEncuesta' name="nombreEncuesta" ng-model="formData.nombreEncuesta" class="form-control ng-pristine ng-valid needsclick" />
-  <br>
-  <input type="hidden" value='1' id="tipoEncuesta" name="tipoEncuesta" ng-model="formData.tipoEncuesta" class="form-control ng-pristine ng-valid needsclick"/>
 <div class="formvertical">
-  
   <div id="tabs" class="uitabs uiwidget uiwidgetcontent uicornerall">
     <div id="tabs0" class="uitabspanel uiwidgetcontent uicornerbottom">
       <div class="acordion uiaccordion uiwidget uihelperreset uiaccordionicons" role="tablist">
@@ -38,6 +29,14 @@
                 I. Datos Generales del entrevistado
               </label>
             </div>
+            <br/>
+            <label for='nombreEncuesta'>
+              0. Identificador de Encuesta:
+            </label>
+            <br>
+            <input type="text" id='nombreEncuesta' name="nombreEncuesta" ng-model="formData.nombreEncuesta" class="form-control ng-pristine ng-valid needsclick" />
+            <br>
+            <input type="hidden" value='1' id="tipoEncuesta" name="tipoEncuesta" ng-model="formData.tipoEncuesta" class="form-control ng-pristine ng-valid needsclick"/>
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2897" class="textinfo tnormal">
@@ -189,166 +188,42 @@
             
             <div class="Rfilas">
               <div class="labelE">
-                <label for="idaliascampo2899" class="textinfo tnormal">
-                  3. Dirección:
-                </label>
-              </div>
-              <div class="control">
-                <input type="text" id="idaliascampo2899" name="namealiascampo2899" class="dinamic Ctexto  form-control ng-pristine ng-valid needsclick" maxlength="255" value="" title="Formulario usuarios" tipo="I" aliasid="2899" ng-model="formData.namealiascampo2899">
-              </div>
-            </div>
-            
-            <div class="Rfilas">
-              <div class="labelE">
-                <label for="idaliascampo2900" class="textinfo tnormal">
-                  4. Residencia:
-                </label>
-              </div>
-              <div id="idaliascampo2900" name="namealiascampo2900" class="dinamic Cradios" title="Formulario Usuarios" tipo="I" aliasid="2900" fielddiv="true">
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290012896" name="namealiascampo2900" value="12896" title="Formulario Usuarios" ng-model="formData.namealiascampo2900" />
-                  <label class="labelradio" for="idradiosaliascampo290012896">
-                    Urbana
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290012897" name="namealiascampo2900" value="12897" title="Formulario Usuarios" ng-model="formData.namealiascampo2900" />
-                  <label class="labelradio" for="idradiosaliascampo290012897">
-                    Rural
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-            <div class="Rfilas">
-              <div class="labelE">
-                <label for="idaliascampo2901" class="textinfo tnormal">
-                  5. Estrato servicios públicos
-                </label>
-              </div>
-              <div id="idaliascampo2901" name="namealiascampo2901" class="dinamic Cradios" title="Formulario Usuarios" tipo="I" aliasid="2901" fielddiv="true">
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112898" name="namealiascampo2901" value="12898" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
-                  <label class="labelradio" for="idradiosaliascampo290112898">
-                    1
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112899" name="namealiascampo2901" value="12899" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
-                  <label class="labelradio" for="idradiosaliascampo290112899">
-                    2
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112900" name="namealiascampo2901" value="12900" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
-                  <label class="labelradio" for="idradiosaliascampo290112900">
-                    3
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112901" name="namealiascampo2901" value="12901" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
-                  <label class="labelradio" for="idradiosaliascampo290112901">
-                    4
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112902" name="namealiascampo2901" value="12902" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
-                  <label class="labelradio" for="idradiosaliascampo290112902">
-                    5
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112903" name="namealiascampo2901" value="12903" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
-                  <label class="labelradio" for="idradiosaliascampo290112903">
-                    6
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112904" name="namealiascampo2901" value="12904" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
-                  <label class="labelradio" for="idradiosaliascampo290112904">
-                    9 No tiene / No sabe
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-            <div class="Rfilas">
-              <div class="labelE">
-                <label for="idaliascampo2902" class="textinfo tnormal">
-                  6. Nivel SISBEN:
-                </label>
-              </div>
-              <div id="idaliascampo2902" name="namealiascampo2902" class="dinamic Cradios" title="Formulario usuarios" tipo="I" aliasid="2902" fielddiv="true">
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212905" name="namealiascampo2902" value="12905" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
-                  <label class="labelradio" for="idradiosaliascampo290212905">
-                    1
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212906" name="namealiascampo2902" value="12906" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
-                  <label class="labelradio" for="idradiosaliascampo290212906">
-                    2
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212907" name="namealiascampo2902" value="12907" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
-                  <label class="labelradio" for="idradiosaliascampo290212907">
-                    3
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212908" name="namealiascampo2902" value="12908" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
-                  <label class="labelradio" for="idradiosaliascampo290212908">
-                    4
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212909" name="namealiascampo2902" value="12909" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
-                  <label class="labelradio" for="idradiosaliascampo290212909">
-                    9 No tiene / No sabe
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-            <div class="Rfilas">
-              <div class="labelE">
                 <label for="idaliascampo2903" class="textinfo tnormal">
-                  7. Apellido:
+                  3. Nombres y Apellidos:
                 </label>
               </div>
               <div class="control">
                 <input type="text" id="idaliascampo2903" name="namealiascampo2903" class="dinamic Ctexto  form-control ng-pristine ng-valid needsclick" maxlength="255" value="" title="Formulario usuarios" tipo="I" aliasid="2903" ng-model="formData.namealiascampo2903">
               </div>
             </div>
-            
+
+            <!--
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2904" class="textinfo tnormal">
-                  8. Nombre:
+                  4. Nombre:
                 </label>
               </div>
               <div class="control">
                 <input type="text" id="idaliascampo2904" name="namealiascampo2904" class="dinamic Ctexto  form-control ng-pristine ng-valid needsclick" maxlength="255" value="" title="Formulario Usuarios" tipo="I" aliasid="2904" ng-model="formData.namealiascampo2904">
               </div>
-            </div>
+            </div>-->
             
-            <div class="Rfilas">
+            <!-- <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2905" class="textinfo tnormal">
-                  9. Documento:
+                  5. Documento:
                 </label>
               </div>
               <div class="control">
                 <input type="text" id="idaliascampo2905" name="namealiascampo2905" class="dinamic Cnumero number  form-control ng-pristine ng-valid needsclick" value="" title="Formulario usuarios" tipo="I" aliasid="2905" ng-model="formData.namealiascampo2905">
               </div>
-            </div>
+            </div> -->
             
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2906" class="textinfo tnormal">
-                  10. Teléfono:
+                  4. Teléfono:
                 </label>
               </div>
               <div class="control">
@@ -359,7 +234,7 @@
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2907" class="textinfo tnormal">
-                  11. Sexo:
+                  5. Sexo:
                 </label>
               </div>
               <div id="idaliascampo2907" name="namealiascampo2907" class="dinamic Cradios" title="Formulario Usuarios" tipo="I" aliasid="2907" fielddiv="true">
@@ -381,18 +256,23 @@
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2908" class="textinfo tnormal">
-                  12. Fecha de nacimiento:
+                  6. Fecha de nacimiento:
                 </label>
               </div>
               <div class="control">
-                <input type="text" id="idaliascampo2908" name="namealiascampo2908" class="dinamic Cfecha hasDatepicker  form-control ng-pristine ng-valid needsclick" value="" title="Formulario Usuarios" tipo="I" aliasid="2908" size="10" ng-model="formData.namealiascampo2908">
+                <p class="input-group">
+                  <input type="text" id="idaliascampo2908" name="namealiascampo2908" class="dinamic Cfecha hasDatepicker  form-control ng-pristine ng-valid needsclick" value="" title="Formulario Usuarios" tipo="I" aliasid="2908" size="10" ng-model="formData.namealiascampo2908"  datepicker-popup=""   close-text="Close" >
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </p>
               </div>
             </div>
             
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2909" class="textinfo tnormal">
-                  13. Estado civil:
+                  7. Estado civil:
                 </label>
               </div>
               <div id="idaliascampo2909" name="namealiascampo2909" class="dinamic Cradios" title="Formulario usuarios" tipo="I" aliasid="2909" fielddiv="true">
@@ -443,7 +323,7 @@
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2913" class="textinfo tnormal">
-                  14. Nivel educativo:
+                  8. Nivel educativo:
                 </label>
               </div>
               <div id="idaliascampo2913" name="namealiascampo2913" class="dinamic Cradios" title="Formulario usuarios" tipo="I" aliasid="2913" fielddiv="true">
@@ -503,11 +383,136 @@
                 </div>
               </div>
             </div>
+
+            <div class="Rfilas">
+              <div class="labelE">
+                <label for="idaliascampo2899" class="textinfo tnormal">
+                  9. Dirección:
+                </label>
+              </div>
+              <div class="control">
+                <input type="text" id="idaliascampo2899" name="namealiascampo2899" class="dinamic Ctexto  form-control ng-pristine ng-valid needsclick" maxlength="255" value="" title="Formulario usuarios" tipo="I" aliasid="2899" ng-model="formData.namealiascampo2899">
+              </div>
+            </div>
+            
+            <div class="Rfilas">
+              <div class="labelE">
+                <label for="idaliascampo2900" class="textinfo tnormal">
+                  10. Residencia:
+                </label>
+              </div>
+              <div id="idaliascampo2900" name="namealiascampo2900" class="dinamic Cradios" title="Formulario Usuarios" tipo="I" aliasid="2900" fielddiv="true">
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290012896" name="namealiascampo2900" value="12896" title="Formulario Usuarios" ng-model="formData.namealiascampo2900" />
+                  <label class="labelradio" for="idradiosaliascampo290012896">
+                    Urbana
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290012897" name="namealiascampo2900" value="12897" title="Formulario Usuarios" ng-model="formData.namealiascampo2900" />
+                  <label class="labelradio" for="idradiosaliascampo290012897">
+                    Rural
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="Rfilas">
+              <div class="labelE">
+                <label for="idaliascampo2901" class="textinfo tnormal">
+                  11. Estrato servicios públicos
+                </label>
+              </div>
+              <div id="idaliascampo2901" name="namealiascampo2901" class="dinamic Cradios" title="Formulario Usuarios" tipo="I" aliasid="2901" fielddiv="true">
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112898" name="namealiascampo2901" value="12898" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
+                  <label class="labelradio" for="idradiosaliascampo290112898">
+                    1
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112899" name="namealiascampo2901" value="12899" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
+                  <label class="labelradio" for="idradiosaliascampo290112899">
+                    2
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112900" name="namealiascampo2901" value="12900" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
+                  <label class="labelradio" for="idradiosaliascampo290112900">
+                    3
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112901" name="namealiascampo2901" value="12901" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
+                  <label class="labelradio" for="idradiosaliascampo290112901">
+                    4
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112902" name="namealiascampo2901" value="12902" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
+                  <label class="labelradio" for="idradiosaliascampo290112902">
+                    5
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112903" name="namealiascampo2901" value="12903" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
+                  <label class="labelradio" for="idradiosaliascampo290112903">
+                    6
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290112904" name="namealiascampo2901" value="12904" title="Formulario Usuarios" ng-model="formData.namealiascampo2901">
+                  <label class="labelradio" for="idradiosaliascampo290112904">
+                    9 No tiene / No sabe
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="Rfilas">
+              <div class="labelE">
+                <label for="idaliascampo2902" class="textinfo tnormal">
+                  12. Nivel SISBEN:
+                </label>
+              </div>
+              <div id="idaliascampo2902" name="namealiascampo2902" class="dinamic Cradios" title="Formulario usuarios" tipo="I" aliasid="2902" fielddiv="true">
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212905" name="namealiascampo2902" value="12905" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
+                  <label class="labelradio" for="idradiosaliascampo290212905">
+                    1
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212906" name="namealiascampo2902" value="12906" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
+                  <label class="labelradio" for="idradiosaliascampo290212906">
+                    2
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212907" name="namealiascampo2902" value="12907" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
+                  <label class="labelradio" for="idradiosaliascampo290212907">
+                    3
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212908" name="namealiascampo2902" value="12908" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
+                  <label class="labelradio" for="idradiosaliascampo290212908">
+                    4
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo290212909" name="namealiascampo2902" value="12909" title="Formulario usuarios" ng-model="formData.namealiascampo2902">
+                  <label class="labelradio" for="idradiosaliascampo290212909">
+                    9 No tiene / No sabe
+                  </label>
+                </div>
+              </div>
+            </div>
             
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2914" class="textinfo tnormal">
-                  15. ¿Desempeña actualmente un trabajo que genere ingreso?
+                  13. ¿Desempeña actualmente un trabajo que genere ingreso?
                 </label>
               </div>
               <div id="idaliascampo2914" name="namealiascampo2914" class="dinamic Cchecked" title="Formulario usuarios" tipo="I" aliasid="2914" fielddiv="true">
@@ -529,7 +534,7 @@
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2915" class="textinfo tnormal">
-                  16. Si su trabajo genera algún ingreso, ¿cuál es su ocupación?
+                  14. Si su trabajo genera algún ingreso, ¿cuál es su ocupación?
                 </label>
               </div>
               <div id="idaliascampo2915" name="namealiascampo2915" class="dinamic Cradios" title="formulario usuarios" tipo="I" aliasid="2915" fielddiv="true">
@@ -593,7 +598,7 @@
             <div class="Rfilas">
               <div class="labelE">
                 <label for="idaliascampo2916" class="textinfo tnormal">
-                  17. Si no genera ingreso por trabajo, su actividad es:
+                  15. Si no genera ingreso por trabajo, su actividad es:
                 </label>
               </div>
               <div id="idaliascampo2916" name="namealiascampo2916" class="dinamic Cradios" title="formulario usuarios" tipo="I" aliasid="2916" fielddiv="true">
@@ -643,7 +648,7 @@
                 </label>
               </div>
               <div class="control">
-                <textarea rows="2" cols="20" id="idaliascampo2917" name="namealiascampo2917" maxlength="255" class="dinamic Ctextarea  form-control ng-pristine ng-valid needsclick" title="Formulario usuarios  17. Si no genera ingreso por trabajo, se ocupa en  Datos entrevistados" tipo="I" aliasid="2917" disabled="disabled" ng-model="formData.namealiascampo2917">                </textarea>
+                <textarea rows="2" cols="20" id="idaliascampo2917" name="namealiascampo2917" maxlength="255" class="dinamic Ctextarea  form-control ng-pristine ng-valid needsclick" title="Formulario usuarios  17. Si no genera ingreso por trabajo, se ocupa en  Datos entrevistados" tipo="I" aliasid="2917" disabled="disabled" ng-model="formData.namealiascampo2917"></textarea>
               </div>
             </div>
         </div>

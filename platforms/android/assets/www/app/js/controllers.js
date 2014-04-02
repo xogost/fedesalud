@@ -45,13 +45,14 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               jQuery("[id*='idradiosaliascampo2915'],[id*='idradiosaliascampo2916']").removeAttr("disabled");
             }
             else{
-              jQuery("[id*='idradiosaliascampo2915'],[id*='idradiosaliascampo2916']").attr("disabled","true").val("").removeAttr("checked");
+              jQuery("[id*='idradiosaliascampo2915'],[id*='idradiosaliascampo2916']").attr("disabled","disabled").val("").removeAttr("checked");
             }
           });
           jQuery("#idchecksaliascampo291412925").trigger("change");
           jQuery("#idchecksaliascampo291412926").change(function () {
             if(jQuery(this).is(":checked")){
-              jQuery("[id*='idradiosaliascampo2916']").removeAttr("disabled");
+              //jQuery("[id*='idradiosaliascampo2916']").removeAttr("disabled");
+              jQuery("[id*='idradiosaliascampo2915'],[id*='idradiosaliascampo2916']").attr("disabled","disabled").val("").removeAttr("checked");
             }
             else{
               jQuery("[id*='idradiosaliascampo2916']").attr("disabled","true").val("").removeAttr("checked");
@@ -678,9 +679,9 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
         var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalid DB", 200000);
         db.transaction($scope.queryEncuestas, $scope.errorDB);
 
-        var div = document.getElementById("tablaEncuestas");
+        /*var div = document.getElementById("tablaEncuestas");
         div.innerHTML = localStorage.getItem("htmlEncuestas");
-        localStorage.removeItem("htmlEncuestas");
+        localStorage.removeItem("htmlEncuestas");*/
       };
       
       $scope.editarEncuesta = function(id){
@@ -691,15 +692,17 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
         var sql = 'select ID,NOMBRE, TIPOENCUESTA from ENCUESTAS';
         tx.executeSql(sql, [], 
           function(tx, result){
-            var html = '';
+            var html = '<thead><tr><th>IDENTIFICADOR</th><th>TIPO</th><th></th></tr></thead><tbody>';
             for(var i = 0; i < result.rows.length; i++){
               if(result.rows.item(i).TIPOENCUESTA == '1'){
-                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td><a href='#/editarInstrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
+                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Usuarios</td><td><a class='btn btn-primary btn-md' href='#/editarInstrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
               }else if(result.rows.item(i).TIPOENCUESTA == '2'){
-                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td><a href='#/editarInstrumentodos/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
+                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Prescriptores</td><td><a class='btn btn-primary btn-md' href='#/editarInstrumentodos/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
               }
             }
-            localStorage.setItem("htmlEncuestas", html);
+            html += "</tbody>";
+            //localStorage.setItem("htmlEncuestas", html);
+            jQuery("#tablaEncuestas").html(html);
           },
           function(error){
             console.log(error.code);
@@ -1167,7 +1170,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
                 else
                   objControl[itemControl].value = result.rows.item(i).VALOR;
               }
-
+ 
               if(objControl.length == 0)
               {
                 objControl = document.getElementById(result.rows.item(i).IDCAMPO);
