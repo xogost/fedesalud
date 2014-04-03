@@ -56,7 +56,7 @@
         margin-top: 5px;
     }
 </style>
-<form class='form-container scrollable-content' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentounopgdos');">
+<form class='form-container scrollable-content' name='form' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentounopgdos');">
     <div class="formvertical">
         <div id="tabs" class="uitabs uiwidget uiwidgetcontent uicornerall">
             <div id="tabs0" class="uitabspanel uiwidgetcontent uicornerbottom">
@@ -283,7 +283,8 @@
                                 </label>
                             </div>
                             <div class="control">
-                                <input type="text" id="idaliascampo2906" name="namealiascampo2906" class="dinamic Ctexto  form-control ng-pristine ng-valid needsclick" maxlength="255" value="" title="Formulario usuarios" tipo="I" aliasid="2906" ng-model="formData.namealiascampo2906">
+                                <input type="text" id="idaliascampo2906" name="namealiascampo2906" class="dinamic Ctexto  form-control ng-pristine ng-valid needsclick" maxlength="255" value="" title="Formulario usuarios" tipo="I" aliasid="2906" ng-minlength="7" ng-model="formData.namealiascampo2906">
+                                <span class="error" ng-show="form.namealiascampo2906.$error.minlength">El teléfono debe ser minimo de 7 caracteres.</span><br>
                             </div>
                         </div>
 
