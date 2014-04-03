@@ -1,50 +1,59 @@
 <style>
-  .form-container {
-    text-align: center;
-    width: 100%;
-    padding: 3em;
-    margin: 0 auto;
-  }
-  .form-container label {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .form-container input[type='text'] {
-
-  }
-  .radio { width: 100%; clear: both;}
-  .radio input[type='radio']{
-    display: inline-block;
-    width: 30%;
-    float: right;
-  }
-  .radio label{
-    display: inline-block;
-    width: 69%;
-    float: left;
-    height: 40px;
-    line-height: 40px;
-    border-bottom: 1px dashed #9c9c9c;
-  }
-  div{
-    clear: both;
-  }
-  
-  .divcapitulo{
-	border: 2px #4B7BB4 solid;
-	background-color: #DCE6F2;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
-  }
-  
-  .txtcapitulo{
-  margin-left: 10px;
-	margin-top: 5px;
-  }
-  
+      .form-container {
+        text-align: left;
+        width: 100%;
+        padding: 3em;
+        margin: 0 auto;
+    }
+    .form-container label {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .radio {
+        width: 100%;
+        clear: both;
+    }
+    .radio input[type='radio'],
+    .checked input[type='checkbox'] {
+        display: inline-block;
+        width: 30%;
+        float: right;
+        margin-top: 2em;
+    }
+    .ControlLabel {
+        width: 69%;
+        display: inline-block;
+    }
+    .control {
+        width: 100%;
+        display: inline-block;
+    }
+    .radio label,
+    .checked label {
+        display: inline-block;
+        width: 69%;
+        float: left;
+        font-weight: normal;
+        line-height: 40px;
+        border-bottom: 1px dashed #9c9c9c;
+    }
+    div {
+        clear: both;
+    }
+    .divcapitulo {
+        border: 2px #4B7BB4 solid;
+        background-color: #DCE6F2;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+    }
+    .txtcapitulo {
+        margin-left: 10px;
+        margin-top: 5px;
+    }
 </style>
 <form class="form-container scrollable-content ng-scope ng-pristine ng-valid" ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentodospgcuatro');" style="overflow: auto; -webkit-overflow-scrolling: touch;">
   <div class="form-vertical">
@@ -322,6 +331,16 @@
                       a. Consultas por internet,
                     </label>
                   </div>
+                  <div class="Rfilas">
+                  <div class="labelE">
+                    <label for="idaliascampo3053" class="text-info tnormal">
+                        sitio:
+                    </label>
+                  </div>
+                  <div class="control">
+                    <input type="text" id="idaliascampo3053" name="namealiascampo3053" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 7. En cuanto a la actualización técnico científica - a. Consultas por internet," disabled="disabled" tipo="I" aliasid="3053"  ng-model="formData.namealiascampo3053">
+                  </div>
+                  </div>
                   <div class="checked">
                     <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213648" name="namealiascampo3052[]" value="13648" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213648">
                     <label class="labelchecked" for="idchecksaliascampo305213648">
@@ -334,6 +353,18 @@
                       c. Revistas médicas especializadas,
                     </label>
                   </div>
+
+                  <div class="Rfilas">
+                    <div class="labelE">
+                      <label for="idaliascampo3054" class="text-info tnormal">
+                        ¿cuál?
+                      </label>
+                    </div>
+                    <div class="control">
+                      <input type="text" id="idaliascampo563054" name="namealiascampo563054" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 7. En cuanto a la actualización técnico científica - c. Revistas médicas especializadas" disabled="disabled" tipo="I" aliasid="3054"  ng-model="formData.namealiascampo563054">
+                    </div>
+                  </div>
+
                   <div class="checked">
                     <input class="input inputchecked form-control needsclick" type="checkbox" id="idchecksaliascampo305213650" name="namealiascampo3052[]" value="13650" title="Formulario prescriptores" ng-model="formData.idchecksaliascampo305213650">
                     <label class="labelchecked" for="idchecksaliascampo305213650">
@@ -369,23 +400,12 @@
               
               <div class="Rfilas">
                 <div class="labelE">
-                  <label for="idaliascampo3053" class="text-info tnormal">
-                    sitio:
-                  </label>
-                </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3053" name="namealiascampo3053" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 7. En cuanto a la actualización técnico científica - a. Consultas por internet," tipo="I" aliasid="3053"  ng-model="formData.namealiascampo3053">
-                </div>
-              </div>
-              
-              <div class="Rfilas">
-                <div class="labelE">
                   <label for="idaliascampo3054" class="text-info tnormal">
                     ¿cuál?
                   </label>
                 </div>
                 <div class="control">
-                  <input type="text" id="idaliascampo3054" name="namealiascampo3054" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 7. En cuanto a la actualización técnico científica - c. Revistas médicas especializadas" tipo="I" aliasid="3054"  ng-model="formData.namealiascampo3054">
+                  <input type="text" id="idaliascampo3054" name="namealiascampo3054" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores - 7. En cuanto a la actualización técnico científica - c. Revistas médicas especializadas" disabled="disabled" tipo="I" aliasid="3054"  ng-model="formData.namealiascampo3054">
                 </div>
               </div>
               

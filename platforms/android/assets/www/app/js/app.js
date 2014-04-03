@@ -43,13 +43,21 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/instrumentounopgtres', {templateUrl: 'partials/instrumentounopgtres.html', controller: 'instrumentounoController'});
   $routeProvider.when('/instrumentounopgcuatro', {templateUrl: 'partials/instrumentounopgcuatro.html', controller: 'instrumentounoController'});
 
+  $routeProvider.when('/instrumentouno/:id', {templateUrl: 'partials/instrumentouno.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/instrumentounopgdos/:id', {templateUrl: 'partials/instrumentounopgdos.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/instrumentounopgtres/:id', {templateUrl: 'partials/instrumentounopgtres.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/instrumentounopgcuatro/:id', {templateUrl: 'partials/instrumentounopgcuatro.html', controller: 'instrumentounoController'});
+
   $routeProvider.when('/instrumentodos', {templateUrl: 'partials/instrumentodos.html', controller: 'instrumentounoController'});
   $routeProvider.when('/instrumentodospgdos', {templateUrl: 'partials/instrumentodospgdos.html', controller: 'instrumentounoController'});
   $routeProvider.when('/instrumentodospgtres', {templateUrl: 'partials/instrumentodospgtres.html', controller: 'instrumentounoController'});
   $routeProvider.when('/instrumentodospgcuatro', {templateUrl: 'partials/instrumentodospgcuatro.html', controller: 'instrumentounoController'});
 
-  $routeProvider.when('/editarInstrumentouno/:id', {templateUrl: 'partials/editInstrumentoUno.html', controller: 'editarEncuestaController'});
-  $routeProvider.when('/editarInstrumentodos/:id', {templateUrl: 'partials/editInstrumentoDos.html', controller: 'editarEncuestaController'});
+  $routeProvider.when('/instrumentodos/:id', {templateUrl: 'partials/instrumentodos.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/instrumentodospgdos/:id', {templateUrl: 'partials/instrumentodospgdos.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/instrumentodospgtres/:id', {templateUrl: 'partials/instrumentodospgtres.html', controller: 'instrumentounoController'});
+  $routeProvider.when('/instrumentodospgcuatro/:id', {templateUrl: 'partials/instrumentodospgcuatro.html', controller: 'instrumentounoController'});
+
   $routeProvider.when('/listencuestas', {templateUrl: 'partials/listEncuestas.html', controller: 'listadoInstrumentosController'});
   $routeProvider.when('/sincronizar', {templateUrl: 'partials/sincronizar.html', controller: 'sincronizarController'});
   
