@@ -2,16 +2,28 @@
   .form-container { text-align: left; width: 100%; padding: 3em; margin: 0 auto;}
   .form-container label {display: block; width: 100%; text-align: left; margin-top: 2em; margin-bottom: 2em;}
   .radio { width: 100%; clear: both;}
-  .radio input[type='radio'], .control input[type='text'], .checked input[type='checkbox']{
+  .radio input[type='radio'], .checked input[type='checkbox']{
     display: inline-block;
     width: 30%;
     float: right;
     margin-top: 2em;
   }
-  .radio label, .control label, .checked label{
+
+  .ControlLabel{
+    width: 69%;
+    display: inline-block;
+  }
+
+  .control {
+    width: 30%;
+    display: inline-block;
+  }
+
+  .radio label, .checked label{
     display: inline-block;
     width: 69%;
     float: left;
+    font-weight: normal;
     line-height: 40px;
     border-bottom: 1px dashed #9c9c9c;
   }
@@ -21,11 +33,11 @@
   }
   
   .divcapitulo{
-	border: 2px #4B7BB4 solid;
-	background-color: #DCE6F2;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
+  	border: 2px #4B7BB4 solid;
+  	background-color: #DCE6F2;
+  	-webkit-border-radius: 7px;
+  	-moz-border-radius: 7px;
+  	border-radius: 7px;
   }
   
   .txtcapitulo{
@@ -72,8 +84,8 @@
               </label>
             </div>
             <div class="Rfilas">
-              <div class="labelE">
-                <label for="idaliascampo3080" class="textinfo tnormal">
+              <div class="ControlLabel">
+                <label for="idaliascampo3080" style='font-weight: normal;' class="textinfo tnormal">
                   a. Tiempo de tratamiento agudas o nuevas (Meses):
                 </label>
               </div>
@@ -83,8 +95,8 @@
             </div>
             
             <div class="Rfilas">
-              <div class="labelE">
-                <label for="idaliascampo3081" class="textinfo tnormal">
+              <div class="ControlLabel">
+                <label for="idaliascampo3081" style='font-weight: normal;' class="textinfo tnormal">
                   b. Tiempo de tratamiento crónicas (Años):
                 </label>
               </div>
