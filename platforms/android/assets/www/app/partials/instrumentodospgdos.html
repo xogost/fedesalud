@@ -1,151 +1,212 @@
 <style>
-  .form-container {
-    text-align: center;
-    width: 100%;
-    padding: 3em;
-    margin: 0 auto;
-  }
-  .form-container label {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .form-container input[type='text'] {
-
-  }
-  .radio { width: 100%; clear: both;}
-  .radio input[type='radio']{
-    display: inline-block;
-    width: 30%;
-    float: right;
-  }
-  .radio label{
-    display: inline-block;
-    width: 69%;
-    float: left;
-    height: 40px;
-    line-height: 40px;
-    border-bottom: 1px dashed #9c9c9c;
-  }
-  div{
-    clear: both;
-  }
+    .form-container
+    {
+        text-align: center;
+        width: 100%;
+        padding: 3em;
+        margin: 0 auto;
+    }
+    .form-container label
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .form-container input[type='text']
+    {
+    }
+    .radio
+    {
+        width: 100%;
+        clear: both;
+    }
+    .radio input[type='radio']
+    {
+        display: inline-block;
+        width: 30%;
+        float: right;
+    }
+    .radio label
+    {
+        display: inline-block;
+        width: 69%;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px dashed #9c9c9c;
+    }
+    div
+    {
+        clear: both;
+    }
 </style>
-<form class="form-container scrollable-content ng-scope ng-pristine ng-valid" ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentodospgtres');" style="overflow: auto; -webkit-overflow-scrolling: touch;">
-  <div class="form-vertical">
+<form class="form-container scrollable-content ng-scope ng-pristine ng-valid" ng-controller="instrumentounoController"
+ng-init="load();" ng-submit="guardar('instrumentodospgtres');" style="overflow: auto;
+-webkit-overflow-scrolling: touch;">
+<div class="form-vertical">
     <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
-      <div id="tabs-0" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
-        <div class="acordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
-          <div id="aco-0-93" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3037" class="text-info tnormal">
-                    5. Año de Grado como Médico:
-                  </label>
+        <div id="tabs-0" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+            <div class="acordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
+                <div id="aco-0-93" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
+                    role="tabpanel">
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <label for="idaliascampo3037" class="text-info tnormal">
+                                5. Año de Grado como Médico:
+                            </label>
+                        </div>
+                        <div class="control">
+                            <input type="text" id="idaliascampo3037" name="namealiascampo3037" class="dinamic Cnumero number form-control needsclick"
+                                value="" title="Formulario prescriptores" tipo="I" aliasid="3037" ng-model="formData.namealiascampo3037">
+                        </div>
+                    </div>
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <label for="idaliascampo3038" class="text-info tnormal">
+                                6. Año de Grado como Especialista:
+                            </label>
+                        </div>
+                        <div class="control">
+                            <input type="text" id="idaliascampo3038" name="namealiascampo3038" class="dinamic Cnumero number form-control needsclick"
+                                value="" title="Formulario prescriptores" tipo="I" aliasid="3038" ng-model="formData.namealiascampo3038">
+                        </div>
+                    </div>
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <label for="idaliascampo3040" class="text-info tnormal">
+                                7. Nombre de la IPS o ESE:
+                            </label>
+                        </div>
+                        <div class="control">
+                            <input type="text" id="idaliascampo3040" name="namealiascampo3040" class="dinamic Ctexto form-control needsclick"
+                                maxlength="255" value="" title="Formulario prescriptores" tipo="I" aliasid="3040"
+                                ng-model="formData.namealiascampo3040">
+                        </div>
+                    </div>
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <label for="idaliascampo3041" class="text-info tnormal">
+                                8. Consultorio particular:
+                            </label>
+                        </div>
+                        <div id="idaliascampo3041" name="namealiascampo3041" class="dinamic Cradios" title="Formulario prescriptores"
+                            tipo="I" aliasid="3041" fielddiv="true">
+                            <div class="radio">
+                                <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304113613"
+                                    name="namealiascampo3041" value="13613" title="Formulario prescriptores" ng-model="formData.namealiascampo3041">
+                                <label class="labelradio" for="idradiosaliascampo304113613">
+                                    Si
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304113614"
+                                    name="namealiascampo3041" value="13614" title="Formulario prescriptores" ng-model="formData.namealiascampo3041">
+                                <label class="labelradio" for="idradiosaliascampo304113614">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="labeladd">
+                        <label for="labeladicional6259" class="text-success tbold">
+                            9. Tipos de usuarios que atiende, escribir porcentaje aproximado mensual según régimen:
+                        </label>
+                    </div>
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <table style="width: 90%">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 50%;text-align: left;">
+                                            <label for="idaliascampo3042" class="text-info tnormal" style="text-align: left;">
+                                                a. Medicina Pre-pagada
+                                            </label>
+                                        </td>
+                                        <td style="width: 50%">
+                                            <div class="control">
+                                                <input type="text" id="idaliascampo3042" name="namealiascampo3042" class="dinamic Cnumero number form-control needsclick"
+                                                    value="" title="Formularioprescriptores" tipo="I" aliasid="3042" style="width: 48px;"
+                                                    ng-model="formData.namealiascampo3042">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <table style="width: 90%">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 50%">
+                                            <label for="idaliascampo3043" class="text-info tnormal" style="text-align: left;">
+                                                b. Régimen contributivo
+                                            </label>
+                                        </td>
+                                        <td style="width: 50%">
+                                            <div class="control">
+                                                <input type="text" id="idaliascampo3043" name="namealiascampo3043" class="dinamic Cnumero number form-control needsclick"
+                                                    value="" title="Formulario prescriptores" tipo="I" aliasid="3043" style="width: 48px;"
+                                                    ng-model="formData.namealiascampo3043">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <table style="width: 90%">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 50%">
+                                            <label for="idaliascampo3044" class="text-info tnormal" style="text-align: left;">
+                                                c. Régimen subsidiado
+                                            </label>
+                                        </td>
+                                        <td style="width: 50%">
+                                            <div class="control">
+                                                <input type="text" id="idaliascampo3044" name="namealiascampo3044" class="dinamic Cnumero number form-control needsclick"
+                                                    value="" title="Formulario prescriptores" tipo="I" aliasid="3044" style="width: 48px;"
+                                                    ng-model="formData.namealiascampo3044">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="Rfilas">
+                        <div class="labelE">
+                            <table style="width: 90%">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 50%">
+                                            <label for="idaliascampo3045" class="text-info tnormal" style="text-align: left;">
+                                                d. Vinculados
+                                            </label>
+                                        </td>
+                                        <td style="width: 50%">
+                                            <div class="control">
+                                                <input type="text" id="idaliascampo3045" name="namealiascampo3045" class="dinamic Cnumero number form-control needsclick"
+                                                    value="" title="Formulario prescriptores" tipo="I" aliasid="3045" style="width: 48px;"
+                                                    ng-model="formData.namealiascampo3045">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3037" name="namealiascampo3037" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3037" ng-model="formData.namealiascampo3037">
-                </div>
-              </div>
-              
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3038" class="text-info tnormal">
-                    6. Año de Grado como Especialista:
-                  </label>
-                </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3038" name="namealiascampo3038" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3038" ng-model="formData.namealiascampo3038">
-                </div>
-              </div>
-              
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3040" class="text-info tnormal">
-                    7. Nombre de la IPS o ESE:
-                  </label>
-                </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3040" name="namealiascampo3040" class="dinamic Ctexto form-control needsclick" maxlength="255" value="" title="Formulario prescriptores" tipo="I" aliasid="3040" ng-model="formData.namealiascampo3040">
-                </div>
-              </div>
-              
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3041" class="text-info tnormal">
-                    8. Consultorio particular:
-                  </label>
-                </div>
-                <div id="idaliascampo3041" name="namealiascampo3041" class="dinamic Cradios" title="Formulario prescriptores" tipo="I" aliasid="3041" fielddiv="true">
-                  <div class="radio">
-                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304113613" name="namealiascampo3041" value="13613" title="Formulario prescriptores" ng-model="formData.namealiascampo3041">
-                    <label class="labelradio" for="idradiosaliascampo304113613">
-                      Si
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <input type="radio" class="inputradio form-control needsclick" id="idradiosaliascampo304113614" name="namealiascampo3041" value="13614" title="Formulario prescriptores" ng-model="formData.namealiascampo3041">
-                    <label class="labelradio" for="idradiosaliascampo304113614">
-                      No
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="labeladd">
-                <label for="labeladicional6259" class="text-success tbold">
-                  9. Tipos de usuarios que atiende, escribir porcentaje aproximado mensual según régimen:
-                </label>
-              </div>
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3042" class="text-info tnormal">
-                    a. Medicina Pre-pagada
-                  </label>
-                </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3042" name="namealiascampo3042" class="dinamic Cnumero number form-control needsclick" value="" title="Formularioprescriptores" tipo="I" aliasid="3042" style="width: 48px;" ng-model="formData.namealiascampo3042">
-                </div>
-              </div>
-              
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3043" class="text-info tnormal">
-                    b. Régimen contributivo
-                  </label>
-                </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3043" name="namealiascampo3043" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3043" style="width: 48px;" ng-model="formData.namealiascampo3043">
-                </div>
-              </div>
-              
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3044" class="text-info tnormal">
-                    c. Régimen subsidiado
-                  </label>
-                </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3044" name="namealiascampo3044" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3044" style="width: 48px;" ng-model="formData.namealiascampo3044">
-                </div>
-              </div>
-              
-              <div class="Rfilas">
-                <div class="labelE">
-                  <label for="idaliascampo3045" class="text-info tnormal">
-                    d. Vinculados
-                  </label>
-                </div>
-                <div class="control">
-                  <input type="text" id="idaliascampo3045" name="namealiascampo3045" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3045" style="width: 48px;" ng-model="formData.namealiascampo3045">
-                </div>
-              </div>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <br/>
-  <br/>
-  <input type="submit" class="btn btn-success" value="Continuar" />
+</div>
+<br />
+<br />
+<input type="submit" class="btn btn-success" value="Continuar" />
 </form>
