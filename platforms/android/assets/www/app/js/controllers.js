@@ -21,6 +21,16 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             jQuery(this).css("width", "100%");
             jQuery(this).css("clear", "both");
           });
+          
+          jQuery("#idaliascampo3084").change(function(){
+             if(jQuery("#idradiosaliascampo308313740").is(":checked") && parseInt(jQuery(this).val()) > 4 && parseInt(jQuery(this).val()) > 0){
+                jQuery(this).val("");
+                alert("El valor no puede ser mayor a 4 para la opcion seleccionada.");
+             }else if(jQuery("#idradiosaliascampo308313741").is(":checked") && parseInt(jQuery(this).val()) > 12 && parseInt(jQuery(this).val()) > 0){
+                jQuery(this).val("");
+                alert("El valor no puede ser mayor a 12 para la opcion seleccionada.");
+             }
+          });
 
           jQuery("[id*='idradiosaliascampo2909']").change(function () {
             if(jQuery("#idradiosaliascampo290912916").is(":checked")){
@@ -430,7 +440,9 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               jQuery("#idaliascampo3097").attr("disabled","true").val("").removeAttr("checked");
             }
           });
+
           jQuery("[id*='idradiosaliascampo3096']").trigger("change");
+
         });
 
         function flujoavance(maxresp, respuniq, grupo){
