@@ -7,11 +7,18 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
   //=================================================================
   //=============        InstrumentoUno Controller   ================
   //=================================================================
-  ModuleMyApp.controller('instrumentounoController', ['$scope', function($scope) {
+  ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', function($scope, $routeParams) {
   	
+    $scope.idEncuesta = $routeParams.id;
+
     $scope.formData = {};
 
     $scope.load = function(){
+
+        if($scope.idEncuesta != undefined && $scope.idEncuesta != null){
+          $scope.cargarEncuesta();
+        }
+
         jQuery(document).ready(function(){
           $scope.formData = {
             tipoEncuesta: jQuery("#tipoEncuesta").val()
@@ -22,6 +29,33 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             jQuery(this).css("clear", "both");
           });
           
+          jQuery("#idchecksaliascampo305213647").change(function(){
+            if(jQuery(this).is(":checked")){
+               jQuery("#idaliascampo3053").removeAttr("disabled");
+            }else{
+               jQuery("#idaliascampo3053").attr("disabled", "disabled");
+               jQuery("#idaliascampo3053").val("");
+            }
+          });
+
+          jQuery("#idchecksaliascampo305213654").change(function(){
+            if(jQuery(this).is(":checked")){
+               jQuery("#idaliascampo3054").removeAttr("disabled");
+            }else{
+               jQuery("#idaliascampo3054").attr("disabled", "disabled");
+               jQuery("#idaliascampo3054").val("");
+            }
+          });
+
+          jQuery("#idchecksaliascampo305213649").change(function(){
+            if(jQuery(this).is(":checked")){
+               jQuery("#idaliascampo563054").removeAttr("disabled");
+            }else{
+               jQuery("#idaliascampo563054").attr("disabled", "disabled");
+               jQuery("#idaliascampo563054").val("");
+            }
+          });
+
           jQuery("#idaliascampo3084").change(function(){
              if(jQuery("#idradiosaliascampo308313740").is(":checked") && parseInt(jQuery(this).val()) > 4 && parseInt(jQuery(this).val()) > 0){
                 jQuery(this).val("");
@@ -497,6 +531,8 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             jQuery(this);
           });
         });
+    
+        
     };
 
     $scope.guardar = function(urlPagina){
@@ -508,6 +544,35 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       }
     };
 
+    $scope.cargarEncuesta = function(){
+      var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000); 
+      var sql = "SELECT * FROM DATAENCUESTAS WHERE IDENCUESTA = " + $scope.idEncuesta;
+
+      db.transaction(function(tx){
+          tx.executeSql(sql, [],function(tx, result){
+            for(var i = 0; i < result.rows.length; i++){
+              var objControl = document.getElementsByName(result.rows.item(i).IDCAMPO);
+              for(var itemControl in objControl){
+                if(objControl[itemControl].type == 'radio'){
+                  if(objControl[itemControl].value == result.rows.item(i).VALOR)
+                    objControl[itemControl].checked = true;
+                }
+                else
+                  objControl[itemControl].value = result.rows.item(i).VALOR;
+              }
+ 
+              if(objControl.length == 0)
+              {
+                objControl = document.getElementById(result.rows.item(i).IDCAMPO);
+                if(objControl.type == 'checkbox'){
+                    objControl.checked = result.rows.item(i).VALOR;
+                }
+              }
+            }
+          },$scope.errorDB); 
+      }, $scope.errorDB);
+    };
+
     //En caso de error
     $scope.querySaveEncuesta = function(tx) {
       var arrayData =  $scope.formData;
@@ -515,29 +580,36 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       var usercookie = window.localStorage.getItem("user");
       var nombreEncuesta = arrayData["nombreEncuesta"];
       var tipoEncuesta = arrayData["tipoEncuesta"];
+      if($scope.idEncuesta == undefined){
+        if(window.localStorage.getItem("idEncuesta") == undefined){
+          var sql = "INSERT INTO ENCUESTAS (NOMBRE, TIPOENCUESTA, SINCRONIZADO, USUARIO) VALUES ('" + nombreEncuesta + "','" + tipoEncuesta + "',0, '" + usercookie + "')";
+          tx.executeSql(sql, [], function(error){ console.log(error); });
 
-      if(window.localStorage.getItem("idEncuesta") == undefined){
-        var sql = "INSERT INTO ENCUESTAS (NOMBRE, TIPOENCUESTA, SINCRONIZADO, USUARIO) VALUES ('" + nombreEncuesta + "','" + tipoEncuesta + "',0, '" + usercookie + "')";
-        tx.executeSql(sql, [], function(error){ console.log(error); });
+          tx.executeSql("SELECT MAX(ID) as ID FROM ENCUESTAS",[], 
+          function(tx, result) { 
+              for(var item in arrayData){
+                var sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + result.rows.item(0).ID + ",'" + item + "','" + arrayData[item] + "', 0, '" + usercookie + "')";
+                tx.executeSql(sql);
+              }
+            }, 
+            function(err){ 
+              console.log("Error: " + err); alert(err.code); 
+            }
+          );
 
-        tx.executeSql("SELECT MAX(ID) as ID FROM ENCUESTAS",[], 
-        function(tx, result) { 
-            for(var item in arrayData){
-              var sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + result.rows.item(0).ID + ",'" + item + "','" + arrayData[item] + "', 0, '" + usercookie + "')";
+        }else{
+          for(var item in arrayData){
+              if(item != "nombreEncuesta" && item != "tipoEncuesta")
+              var sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + localStorage.getItem("idEncuesta") + ",'" + item + "','" + arrayData[item] + "', 0, '" + usercookie + "')";
               tx.executeSql(sql);
             }
-          }, 
-          function(err){ 
-            console.log("Error: " + err); alert(err.code); 
-          }
-        );
-
-      }else{
+        }
+      }else if($scope.idEncuesta != undefined && $scope.idEncuesta != null){
         for(var item in arrayData){
-            if(item != "nombreEncuesta" && item != "tipoEncuesta")
-            var sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + localStorage.getItem("idEncuesta") + ",'" + item + "','" + arrayData[item] + "', 0, '" + usercookie + "')";
-            tx.executeSql(sql);
-          }
+          var sql = "UPDATE DATAENCUESTAS SET SINCRONIZADO = 0, VALOR = '" + arrayData[item] + "' WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + item + "'";
+          console.log(sql);
+          tx.executeSql(sql);
+        }
       }
 
       if($scope.pagina == "ultima"){
@@ -707,9 +779,9 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             var html = '<thead><tr><th>IDENTIFICADOR</th><th>TIPO</th><th></th></tr></thead><tbody>';
             for(var i = 0; i < result.rows.length; i++){
               if(result.rows.item(i).TIPOENCUESTA == '1'){
-                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Usuarios</td><td><a class='btn btn-primary btn-md' href='#/editarInstrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
+                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Usuarios</td><td><a class='btn btn-primary btn-md' href='#/instrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
               }else if(result.rows.item(i).TIPOENCUESTA == '2'){
-                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Prescriptores</td><td><a class='btn btn-primary btn-md' href='#/editarInstrumentodos/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
+                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Prescriptores</td><td><a class='btn btn-primary btn-md' href='#/instrumentodos/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
               }
             }
             html += "</tbody>";
@@ -1200,9 +1272,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       var arrayData =  $scope.formData;
       console.log(arrayData);
       var usercookie = window.localStorage.getItem("user");
-      var nombreEncuesta = arrayData["nombreEncuesta"];
-      var sql = "UPDATE ENCUESTAS SET SINCRONIZADO = 0, NOMBRE = '" + nombreEncuesta + "' WHERE ID = " + $scope.idEncuesta;
-      //tx.executeSql(sql, [], function(error){ console.log(error); });
+
       for(var item in arrayData){
         var sql = "UPDATE DATAENCUESTAS SET SINCRONIZADO = 0, VALOR = '" + arrayData[item] + "' WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + item + "'";
         console.log(sql);

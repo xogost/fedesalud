@@ -1,11 +1,60 @@
 <style>
-    .form-container
-    {
-        text-align: center;
+    .form-container {
+        text-align: left;
         width: 100%;
         padding: 3em;
         margin: 0 auto;
     }
+    .form-container label {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .radio {
+        width: 100%;
+        clear: both;
+    }
+    .radio input[type='radio'],
+    .checked input[type='checkbox'] {
+        display: inline-block;
+        width: 30%;
+        float: right;
+        margin-top: 2em;
+    }
+    .ControlLabel {
+        width: 69%;
+        display: inline-block;
+    }
+    .control {
+        width: 100%;
+        display: inline-block;
+    }
+    .radio label,
+    .checked label {
+        display: inline-block;
+        width: 69%;
+        float: left;
+        font-weight: normal;
+        line-height: 40px;
+        border-bottom: 1px dashed #9c9c9c;
+    }
+    div {
+        clear: both;
+    }
+    .divcapitulo {
+        border: 2px #4B7BB4 solid;
+        background-color: #DCE6F2;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+    }
+    .txtcapitulo {
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+=======
     .form-container label
     {
         display: block;
@@ -46,32 +95,195 @@ ng-init="load();" ng-submit="guardar('instrumentodospgtres');" style="overflow: 
 -webkit-overflow-scrolling: touch;">
 <div class="form-vertical">
     <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
-        <div id="tabs-0" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
-            <div class="acordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
-                <div id="aco-0-93" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
-                    role="tabpanel">
-                    <div class="Rfilas">
+      <div id="tabs-0" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+        <div class="acordion ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
+          <div id="aco-0-93" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
+              <div class="Rfilas">
                         <div class="labelE">
-                            <label for="idaliascampo3037" class="text-info tnormal">
-                                5. Año de Grado como Médico:
-                            </label>
+                          <label for="idaliascampo3037" class="text-info tnormal">
+                            5. Año de Grado como Médico:
+                          </label>
                         </div>
                         <div class="control">
-                            <input type="text" id="idaliascampo3037" name="namealiascampo3037" class="dinamic Cnumero number form-control needsclick"
-                                value="" title="Formulario prescriptores" tipo="I" aliasid="3037" ng-model="formData.namealiascampo3037">
+                          <select  id="idaliascampo3037" name="namealiascampo3037" class="dinamic Cnumero number form-control" value="" title="Formulario prescriptores" tipo="I" aliasid="3037" ng-model="formData.namealiascampo3037">
+                            <option>SELECCIONE...</option>
+                            <option>2014</option>
+                            <option>2013</option>
+                            <option>2012</option>
+                            <option>2011</option>
+                            <option>2010</option>
+                            <option>2009</option>
+                            <option>2008</option>
+                            <option>2007</option>
+                            <option>2006</option>
+                            <option>2005</option>
+                            <option>2004</option>
+                            <option>2003</option>
+                            <option>2002</option>
+                            <option>2001</option>
+                            <option>2000</option>
+                            <option>1999</option>
+                            <option>1998</option>
+                            <option>1997</option>
+                            <option>1996</option>
+                            <option>1995</option>
+                            <option>1994</option>
+                            <option>1993</option>
+                            <option>1992</option>
+                            <option>1991</option>
+                            <option>1990</option>
+                            <option>1989</option>
+                            <option>1988</option>
+                            <option>1987</option>
+                            <option>1986</option>
+                            <option>1985</option>
+                            <option>1984</option>
+                            <option>1983</option>
+                            <option>1982</option>
+                            <option>1981</option>
+                            <option>1980</option>
+                            <option>1979</option>
+                            <option>1978</option>
+                            <option>1977</option>
+                            <option>1976</option>
+                            <option>1975</option>
+                            <option>1974</option>
+                            <option>1973</option>
+                            <option>1972</option>
+                            <option>1971</option>
+                            <option>1970</option>
+                            <option>1969</option>
+                            <option>1968</option>
+                            <option>1967</option>
+                            <option>1966</option>
+                            <option>1965</option>
+                            <option>1964</option>
+                            <option>1963</option>
+                            <option>1962</option>
+                            <option>1961</option>
+                            <option>1960</option>
+                            <option>1959</option>
+                            <option>1958</option>
+                            <option>1957</option>
+                            <option>1956</option>
+                            <option>1955</option>
+                            <option>1954</option>
+                            <option>1953</option>
+                            <option>1952</option>
+                            <option>1951</option>
+                            <option>1950</option>
+                            <option>1949</option>
+                            <option>1948</option>
+                            <option>1947</option>
+                            <option>1946</option>
+                            <option>1945</option>
+                            <option>1944</option>
+                            <option>1943</option>
+                            <option>1942</option>
+                            <option>1941</option>
+                            <option>1940</option>
+                            <option>1939</option>
+                            <option>1938</option>
+                            <option>1937</option>
+                            <option>1936</option>
+                            <option>1935</option>
+                            <option>1934</option>
+                          </select>
                         </div>
-                    </div>
-                    <div class="Rfilas">
+                      </div>
+                      
+                      <div class="Rfilas">
                         <div class="labelE">
-                            <label for="idaliascampo3038" class="text-info tnormal">
-                                6. Año de Grado como Especialista:
-                            </label>
+                          <label for="idaliascampo3038" class="text-info tnormal">
+                            6. Año de Grado como Especialista:
+                          </label>
                         </div>
                         <div class="control">
-                            <input type="text" id="idaliascampo3038" name="namealiascampo3038" class="dinamic Cnumero number form-control needsclick"
-                                value="" title="Formulario prescriptores" tipo="I" aliasid="3038" ng-model="formData.namealiascampo3038">
+                          <select type="text" id="idaliascampo3038" name="namealiascampo3038" class="dinamic Cnumero number form-control needsclick" value="" title="Formulario prescriptores" tipo="I" aliasid="3038" ng-model="formData.namealiascampo3038">
+                            <option>2014</option>
+                            <option>2013</option>
+                            <option>2012</option>
+                            <option>2011</option>
+                            <option>2010</option>
+                            <option>2009</option>
+                            <option>2008</option>
+                            <option>2007</option>
+                            <option>2006</option>
+                            <option>2005</option>
+                            <option>2004</option>
+                            <option>2003</option>
+                            <option>2002</option>
+                            <option>2001</option>
+                            <option>2000</option>
+                            <option>1999</option>
+                            <option>1998</option>
+                            <option>1997</option>
+                            <option>1996</option>
+                            <option>1995</option>
+                            <option>1994</option>
+                            <option>1993</option>
+                            <option>1992</option>
+                            <option>1991</option>
+                            <option>1990</option>
+                            <option>1989</option>
+                            <option>1988</option>
+                            <option>1987</option>
+                            <option>1986</option>
+                            <option>1985</option>
+                            <option>1984</option>
+                            <option>1983</option>
+                            <option>1982</option>
+                            <option>1981</option>
+                            <option>1980</option>
+                            <option>1979</option>
+                            <option>1978</option>
+                            <option>1977</option>
+                            <option>1976</option>
+                            <option>1975</option>
+                            <option>1974</option>
+                            <option>1973</option>
+                            <option>1972</option>
+                            <option>1971</option>
+                            <option>1970</option>
+                            <option>1969</option>
+                            <option>1968</option>
+                            <option>1967</option>
+                            <option>1966</option>
+                            <option>1965</option>
+                            <option>1964</option>
+                            <option>1963</option>
+                            <option>1962</option>
+                            <option>1961</option>
+                            <option>1960</option>
+                            <option>1959</option>
+                            <option>1958</option>
+                            <option>1957</option>
+                            <option>1956</option>
+                            <option>1955</option>
+                            <option>1954</option>
+                            <option>1953</option>
+                            <option>1952</option>
+                            <option>1951</option>
+                            <option>1950</option>
+                            <option>1949</option>
+                            <option>1948</option>
+                            <option>1947</option>
+                            <option>1946</option>
+                            <option>1945</option>
+                            <option>1944</option>
+                            <option>1943</option>
+                            <option>1942</option>
+                            <option>1941</option>
+                            <option>1940</option>
+                            <option>1939</option>
+                            <option>1938</option>
+                            <option>1937</option>
+                            <option>1936</option>
+                            <option>1935</option>
+                            <option>1934</option>
+                          </select>
                         </div>
-                    </div>
+                      </div>
                     <div class="Rfilas">
                         <div class="labelE">
                             <label for="idaliascampo3040" class="text-info tnormal">
