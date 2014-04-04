@@ -19,6 +19,9 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             tipoEncuesta: jQuery("#tipoEncuesta").val()
           };
           
+          jQuery("input[type='radio']").css("width", "3em;");          
+          jQuery("input[type='radio']").css("height", "3em;");          
+
           jQuery(".btn").each(function(){
             jQuery(this).css("width", "100%");
             jQuery(this).css("clear", "both");
@@ -585,9 +588,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       var usercookie = window.localStorage.getItem("user");
       var nombreEncuesta = arrayData["nombreEncuesta"];
       var tipoEncuesta = arrayData["tipoEncuesta"];
-
-      alert(window.localStorage.getItem("idEncuesta"));
-
+      alert($scope.idEncuesta);
       if($scope.idEncuesta == undefined){
         if(window.localStorage.getItem("idEncuesta") == null){
           var sql = "INSERT INTO ENCUESTAS (NOMBRE, TIPOENCUESTA, SINCRONIZADO, USUARIO) VALUES ('" + nombreEncuesta + "','" + tipoEncuesta + "',0, '" + usercookie + "')";

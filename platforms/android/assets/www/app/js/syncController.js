@@ -18,6 +18,9 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http' , function($s
     $scope.queryGetSync = function(tx){
       var sql = 'SELECT * FROM ENCUESTAS WHERE SINCRONIZADO = 0';
       tx.executeSql(sql, [], $scope.pushResultServer, $scope.errorDB);
+
+      var sql = 'SELECT * FROM DATAENCUESTAS WHERE SINCRONIZADO = 0';
+      tx.executeSql(sql, [], $scope.pushResultDataEncuestasServer, $scope.errorDB);
     };
 
     $scope.pushResultServer = function(tx, result){
@@ -37,11 +40,6 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http' , function($s
 
         var sqlUpdate = "UPDATE ENCUESTAS SET SINCRONIZADO = 1 WHERE ID = " + result.rows.item(i).ID;
         tx.executeSql(sqlUpdate ,[], function(err){ console.log(err); });         
-
-        var sql = 'SELECT * FROM DATAENCUESTAS WHERE SINCRONIZADO = 0';
-        tx.executeSql(sql, [], $scope.pushResultDataEncuestasServer, $scope.errorDB);
-
-
       };
     };
 
