@@ -19,6 +19,9 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             tipoEncuesta: jQuery("#tipoEncuesta").val()
           };
           
+          jQuery("input[type='radio']").css("width", "3em;");          
+          jQuery("input[type='radio']").css("height", "3em;");          
+
           jQuery(".btn").each(function(){
             jQuery(this).css("width", "100%");
             jQuery(this).css("clear", "both");
@@ -565,7 +568,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               if(objControl.length == 0)
               {
                 objControl = document.getElementById(result.rows.item(i).IDCAMPO);
-                console.log(objControl);
+                //console.log(objControl);
                 if(objControl != null){
                   if(objControl.type == 'checkbox'){
                       objControl.checked = result.rows.item(i).VALOR;
@@ -586,12 +589,10 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       var nombreEncuesta = arrayData["nombreEncuesta"];
       var tipoEncuesta = arrayData["tipoEncuesta"];
 
-      alert(window.localStorage.getItem("idEncuesta"));
-
       if($scope.idEncuesta == undefined){
         if(window.localStorage.getItem("idEncuesta") == null){
           var sql = "INSERT INTO ENCUESTAS (NOMBRE, TIPOENCUESTA, SINCRONIZADO, USUARIO) VALUES ('" + nombreEncuesta + "','" + tipoEncuesta + "',0, '" + usercookie + "')";
-          tx.executeSql(sql, [], function(error){ console.log(error); });
+          tx.executeSql(sql, [], function(error){ //console.log(error); });
 
           tx.executeSql("SELECT MAX(ID) as ID FROM ENCUESTAS",[], 
           function(tx, result) {
@@ -602,7 +603,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               }
             }, 
             function(err){ 
-              console.log("Error: " + err); alert(err.code); 
+              //console.log("Error: " + err); alert(err.code); 
             }
           );
 
@@ -614,13 +615,23 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               }
             }
         }
-      }else if($scope.idEncuesta != undefined && $scope.idEncuesta != null){
-        for(var item in arrayData){
-          if(item != "nombreEncuesta" && item != "tipoEncuesta"){
-            var sql = "UPDATE DATAENCUESTAS SET SINCRONIZADO = 0, VALOR = '" + arrayData[item] + "' WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + item + "'";
-            console.log(sql);
-            tx.executeSql(sql);
-          }
+      }else if($scope.idEncuesta != undefined){
+        //console.log(arrayData);
+        //console.log(Object.keys(arrayData).length);
+        for(var i=0; i<Object.keys(arrayData).length; i++){
+          tx.executeSql("SELECT COUNT(1) as Cantidad FROM DATAENCUESTAS WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + i + "'",[], function(tx, result){
+            if(i != "nombreEncuesta" && i != "tipoEncuesta"){
+              if(result.rows.item(0).Cantidad > 0){
+                var sql = "UPDATE DATAENCUESTAS SET SINCRONIZADO = 0, VALOR = '" + arrayData[i] + "' WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + i + "'";
+                //console.log(sql);
+                tx.executeSql(sql);
+              }else{
+                var sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + $scope.idEncuesta + ",'" + i + "','" + arrayData[i] + "', 0, '" + usercookie + "')";
+                //console.log(sql);
+                tx.executeSql(sql);
+              }
+            }
+          }, $scope.errorDB);
         }
       }
 
@@ -641,7 +652,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
     //En caso de error
     $scope.errorDB = function(error) {
       alert("Error BD: " + error.code);
-      console.log(error);
+      //console.log(error);
     };
 
   }]);
@@ -866,7 +877,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             jQuery("#tablaEncuestas").html(html);
           },
           function(error){
-            console.log(error.code);
+            //console.log(error.code);
           }
         );
       };
