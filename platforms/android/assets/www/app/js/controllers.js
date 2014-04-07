@@ -473,12 +473,78 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             }
           });
 
+		  /*Validaciones Pedro*/
+		  jQuery("[id*='3b15']").trigger("change");
+		jQuery("#3b15").change(function () {
+		if(jQuery(this).is(":checked")){
+		jQuery("[id*='3b2cual']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b31']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b33']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b34']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b35']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b36']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b37']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b38']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b39']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b40']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b41']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b3cual']").attr("disabled","true").val("").removeAttr("checked");
+	}
+	else{
+		jQuery("[id*='3b2cual']").removeAttr("disabled");
+		jQuery("[id*='3b31']").removeAttr("disabled");
+		jQuery("[id*='3b33']").removeAttr("disabled");
+		jQuery("[id*='3b34']").removeAttr("disabled");
+		jQuery("[id*='3b35']").removeAttr("disabled");
+		jQuery("[id*='3b36']").removeAttr("disabled");
+		jQuery("[id*='3b37']").removeAttr("disabled");
+		jQuery("[id*='3b38']").removeAttr("disabled");
+		jQuery("[id*='3b39']").removeAttr("disabled");
+		jQuery("[id*='3b40']").removeAttr("disabled");
+		jQuery("[id*='3b41']").removeAttr("disabled");
+		jQuery("[id*='3b3cual']").removeAttr("disabled");		
+	}
+});
+
+		  jQuery("[id*='3b14']").trigger("change");
+		jQuery("#3b14").change(function () {
+		if(jQuery(this).is(":checked")){
+		jQuery("[id*='3b2cual']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b31']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b33']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b34']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b35']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b36']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b37']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b38']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b39']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b40']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b41']").attr("disabled","true").val("").removeAttr("checked");
+		jQuery("[id*='3b3cual']").attr("disabled","true").val("").removeAttr("checked");
+	}
+	else{
+		jQuery("[id*='3b2cual']").removeAttr("disabled");
+		jQuery("[id*='3b31']").removeAttr("disabled");
+		jQuery("[id*='3b33']").removeAttr("disabled");
+		jQuery("[id*='3b34']").removeAttr("disabled");
+		jQuery("[id*='3b35']").removeAttr("disabled");
+		jQuery("[id*='3b36']").removeAttr("disabled");
+		jQuery("[id*='3b37']").removeAttr("disabled");
+		jQuery("[id*='3b38']").removeAttr("disabled");
+		jQuery("[id*='3b39']").removeAttr("disabled");
+		jQuery("[id*='3b40']").removeAttr("disabled");
+		jQuery("[id*='3b41']").removeAttr("disabled");
+		jQuery("[id*='3b3cual']").removeAttr("disabled");		
+	}
+});
+		  
+		  
           jQuery("[id*='idradiosaliascampo3096']").trigger("change");
 
           if($scope.idEncuesta != undefined && $scope.idEncuesta != null){
             $scope.cargarEncuesta();
           }
-
+		  
         });
 
         function flujoavance(maxresp, respuniq, grupo){
@@ -615,9 +681,9 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               }
             }
         }
-      }else if($scope.idEncuesta != undefined){
-        console.log(arrayData);
-        console.log(Object.keys(arrayData).length);
+	  }else if($scope.idEncuesta != undefined){
+        //console.log(arrayData);
+        //console.log(Object.keys(arrayData).length);
         for(var i=0; i<Object.keys(arrayData).length; i++){
           tx.executeSql("SELECT COUNT(1) as Cantidad FROM DATAENCUESTAS WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + i + "'",[], function(tx, result){
             if(i != "nombreEncuesta" && i != "tipoEncuesta"){
