@@ -567,14 +567,50 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 
                 });
 
-				          jQuery("input[name='namealiascampo3068']").change(function(){
-            if(jQuery("#idradiosaliascampo306813709").is(":checked")){
-               jQuery("#idaliascampo3069").removeAttr("disabled");
-            }else{
-               jQuery("#idaliascampo3069").attr("disabled", "disabled");
-               jQuery("#idaliascampo3069").val("");
-            }
-          });
+                jQuery("input[name='namealiascampo3068']").change(function() {
+                    if (jQuery("#idradiosaliascampo306813709").is(":checked")) {
+                        jQuery("#idaliascampo3069").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo3069").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3069").val("");
+                    }
+                });
+
+                jQuery("input[name='3b3name']").change(function() {
+                    if (jQuery("#3b41").is(":checked")) {
+                        jQuery("#3b3cual").removeAttr("disabled");
+                    } else {
+                        jQuery("#3b3cual").attr("disabled", "disabled");
+                        jQuery("#3b3cual").val("");
+                    }
+                });
+
+                jQuery("input[name='3c3name']").change(function() {
+                    if (jQuery("#3c41").is(":checked")) {
+                        jQuery("#3c3cual").removeAttr("disabled");
+                    } else {
+                        jQuery("#3c3cual").attr("disabled", "disabled");
+                        jQuery("#3c3cual").val("");
+                    }
+                });
+
+				                jQuery("input[name='3d3name']").change(function() {
+                    if (jQuery("#3d41").is(":checked")) {
+                        jQuery("#3d3cual").removeAttr("disabled");
+                    } else {
+                        jQuery("#3d3cual").attr("disabled", "disabled");
+                        jQuery("#3d3cual").val("");
+                    }
+                });
+				
+								                jQuery("input[name='3e3name']").change(function() {
+                    if (jQuery("#3e41").is(":checked")) {
+                        jQuery("#3e3cual").removeAttr("disabled");
+                    } else {
+                        jQuery("#3e3cual").attr("disabled", "disabled");
+                        jQuery("#3e3cual").val("");
+                    }
+                });
 				
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
 
