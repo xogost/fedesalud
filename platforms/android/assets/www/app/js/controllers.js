@@ -473,7 +473,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             }
           });
 
-		  /*Validaciones*/
+		  /*Validaciones Pedro*/
 		  jQuery("[id*='3b15']").trigger("change");
 		jQuery("#3b15").change(function () {
 		if(jQuery(this).is(":checked")){
