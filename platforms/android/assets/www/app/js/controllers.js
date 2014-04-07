@@ -479,6 +479,21 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
             $scope.cargarEncuesta();
           }
 
+		  // Validaciones Flujos Pedro
+		  
+		  jQuery("[id*='idradiosaliascampo3095']").trigger("change");
+			jQuery("#idradiosaliascampo309513774").change(function () {
+				if(jQuery(this).is(":checked")){
+					jQuery("[id*='idaliascampo3096']").removeAttr("disabled");
+				}
+				else{
+					jQuery("[id*='idradiosaliascampo3096']").attr("disabled","true").val("").removeAttr("checked");
+				}
+			});
+
+		  
+		  // Fin validaciones Pedro
+		  
         });
 
         function flujoavance(maxresp, respuniq, grupo){
@@ -592,7 +607,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
       if($scope.idEncuesta == undefined){
         if(window.localStorage.getItem("idEncuesta") == null){
           var sql = "INSERT INTO ENCUESTAS (NOMBRE, TIPOENCUESTA, SINCRONIZADO, USUARIO) VALUES ('" + nombreEncuesta + "','" + tipoEncuesta + "',0, '" + usercookie + "')";
-          tx.executeSql(sql, [], function(error){ //console.log(error); });
+          tx.executeSql(sql, [], function(error){ console.log(error); });
 
           tx.executeSql("SELECT MAX(ID) as ID FROM ENCUESTAS",[], 
           function(tx, result) {
@@ -615,7 +630,7 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
               }
             }
         }
-      }else if($scope.idEncuesta != undefined){
+	  }else if($scope.idEncuesta != undefined){
         //console.log(arrayData);
         //console.log(Object.keys(arrayData).length);
         for(var i=0; i<Object.keys(arrayData).length; i++){

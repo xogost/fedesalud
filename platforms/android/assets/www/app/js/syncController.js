@@ -30,7 +30,7 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http' , function($s
       for (var i = result.rows.length - 1; i >= 0; i--) {
         $http({
             method: "GET",
-            url: "http://198.38.92.149:8080/fedesalud-sync/index.php/getData",          
+            url: "http://198.38.92.149/fedesalud-sync/index.php/getData",          
             params: {"data": JSON.stringify(result.rows.item(i))},
           }).success(function(idSync) {
             
@@ -50,7 +50,7 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http' , function($s
       for (var i = result.rows.length - 1; i >= 0; i--) {
         $http({
             method: "GET",
-            url: "http://198.38.92.149:8080/fedesalud-sync/index.php/getData/DataEncuestas",          
+            url: "http://198.38.92.149/fedesalud-sync/index.php/getData/DataEncuestas",          
             params: {"data": JSON.stringify(result.rows.item(i))},
           }).success(function(idSync) {
             
