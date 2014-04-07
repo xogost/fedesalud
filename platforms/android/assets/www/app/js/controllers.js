@@ -90,25 +90,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2915'],[id*='idradiosaliascampo2916']").attr("disabled", "disabled").val("").removeAttr("checked");
                     }
                 });
-                // jQuery("#idchecksaliascampo291412925").trigger("change");
-                // jQuery("#idchecksaliascampo291412926").change(function() {
-                // if (jQuery(this).is(":checked")) {
-                // //jQuery("[id*='idradiosaliascampo2916']").removeAttr("disabled");
-                // jQuery("[id*='idradiosaliascampo2915'],[id*='idradiosaliascampo2916']").attr("disabled", "disabled").val("").removeAttr("checked");
-                // }
-                // else {
-                // jQuery("[id*='idradiosaliascampo2916']").attr("disabled", "true").val("").removeAttr("checked");
-                // }
-                // });
-                // jQuery("#idchecksaliascampo291412926").trigger("change");
-                // jQuery("[id*='idradiosaliascampo2930']").change(function() {
-                // if (jQuery("#idradiosaliascampo293012979").is(":checked")) {
-                // jQuery("#idaliascampo2932").removeAttr("disabled");
-                // }
-                // else {
-                // jQuery("#idaliascampo2932").attr("disabled", "true").val("").removeAttr("checked");
-                // }
-                // });
+
                 jQuery("[id*='idradiosaliascampo2930']").trigger("change");
                 jQuery("#idchecksaliascampo300513326").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -551,7 +533,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     console.log(parseInt(jQuery("#idaliascampo3038").val()));
                     if (parseInt(jQuery("#idaliascampo3038").val()) < parseInt(jQuery("#idaliascampo3037").val()))
                     {
-                        alert("El valor no es correcto");
+                        alert("El año de grado como especialista no es correcto. Por favor verifique.");
                         jQuery("#idaliascampo3038").val("");
                     }
                 });
@@ -585,6 +567,8 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 
                 });
 
+				
+				
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
 
                 if ($scope.idEncuesta != undefined && $scope.idEncuesta != null) {
