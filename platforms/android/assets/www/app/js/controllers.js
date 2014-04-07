@@ -567,7 +567,14 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 
                 });
 
-				
+				          jQuery("input[name='namealiascampo3068']").change(function(){
+            if(jQuery("#idradiosaliascampo306813709").is(":checked")){
+               jQuery("#idaliascampo3069").removeAttr("disabled");
+            }else{
+               jQuery("#idaliascampo3069").attr("disabled", "disabled");
+               jQuery("#idaliascampo3069").val("");
+            }
+          });
 				
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
 
