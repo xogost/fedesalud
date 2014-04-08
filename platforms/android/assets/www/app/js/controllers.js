@@ -337,24 +337,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").val("").removeAttr("checked");
                     }
                 });
-                // jQuery("#idchecksaliascampo297313271").trigger("change");
-                // jQuery("#idchecksaliascampo301913377").change(function() {
-                    // if (jQuery(this).is(":checked")) {
-                        // jQuery("#idaliascampo3081").removeAttr("disabled");
-                    // }
-                    // else {
-                        // jQuery("#idaliascampo3081").attr("disabled", "true").val("").removeAttr("checked");
-                    // }
-                // });
-                // jQuery("#idchecksaliascampo301913377").trigger("change");
-                // jQuery("#idchecksaliascampo301913376").change(function() {
-                    // if (jQuery(this).is(":checked")) {
-                        // jQuery("#idaliascampo3080").removeAttr("disabled");
-                    // }
-                    // else {
-                        // jQuery("#idaliascampo3080").attr("disabled", "true").val("").removeAttr("checked");
-                    // }
-                // });
+
                 jQuery("#idchecksaliascampo301913376").trigger("change");
                 jQuery("#idchecksaliascampo308713752").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -642,10 +625,20 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 				
                 jQuery("input[name='namealiascampo3087']").change(function() {
                     if (jQuery("#idradiosaliascampo308713752").is(":checked")) {
-						jQuery("input[name='namealiascampo3088']").removeAttr("disabled");
-                    } else {
                         jQuery("input[name='namealiascampo3088']").attr("disabled", "disabled");
                         jQuery("input[name='namealiascampo3088']").removeAttr("checked");
+						jQuery("input[name='namealiascampo3090']").removeAttr("disabled");
+                        // jQuery("input[name='namealiascampo3090']").attr("disabled", "disabled");
+                        // jQuery("input[name='namealiascampo3090']").removeAttr("checked");
+                        // jQuery("input[name='namealiascampo3091']").attr("disabled", "disabled");
+                        // jQuery("input[name='namealiascampo3091']").removeAttr("checked");
+                        // jQuery("input[name='namealiascampo3092']").attr("disabled", "disabled");
+                        // jQuery("input[name='namealiascampo3092']").removeAttr("checked");
+                    } else {
+						jQuery("input[name='namealiascampo3088']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3090']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3091']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3092']").removeAttr("disabled");
                     }
                 });
 				
@@ -709,6 +702,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         } else {
                             jQuery("input[name='namealiascampo2927']").removeAttr("disabled");
                         }
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo2930']").change(function() {
+                    if (jQuery("#idradiosaliascampo293012979").is(":checked")) {
+                        jQuery("#idaliascampo2932").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo2932").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2932").val("");
                     }
                 });
 				
@@ -789,7 +791,8 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 
         $scope.guardar = function(urlPagina) {
             $scope.pagina = urlPagina;
-            var confirmarGuardado = confirm("Esta seguro que desea almacenar la encuesta!");
+			// alert("eco");
+            var confirmarGuardado = confirm("Esta seguro que desea almacenar la encuesta?");
             if (confirmarGuardado) {
                 var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000);
                 db.transaction($scope.querySaveEncuesta, $scope.errorDB);
