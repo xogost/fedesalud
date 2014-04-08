@@ -346,24 +346,24 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").val("").removeAttr("checked");
                     }
                 });
-                jQuery("#idchecksaliascampo297313271").trigger("change");
-                jQuery("#idchecksaliascampo301913377").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("#idaliascampo3081").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo3081").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                });
-                jQuery("#idchecksaliascampo301913377").trigger("change");
-                jQuery("#idchecksaliascampo301913376").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("#idaliascampo3080").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo3080").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                });
+                // jQuery("#idchecksaliascampo297313271").trigger("change");
+                // jQuery("#idchecksaliascampo301913377").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("#idaliascampo3081").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo3081").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("#idchecksaliascampo301913377").trigger("change");
+                // jQuery("#idchecksaliascampo301913376").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("#idaliascampo3080").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo3080").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
+                // });
                 jQuery("#idchecksaliascampo301913376").trigger("change");
                 jQuery("#idchecksaliascampo308713752").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -623,6 +623,86 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
 				
+                jQuery("input[name='namealiascampo2973']").change(function() {
+                    if (jQuery("#idchecksaliascampo297313267").is(":checked") || jQuery("#idchecksaliascampo297313268").is(":checked")) {
+                        jQuery("input[name='namealiascampo2976']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2976']").removeAttr("checked");
+						
+						jQuery("input[name='namealiascampo2974']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2974']").removeAttr("checked");
+						
+                    } else {
+                        if (jQuery("#idchecksaliascampo297313267").is(":checked") && jQuery("#idchecksaliascampo297313268").is(":checked")) {
+                        } else {
+                            jQuery("input[name='namealiascampo2976']").removeAttr("disabled");
+							jQuery("input[name='namealiascampo2974']").removeAttr("disabled");
+							
+                        }
+                    }
+                });
+
+                jQuery("input[name='namealiascampo3019']").change(function() {
+                    if (jQuery("#idchecksaliascampo301913376").is(":checked")) {
+                        jQuery("#idaliascampo3080").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo3080").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3080").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3019']").change(function() {
+                    if (jQuery("#idchecksaliascampo301913377").is(":checked")) {
+                        jQuery("#idaliascampo3081").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo3081").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3081").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3087']").change(function() {
+                    if (jQuery("#idradiosaliascampo308713752").is(":checked")) {
+						jQuery("input[name='namealiascampo3088']").removeAttr("disabled");
+                    } else {
+                        jQuery("input[name='namealiascampo3088']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3088']").removeAttr("checked");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3088']").change(function() {
+                    if (jQuery("#idradiosaliascampo308813756").is(":checked")) {
+                        jQuery("#idaliascampo3089").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo3089").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3089").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3088']").change(function() {
+                    if (jQuery("#idradiosaliascampo308813753").is(":checked")) {
+                        jQuery("input[name='namealiascampo3090']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3090']").removeAttr("checked");
+						jQuery("input[name='namealiascampo3091']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3091']").removeAttr("checked");
+						jQuery("input[name='namealiascampo3092']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3092']").removeAttr("checked");
+                    } else {
+                        jQuery("input[name='namealiascampo3090']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3091']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3092']").removeAttr("disabled");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3095']").change(function() {
+                    if (jQuery("#idradiosaliascampo309513773").is(":checked")) {
+                        jQuery("input[name='namealiascampo3096']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3096']").removeAttr("checked");
+                    } else {
+						jQuery("input[name='namealiascampo3096']").removeAttr("disabled");
+                    }
+                });
+				
+				//Fin validaciones Pedro
+
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
 
                 if ($scope.idEncuesta != undefined && $scope.idEncuesta != null) {
@@ -809,158 +889,184 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 
     }]);
 
+//=================================================================
+//=============        Login Contoller             ================
+//=================================================================
 
-  //=================================================================
-  //=============        Login Contoller             ================
-  //=================================================================
+ModuleMyApp.controller('loginController', ['$scope', function($scope) {
 
-  ModuleMyApp.controller('loginController', ['$scope', function($scope) {
-      
-    $scope.userName = 0;
-    $scope.passWord = 0; 
+        $scope.userName = 0;
+        $scope.passWord = 0;
 
-    $scope.queryUsuarios = function(tx) {
-      var domUserName = document.getElementById("txtuser");
-      var query = "SELECT * FROM USUARIOS WHERE USUARIOS.NOMBRE = '" + domUserName.value + "'";
-      tx.executeSql(query, [], $scope.queryCorrecto, $scope.errorDB);
-    };
-    
-    $scope.queryAdmin = function (tx) {
-      tx.executeSql("CREATE TABLE IF NOT EXISTS USUARIOS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOMBRE TEXT NOT NULL, PASSWORD TEXT NOT NULL)");
-      //tx.executeSql("DROP TABLE ENCUESTAS");
-      //tx.executeSql("DROP TABLE DATAENCUESTAS");
-      //tx.executeSql("DELETE FROM ENCUESTAS");
-      //tx.executeSql("DELETE FROM DATAENCUESTAS");
-      tx.executeSql("CREATE TABLE IF NOT EXISTS ENCUESTAS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOMBRE TEXT NOT NULL, TIPOENCUESTA TEXT NOT NULL, SINCRONIZADO INTEGER NOT NULL, USUARIO TEXT NOT NULL)");
-      tx.executeSql("CREATE TABLE IF NOT EXISTS DATAENCUESTAS (ID INTEGER PRIMARY KEY AUTOINCREMENT, IDENCUESTA INTEGER NOT NULL, IDCAMPO TEXT NOT NULL, VALOR TEXT NOT NULL, SINCRONIZADO INTEGER NOT NULL, USUARIO TEXT NOT NULL)");
-      var query = "SELECT * FROM USUARIOS";
-      tx.executeSql(query, [], $scope.CreateAmdin, $scope.errorDB);
-    };
+        $scope.queryUsuarios = function(tx) {
+            var domUserName = document.getElementById("txtuser");
+            var query = "SELECT * FROM USUARIOS WHERE USUARIOS.NOMBRE = '" + domUserName.value + "'";
+            tx.executeSql(query, [], $scope.queryCorrecto, $scope.errorDB);
+        };
 
-    $scope.login = function(){
-      var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalid DB", 200000);
-      db.transaction($scope.queryUsuarios, $scope.errorDB);
-    };
+        $scope.queryAdmin = function(tx) {
+            tx.executeSql("CREATE TABLE IF NOT EXISTS USUARIOS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOMBRE TEXT NOT NULL, PASSWORD TEXT NOT NULL)");
+            //tx.executeSql("DROP TABLE ENCUESTAS");
+            //tx.executeSql("DROP TABLE DATAENCUESTAS");
+            //tx.executeSql("DELETE FROM ENCUESTAS");
+            //tx.executeSql("DELETE FROM DATAENCUESTAS");
+            tx.executeSql("CREATE TABLE IF NOT EXISTS ENCUESTAS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOMBRE TEXT NOT NULL, TIPOENCUESTA TEXT NOT NULL, SINCRONIZADO INTEGER NOT NULL, USUARIO TEXT NOT NULL)");
+            tx.executeSql("CREATE TABLE IF NOT EXISTS DATAENCUESTAS (ID INTEGER PRIMARY KEY AUTOINCREMENT, IDENCUESTA INTEGER NOT NULL, IDCAMPO TEXT NOT NULL, VALOR TEXT NOT NULL, SINCRONIZADO INTEGER NOT NULL, USUARIO TEXT NOT NULL)");
+            var query = "SELECT * FROM USUARIOS";
+            tx.executeSql(query, [], $scope.CreateAmdin, $scope.errorDB);
+        };
 
-    $scope.onDeviceReady = function(){
-      if(window.localStorage.getItem("user") == undefined){
-        var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000);
-        db.transaction($scope.queryAdmin, $scope.errorDB);
-      }else{
-        window.location = '#/menu';
-      }
-    };
+        $scope.login = function() {
+            var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalid DB", 200000);
+            db.transaction($scope.queryUsuarios, $scope.errorDB);
+        };
 
-    //En caso de error
-    $scope.errorDB = function(error) {
-      alert("Error BD: " + error.code);
-    };
+        $scope.onDeviceReady = function() {
+            if (window.localStorage.getItem("user") == undefined) {
+                var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalud DB", 200000);
+                db.transaction($scope.queryAdmin, $scope.errorDB);
+            } else {
+                window.location = '#/menu';
+            }
+        };
 
-    $scope.CreateAmdin = function (tx, resultados) {
-      var encontroUsuario = resultados.rows.length;
-      if(encontroUsuario == 0){
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Administrador', '123456')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador1', 'Encuestador#1')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador2', 'Encuestador#2')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador3', 'Encuestador#3')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador4', 'Encuestador#4')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador5', 'Encuestador#5')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador6', 'Encuestador#6')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador7', 'Encuestador#7')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador8', 'Encuestador#8')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador9', 'Encuestador#9')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador10', 'Encuestador#10')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador11', 'Encuestador#11')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador12', 'Encuestador#12')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador13', 'Encuestador#13')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador14', 'Encuestador#14')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador15', 'Encuestador#15')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador16', 'Encuestador#16')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador17', 'Encuestador#17')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador18', 'Encuestador#18')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador19', 'Encuestador#19')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador20', 'Encuestador#20')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador21', 'Encuestador#21')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador22', 'Encuestador#22')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador23', 'Encuestador#23')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador24', 'Encuestador#24')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador25', 'Encuestador#25')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador26', 'Encuestador#26')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador27', 'Encuestador#27')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador28', 'Encuestador#28')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador29', 'Encuestador#29')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador30', 'Encuestador#30')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador31', 'Encuestador#31')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador32', 'Encuestador#32')");
+        //En caso de error
+        $scope.errorDB = function(error) {
+            alert("Error BD: " + error.code);
+        };
 
-      }
-      else
-      {
-        tx.executeSql("DELETE FROM USUARIOS");
+        $scope.CreateAmdin = function(tx, resultados) {
+            var encontroUsuario = resultados.rows.length;
+            if (encontroUsuario == 0) {
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Administrador', '123456')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador1', 'Encuestador#1')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador2', 'Encuestador#2')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador3', 'Encuestador#3')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador4', 'Encuestador#4')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador5', 'Encuestador#5')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador6', 'Encuestador#6')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador7', 'Encuestador#7')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador8', 'Encuestador#8')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador9', 'Encuestador#9')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador10', 'Encuestador#10')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador11', 'Encuestador#11')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador12', 'Encuestador#12')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador13', 'Encuestador#13')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador14', 'Encuestador#14')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador15', 'Encuestador#15')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador16', 'Encuestador#16')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador17', 'Encuestador#17')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador18', 'Encuestador#18')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador19', 'Encuestador#19')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador20', 'Encuestador#20')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador21', 'Encuestador#21')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador22', 'Encuestador#22')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador23', 'Encuestador#23')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador24', 'Encuestador#24')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador25', 'Encuestador#25')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador26', 'Encuestador#26')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador27', 'Encuestador#27')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador28', 'Encuestador#28')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador29', 'Encuestador#29')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador30', 'Encuestador#30')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador31', 'Encuestador#31')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador32', 'Encuestador#32')");
 
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Administrador', '123456')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador1', 'Encuestador#1')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador2', 'Encuestador#2')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador3', 'Encuestador#3')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador4', 'Encuestador#4')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador5', 'Encuestador#5')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador6', 'Encuestador#6')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador7', 'Encuestador#7')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador8', 'Encuestador#8')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador9', 'Encuestador#9')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador10', 'Encuestador#10')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador11', 'Encuestador#11')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador12', 'Encuestador#12')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador13', 'Encuestador#13')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador14', 'Encuestador#14')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador15', 'Encuestador#15')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador16', 'Encuestador#16')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador17', 'Encuestador#17')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador18', 'Encuestador#18')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador19', 'Encuestador#19')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador20', 'Encuestador#20')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador21', 'Encuestador#21')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador22', 'Encuestador#22')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador23', 'Encuestador#23')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador24', 'Encuestador#24')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador25', 'Encuestador#25')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador26', 'Encuestador#26')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador27', 'Encuestador#27')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador28', 'Encuestador#28')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador29', 'Encuestador#29')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador30', 'Encuestador#30')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador31', 'Encuestador#31')");
-        tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador32', 'Encuestador#32')");
+            }
+            else
+            {
+                tx.executeSql("DELETE FROM USUARIOS");
 
-      }
-    };
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Administrador', '123456')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador1', 'Encuestador#1')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador2', 'Encuestador#2')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador3', 'Encuestador#3')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador4', 'Encuestador#4')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador5', 'Encuestador#5')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador6', 'Encuestador#6')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador7', 'Encuestador#7')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador8', 'Encuestador#8')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador9', 'Encuestador#9')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador10', 'Encuestador#10')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador11', 'Encuestador#11')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador12', 'Encuestador#12')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador13', 'Encuestador#13')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador14', 'Encuestador#14')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador15', 'Encuestador#15')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador16', 'Encuestador#16')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador17', 'Encuestador#17')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador18', 'Encuestador#18')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador19', 'Encuestador#19')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador20', 'Encuestador#20')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador21', 'Encuestador#21')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador22', 'Encuestador#22')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador23', 'Encuestador#23')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador24', 'Encuestador#24')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador25', 'Encuestador#25')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador26', 'Encuestador#26')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador27', 'Encuestador#27')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador28', 'Encuestador#28')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador29', 'Encuestador#29')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador30', 'Encuestador#30')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador31', 'Encuestador#31')");
+                tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador32', 'Encuestador#32')");
 
-    $scope.queryCorrecto = function (tx, resultados) {
-      var encontroUsuario = resultados.rows.length;
+            }
+        };
 
-      if(encontroUsuario >= 1){
-        $scope.idUser = resultados.rows.item(0).ID;
-        $scope.userName = resultados.rows.item(0).NOMBRE;
-        $scope.passWord = resultados.rows.item(0).PASSWORD;
+        $scope.queryCorrecto = function(tx, resultados) {
+            var encontroUsuario = resultados.rows.length;
 
-        var domUserName = document.getElementById("txtuser");
-        var domPassword = document.getElementById("txtpassword");
+            if (encontroUsuario >= 1) {
+                $scope.idUser = resultados.rows.item(0).ID;
+                $scope.userName = resultados.rows.item(0).NOMBRE;
+                $scope.passWord = resultados.rows.item(0).PASSWORD;
 
-        if($scope.userName == domUserName.value && $scope.passWord == domPassword.value){
-          window.localStorage.setItem("user", $scope.idUser + ":" + $scope.userName);
-          window.location = '#/menu';
+                var domUserName = document.getElementById("txtuser");
+                var domPassword = document.getElementById("txtpassword");
+
+                if ($scope.userName == domUserName.value && $scope.passWord == domPassword.value) {
+                    window.localStorage.setItem("user", $scope.idUser + ":" + $scope.userName);
+                    window.location = '#/menu';
+                }
+                else {
+                    alert("Nombre de usuario o contraseña invalidos, intentelo de nuevo.");
+                }
+            }
+            else {
+                alert("Nombre de usuario o contraseña invalidos, intentelo de nuevo.");
+            }
+        };
+
+    }]);
+
+//=================================================================
+//=============            Menu Controller         ================
+//=================================================================
+
+ModuleMyApp.controller('MenuController', ['$scope', function($scope) {
+
+        localStorage.removeItem("idEncuesta");
+
+        jQuery(".btn").click(function() {
+            jQuery("#waiting").css("display", "block");
+        });
+
+        if (window.localStorage.getItem("user") == undefined) {
+            window.location = '#/login';
         }
-      }
-    };
+    }]);
 
-    //En caso de error
-    $scope.errorDB = function(error) {
-      alert("Error BD: " + error.code);
-      console.log(error);
-    };
+//=================================================================
+//=============            Logout Controller         ==============
+//=================================================================
 
-  }]);
-
+ModuleMyApp.controller('logoutController', ['$scope', function($scope) {
+        $scope.logout = function() {
+            window.localStorage.removeItem("user");
+            window.location = "#/login";
+        };
+    }]);
 //=================================================================
 //=============            Listado Controller         =============
 //=================================================================
@@ -1013,39 +1119,4 @@ ModuleMyApp.controller('listadoInstrumentosController', ['$scope', function($sco
                 alert("Error BD: " + error.code);
             };
         }
-      }
-      else{
-        alert("Nombre de usuario o contraseña invalidos, intentelo de nuevo.");
-      }
-    };
-
-  }]);
-  
-  //=================================================================
-  //=============            Menu Controller         ================
-  //=================================================================
-
-  ModuleMyApp.controller('MenuController', ['$scope', function($scope) {
-    
-    localStorage.removeItem("idEncuesta");
-
-    jQuery(".btn").click(function(){
-      jQuery("#waiting").css("display", "block");
-    });
-
-    if(window.localStorage.getItem("user") == undefined){
-      window.location = '#/login';
-    }
-  }]);
-
-  //=================================================================
-  //=============            Logout Controller         ==============
-  //=================================================================
-
-  ModuleMyApp.controller('logoutController', ['$scope', function($scope) {
-    $scope.logout = function(){
-      window.localStorage.removeItem("user");
-      window.location = "#/login";
-    };
-  }]);
-  
+    }]);
