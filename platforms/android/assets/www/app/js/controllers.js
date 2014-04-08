@@ -456,70 +456,6 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 });
 
                 /*Validaciones Pedro*/
-                jQuery("[id*='3b15']").trigger("change");
-                jQuery("#3b15").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='3b2cual']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b31']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b33']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b34']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b35']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b36']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b37']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b38']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b39']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b40']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b41']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b3cual']").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                    else {
-                        jQuery("[id*='3b2cual']").removeAttr("disabled");
-                        jQuery("[id*='3b31']").removeAttr("disabled");
-                        jQuery("[id*='3b33']").removeAttr("disabled");
-                        jQuery("[id*='3b34']").removeAttr("disabled");
-                        jQuery("[id*='3b35']").removeAttr("disabled");
-                        jQuery("[id*='3b36']").removeAttr("disabled");
-                        jQuery("[id*='3b37']").removeAttr("disabled");
-                        jQuery("[id*='3b38']").removeAttr("disabled");
-                        jQuery("[id*='3b39']").removeAttr("disabled");
-                        jQuery("[id*='3b40']").removeAttr("disabled");
-                        jQuery("[id*='3b41']").removeAttr("disabled");
-                        jQuery("[id*='3b3cual']").removeAttr("disabled");
-                    }
-                });
-
-                jQuery("[id*='3b14']").trigger("change");
-                jQuery("#3b14").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='3b2cual']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b31']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b33']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b34']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b35']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b36']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b37']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b38']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b39']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b40']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b41']").attr("disabled", "true").val("").removeAttr("checked");
-                        jQuery("[id*='3b3cual']").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                    else {
-                        jQuery("[id*='3b2cual']").removeAttr("disabled");
-                        jQuery("[id*='3b31']").removeAttr("disabled");
-                        jQuery("[id*='3b33']").removeAttr("disabled");
-                        jQuery("[id*='3b34']").removeAttr("disabled");
-                        jQuery("[id*='3b35']").removeAttr("disabled");
-                        jQuery("[id*='3b36']").removeAttr("disabled");
-                        jQuery("[id*='3b37']").removeAttr("disabled");
-                        jQuery("[id*='3b38']").removeAttr("disabled");
-                        jQuery("[id*='3b39']").removeAttr("disabled");
-                        jQuery("[id*='3b40']").removeAttr("disabled");
-                        jQuery("[id*='3b41']").removeAttr("disabled");
-                        jQuery("[id*='3b3cual']").removeAttr("disabled");
-                    }
-                });
-
                 jQuery("#idchecksaliascampo922712961").change(function() {
                     if (jQuery(idchecksaliascampo922712961).is(":checked")) {
                         jQuery("[id*='idaliascampo3038']").attr("disabled", "true").val("");
@@ -594,7 +530,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
 
-				                jQuery("input[name='3d3name']").change(function() {
+                jQuery("input[name='3d3name']").change(function() {
                     if (jQuery("#3d41").is(":checked")) {
                         jQuery("#3d3cual").removeAttr("disabled");
                     } else {
@@ -602,13 +538,88 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#3d3cual").val("");
                     }
                 });
-				
-								                jQuery("input[name='3e3name']").change(function() {
+
+                jQuery("input[name='3e3name']").change(function() {
                     if (jQuery("#3e41").is(":checked")) {
                         jQuery("#3e3cual").removeAttr("disabled");
                     } else {
                         jQuery("#3e3cual").attr("disabled", "disabled");
                         jQuery("#3e3cual").val("");
+                    }
+                });
+
+                jQuery("input[name='3b1name']").change(function() {
+                    if (jQuery("#3b14").is(":checked") || jQuery("#3b15").is(":checked")) {
+                        jQuery("#3b2cual").attr("disabled", "disabled");
+                        jQuery("#3b2cual").val("");
+                        jQuery("input[name='3b3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3b3name']").removeAttr("checked");
+                    } else {
+                        if (jQuery("#3b14").is(":checked") && jQuery("#3b15").is(":checked")) {
+                        } else {
+                            jQuery("#3b2cual").removeAttr("disabled");
+                            jQuery("input[name='3b3name']").removeAttr("disabled");
+                        }
+                    }
+                });
+
+				                jQuery("input[name='3c1name']").change(function() {
+                    if (jQuery("#3c14").is(":checked") || jQuery("#3c15").is(":checked")) {
+                        jQuery("#3c2cual").attr("disabled", "disabled");
+                        jQuery("#3c2cual").val("");
+                        jQuery("input[name='3c3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3c3name']").removeAttr("checked");
+                    } else {
+                        if (jQuery("#3c14").is(":checked") && jQuery("#3c15").is(":checked")) {
+                        } else {
+                            jQuery("#3c2cual").removeAttr("disabled");
+                            jQuery("input[name='3c3name']").removeAttr("disabled");
+                        }
+                    }
+                });
+				
+                jQuery("input[name='3c1name']").change(function() {
+                    if (jQuery("#3c14").is(":checked") || jQuery("#3c15").is(":checked")) {
+                        jQuery("#3c2cual").attr("disabled", "disabled");
+                        jQuery("#3c2cual").val("");
+                        jQuery("input[name='3c3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3c3name']").removeAttr("checked");
+                    } else {
+                        if (jQuery("#3c14").is(":checked") && jQuery("#3c15").is(":checked")) {
+                        } else {
+                            jQuery("#3c2cual").removeAttr("disabled");
+                            jQuery("input[name='3c3name']").removeAttr("disabled");
+                        }
+                    }
+                });
+				
+                jQuery("input[name='3d1name']").change(function() {
+                    if (jQuery("#3d14").is(":checked") || jQuery("#3d15").is(":checked")) {
+                        jQuery("#3d2cual").attr("disabled", "disabled");
+                        jQuery("#3d2cual").val("");
+                        jQuery("input[name='3d3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3d3name']").removeAttr("checked");
+                    } else {
+                        if (jQuery("#3d14").is(":checked") && jQuery("#3d15").is(":checked")) {
+                        } else {
+                            jQuery("#3d2cual").removeAttr("disabled");
+                            jQuery("input[name='3d3name']").removeAttr("disabled");
+                        }
+                    }
+                });
+				
+                jQuery("input[name='3e1name']").change(function() {
+                    if (jQuery("#3e14").is(":checked") || jQuery("#3e15").is(":checked")) {
+                        jQuery("#3e2cual").attr("disabled", "disabled");
+                        jQuery("#3e2cual").val("");
+                        jQuery("input[name='3e3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3e3name']").removeAttr("checked");
+                    } else {
+                        if (jQuery("#3e14").is(":checked") && jQuery("#3e15").is(":checked")) {
+                        } else {
+                            jQuery("#3e2cual").removeAttr("disabled");
+                            jQuery("input[name='3e3name']").removeAttr("disabled");
+                        }
                     }
                 });
 				
