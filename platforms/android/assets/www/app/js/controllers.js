@@ -956,7 +956,6 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 ModuleMyApp.controller('listadoInstrumentosController', ['$scope', function($scope) {
         if (window.localStorage.getItem("user") == undefined) {
             window.location = '#/login';
->>>>>>> e23396613f1afe410d4b6e89ab95283d1284be40
         }
         else {
             $scope.refresh = function() {
@@ -1038,60 +1037,4 @@ ModuleMyApp.controller('listadoInstrumentosController', ['$scope', function($sco
       window.location = "#/login";
     };
   }]);
-  //=================================================================
-  //=============            Listado Controller         =============
-  //=================================================================
-  ModuleMyApp.controller('listadoInstrumentosController', ['$scope', function($scope) {
-    if(window.localStorage.getItem("user") == undefined){
-      window.location = '#/login';
-    }
-    else{
-      $scope.refresh = function(){
-        window.location = '#/listencuestas';
-      };   
-
-      $scope.obtenerEncuestas = function(){
-        var db = window.openDatabase("fedesaludDB", "1.0", "Fedesalid DB", 200000);
-        db.transaction($scope.queryEncuestas, $scope.errorDB);
-
-        /*var div = document.getElementById("tablaEncuestas");
-        div.innerHTML = localStorage.getItem("htmlEncuestas");
-        localStorage.removeItem("htmlEncuestas");*/
-      };
-      
-      $scope.editarEncuesta = function(id){
-        window.location = '#/editarInstrumentouno/' + id;
-      };
-
-      $scope.queryEncuestas = function(tx){ 
-        var sql = 'select ID,NOMBRE, TIPOENCUESTA from ENCUESTAS';
-        tx.executeSql(sql, [], 
-          function(tx, result){
-            var html = '<thead><tr><th>IDENTIFICADOR</th><th>TIPO</th><th></th></tr></thead><tbody>';
-            for(var i = 0; i < result.rows.length; i++){
-              if(result.rows.item(i).TIPOENCUESTA == '1'){
-                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Usuarios</td><td><a class='btn btn-primary btn-md' href='#/instrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
-              }else if(result.rows.item(i).TIPOENCUESTA == '2'){
-                html += "<tr><td>" + result.rows.item(i).NOMBRE  + "</td><td>Prescriptores</td><td><a class='btn btn-primary btn-md' href='#/instrumentodos/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
-              }
-            }
-            html += "</tbody>";
-            //localStorage.setItem("htmlEncuestas", html);
-            jQuery("#tablaEncuestas").html(html);
-          },
-          function(error){
-            console.log(error.code);
-          }
-        );
-      };
-
-      //En caso de error
-      $scope.errorDB = function(error) {
-        alert("Error BD: " + error.code);
-      };
-    }
-  }]);
-=======
-    }]);
->>>>>>> e23396613f1afe410d4b6e89ab95283d1284be40
-
+  
