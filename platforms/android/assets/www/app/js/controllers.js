@@ -757,7 +757,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 });
 
                 //Fin validaciones Pedro
-
+				
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
                 if ($scope.idEncuesta != undefined && $scope.idEncuesta != null) {
                     $scope.cargarEncuesta();
@@ -833,6 +833,16 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 }
             }
 
+				//Validacion de numeros en nombres
+				var email = new RegExp(/^[^0-9()]+$/);
+				if (!jQuery("#idaliascampo2903").val().match(email)) {
+					alert("El campo Nombres y Apellidos no debe contener números. Por favor verifique.");
+					 var emailaddr = jQuery("#idaliascampo2903").val();
+					jQuery("#idaliascampo2903").focus();
+					return false;
+				} 
+				//
+			
             if (jQuery("#idaliascampo2962").length == 0) {
                 //no existe el control
             } else {
