@@ -751,8 +751,11 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     if (jQuery("#idradiosaliascampo303613610").is(":checked")) {
                         jQuery("#idaliascampo3038").attr("disabled", "disabled");
                         jQuery("#idaliascampo3038").val("");
+						jQuery("#idaliascampo3037").removeAttr("disabled");
                     } else {
                         jQuery("#idaliascampo3038").removeAttr("disabled");
+						jQuery("#idaliascampo3037").removeAttr("disabled");
+
                     }
                 });
 
@@ -829,18 +832,24 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     alert("El identificador de encuesta debe tener 9 digitos. Por favor verifique.");
                     $scope.errores = $scope.errores + 1;
                     jQuery("#nombreEncuesta").focus();
+					return false;
                 } else {
                 }
             }
 
 				//Validacion de numeros en nombres
-				var email = new RegExp(/^[^0-9()]+$/);
-				if (!jQuery("#idaliascampo2903").val().match(email)) {
+				
+            if (jQuery("#idaliascampo2903").length == 0) {
+                //no existe el control
+            } else {
+				//validar la expresion y mostrar el mensaje
+				var validacion = new RegExp(/^[^0-9()]+$/);
+				if (!jQuery("#idaliascampo2903").val().match(validacion)) {
 					alert("El campo Nombres y Apellidos no debe contener números. Por favor verifique.");
-					 var emailaddr = jQuery("#idaliascampo2903").val();
 					jQuery("#idaliascampo2903").focus();
 					return false;
 				} 
+			}
 				//
 			
             if (jQuery("#idaliascampo2962").length == 0) {
@@ -853,6 +862,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         alert("Debe especificar el uso del medicamento. Por favor verifique.");
                         $scope.errores = $scope.errores + 1;
                         jQuery("#idaliascampo2966").focus();
+						return false;
                     } else {
                         //el segundo campo no tiene datos
                     }
@@ -871,6 +881,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         alert("Debe especificar el uso del medicamento. Por favor verifique.");
                         $scope.errores = $scope.errores + 1;
                         jQuery("#idaliascampo2965").focus();
+						return false;
                     } else {
                         //el segundo campo no tiene datos
                     }
@@ -889,6 +900,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         alert("Debe especificar el uso del medicamento. Por favor verifique.");
                         $scope.errores = $scope.errores + 1;
                         jQuery("#idaliascampo2967").focus();
+						return false;
                     } else {
                         //el segundo campo no tiene datos
                     }
@@ -897,6 +909,492 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 }
             }
 
+			/////// Inicio Otro Cual
+			
+            if (jQuery("#idaliascampo2910").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo2910").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo2910").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo2910").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+            if (jQuery("#idaliascampo2917").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo2917").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo2917").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo2917").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+            if (jQuery("#idaliascampo2917").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo2917").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo2917").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo2917").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+            if (jQuery("#idaliascampo2928").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo2928").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo2928").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo2928").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+            if (jQuery("#idaliascampo2931").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo2931").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo2931").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo2931").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+            if (jQuery("#idaliascampo2932").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo2932").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo2932").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo2932").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+            if (jQuery("#3a3cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3a3cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3a3cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3a3cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3b2cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3b2cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3b2cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3b2cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3b2cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3b2cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3b2cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3b2cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3b3cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3b3cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3b3cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo Otro. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3b3cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3c3cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3c3cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3c3cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3c3cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3d2cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3d2cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3d2cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3d2cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3d3cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3d3cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3d3cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3d3cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3e2cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3e2cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3e2cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3e2cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#3e3cual").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#3e3cual").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#3e3cual").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#3e3cual").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+           if (jQuery("#idaliascampo2982").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo2982").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo2982").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo2982").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			if (jQuery("#idaliascampo3014").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo3014").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo3014").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3014").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			if (jQuery("#idaliascampo3089").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo3089").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo3089").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3089").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			if (jQuery("#idaliascampo3097").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo3097").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo3097").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3097").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			//Otro cual prescriptores
+			
+			if (jQuery("#idaliascampo3053").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo3053").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo3053").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3053").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			if (jQuery("#idaliascampo563054").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo563054").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo563054").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo563054").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			if (jQuery("#idaliascampo3054").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo3054").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo3054").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3054").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			if (jQuery("#idaliascampo3069").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo3069").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo3069").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3069").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			if (jQuery("#idaliascampo3069").length == 0) {
+                //no existe el control
+            } else {
+				//si existe validar que este activo
+				if (jQuery("#idaliascampo3069").prop('disabled') == false ){
+				//esta activo
+                    if (jQuery("#idaliascampo3069").val().length < 1) {
+                        //esta vacio
+                        alert("Debe especificar el valor del campo. Por favor verifique.");
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3069").focus();
+						return false;
+                    } else {
+                        //tiene datos
+                    }
+				}else{
+				//esta inactivo
+				}
+			}
+			
+			/////// Fin Otro Cual
+			
             // fin Validaciones anteriores al guardado
 
             if ($scope.errores == 0) {
