@@ -1395,6 +1395,60 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 			
 			/////// Fin Otro Cual
 			
+			////////Inicio Valida porcentaje
+			
+			if (jQuery("#idaliascampo3042").length == 0) {
+                //no existe el control
+            } else {
+				//si existe generar las 4 variables y validar
+				
+				if(jQuery("#idaliascampo3042").val() == '' ){
+				//Verificar si el campo esta vacio y volverlo un cero
+				var porc1 = 0;
+				}else{
+				//Si no es cero sumar el valor
+				var porc1 = jQuery("#idaliascampo3042").val();
+				}
+				
+				if(jQuery("#idaliascampo3043").val() == '' ){
+				//Verificar si el campo esta vacio y volverlo un cero
+				var porc2 = 0;
+				}else{
+				//Si no es cero sumar el valor
+				var porc2 = jQuery("#idaliascampo3043").val();
+				}
+				
+				if(jQuery("#idaliascampo3044").val() == '' ){
+				//Verificar si el campo esta vacio y volverlo un cero
+				var porc3 = 0;
+				}else{
+				//Si no es cero sumar el valor
+				var porc3 = jQuery("#idaliascampo3044").val();
+				}
+				
+				if(jQuery("#idaliascampo3045").val() == '' ){
+				//Verificar si el campo esta vacio y volverlo un cero
+				var porc4 = 0;
+				}else{
+				//Si no es cero sumar el valor
+				var porc4 = jQuery("#idaliascampo3045").val();
+				}
+				
+				var porc5 = parseInt(porc1)+parseInt(porc2)+parseInt(porc3)+parseInt(porc4);
+				
+				if(porc5 != 100){
+				//El valor es diferente del 100%
+						alert('La suma de los porcentajes de usuarios que atiende debe sumar 100%. Por favor verifique.');
+                        $scope.errores = $scope.errores + 1;
+                        jQuery("#idaliascampo3042").focus();
+						return false;
+				}else{
+				}
+				
+			}
+			
+			////////Fin Valida porcentaje
+			
             // fin Validaciones anteriores al guardado
 
             if ($scope.errores == 0) {
