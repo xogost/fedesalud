@@ -419,6 +419,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
                 /*Validaciones Pedro*/
+				
                 // jQuery("#idchecksaliascampo922712961").change(function() {
                 // if (jQuery(idchecksaliascampo922712961).is(":checked")) {
                 // jQuery("[id*='idaliascampo3038']").attr("disabled", "true").val("");
@@ -759,6 +760,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
 
+                jQuery("input[name='namealiascampo3011']").change(function() {
+                    if (jQuery("#idchecksaliascampo301113351").is(":checked")) {
+                        jQuery("#idaliascampo3012").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3012").val("");
+                    } else {
+                        jQuery("#idaliascampo3012").removeAttr("disabled");
+                    }
+                });
+				
                 //Fin validaciones Pedro
 				
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
