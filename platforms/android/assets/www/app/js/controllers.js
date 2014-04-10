@@ -1560,20 +1560,14 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
             } else if ($scope.idEncuesta != undefined) {
                 //console.log(arrayData);
                 //console.log(Object.keys(arrayData).length);
-                for (var i = 0; i < Object.keys(arrayData).length; i++) {
-                    tx.executeSql("SELECT COUNT(1) as Cantidad FROM DATAENCUESTAS WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + i + "'", [], function(tx, result) {
-                        if (i != "nombreEncuesta" && i != "tipoEncuesta") {
-                            if (result.rows.item(0).Cantidad > 0) {
-                                var sql = "UPDATE DATAENCUESTAS SET SINCRONIZADO = 0, VALOR = '" + arrayData[i] + "' WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + i + "'";
-                                //console.log(sql);
-                                tx.executeSql(sql);
-                            } else {
-                                var sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + $scope.idEncuesta + ",'" + i + "','" + arrayData[i] + "', 0, '" + usercookie + "')";
-                                //console.log(sql);
-                                tx.executeSql(sql);
-                            }
-                        }
-                    }, $scope.errorDB);
+                for (var itemUpdate in arrayData) {
+                    if (arrayData[itemUpdate] != "nombreEncuesta" && arrayData[itemUpdate] != "tipoEncuesta") {
+                        var sql = "DELETE FROM DATAENCUESTAS WHERE IDENCUESTA = " + $scope.idEncuesta + " AND IDCAMPO = '" + itemUpdate + "'";
+                        tx.executeSql(sql);
+
+                        sql = "INSERT INTO DATAENCUESTAS (IDENCUESTA, IDCAMPO, VALOR, SINCRONIZADO, USUARIO) VALUES (" + $scope.idEncuesta + ",'" + itemUpdate + "','" + arrayData[itemUpdate] + "', 0, '" + usercookie + "')";
+                        tx.executeSql(sql);
+                    }
                 }
             }
 
