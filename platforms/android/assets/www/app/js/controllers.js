@@ -376,10 +376,10 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 jQuery("#idchecksaliascampo308813755").trigger("change");
                 jQuery("#idchecksaliascampo309013757").change(function() {
                     if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").removeAttr("disabled");
+                        //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").val("").removeAttr("checked");
+                        //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").val("").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo309013757").trigger("change");
@@ -633,16 +633,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("input[name='namealiascampo3092']").removeAttr("disabled");
                     }
                 });
-                jQuery("[id*='idradiosaliascampo2916']").trigger("change");
-                jQuery("#idchecksaliascampo291412925").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("input[name='namealiascampo2915']").removeAttr("disabled");
-                        jQuery("input[name='namealiascampo2916']").removeAttr("disabled");
-                    }
-                    else {
 
-                    }
-                });
                 jQuery("input[name='namealiascampo2925']").change(function() {
                     if (jQuery("#idchecksaliascampo292512946").is(":checked") || jQuery("#idchecksaliascampo292512947").is(":checked")) {
                         jQuery("input[name='namealiascampo2926']").attr("disabled", "disabled");
@@ -688,10 +679,13 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     if (jQuery("#3a14").is(":checked") || jQuery("#3a15").is(":checked")) {
                         jQuery("#3a2cual").attr("disabled", "disabled");
                         jQuery("#3a2cual").val("");
+						jQuery("input[name='3a3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3a3name']").removeAttr("checked");
                     } else {
                         if (jQuery("#3a14").is(":checked") && jQuery("#3a15").is(":checked")) {
                         } else {
                             jQuery("#3a2cual").removeAttr("disabled");
+							jQuery("input[name='3a3name']").removeAttr("disabled");
                         }
                     }
                 });
@@ -760,6 +754,18 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
 
+                jQuery("input[name='namealiascampo2914']").change(function() {
+                    if (jQuery("#idchecksaliascampo291412925").is(":checked")) {
+						jQuery("input[name='namealiascampo2916']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2916']").removeAttr("checked");
+						jQuery("input[name='namealiascampo2915']").removeAttr("disabled");
+                    } else {
+						jQuery("input[name='namealiascampo2915']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2915']").removeAttr("checked");
+						jQuery("input[name='namealiascampo2916']").removeAttr("disabled");
+                    }
+                });
+				
                 jQuery("input[name='namealiascampo3011']").change(function() {
                     if (jQuery("#idchecksaliascampo301113351").is(":checked")) {
                         jQuery("#idaliascampo3012").attr("disabled", "disabled");
@@ -767,6 +773,22 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     } else {
                         jQuery("#idaliascampo3012").removeAttr("disabled");
                     }
+                });
+				
+                jQuery("#idchecksaliascampo309013757").change(function() {
+				if (jQuery("#idchecksaliascampo309013757").is(":checked")){
+                        jQuery("#idchecksaliascampo309013758").removeAttr("checked");
+						jQuery("input[name='namealiascampo3091']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3092']").removeAttr("disabled");
+				}
+                });
+				
+                jQuery("#idchecksaliascampo309013758").change(function() {
+				if (jQuery("#idchecksaliascampo309013758").is(":checked")){
+                        jQuery("#idchecksaliascampo309013757").removeAttr("checked");
+						jQuery("input[name='namealiascampo3091']").attr("disabled", "disabled");
+						jQuery("input[name='namealiascampo3092']").attr("disabled", "disabled");
+				}
                 });
 				
                 //Fin validaciones Pedro
