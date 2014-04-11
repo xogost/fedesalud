@@ -1493,7 +1493,9 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 if(!jQuery("input[name='" + arrayNameRadios[itemRadiosName] + "']").is(":checked")){
                     jQuery("input[name='" + arrayNameRadios[itemRadiosName] + "']").focus();
                     $scope.errores = $scope.errores + 1;
-                    alert("Las opciones de selección unica son obligatorias.");
+                    console.log(jQuery("input[name='" + arrayNameRadios[itemRadiosName] + "']").parent().parent().parent().find(".textinfo").html());
+                    var noPreguntaError = jQuery.trim(jQuery("input[name='" + arrayNameRadios[itemRadiosName] + "']").parent().parent().parent().find(".textinfo").html());
+                    alert("Existen preguntas sin responder, la primera vacia es la no. " + noPreguntaError);
                     break;
                 } 
             }
@@ -1523,10 +1525,14 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                                 if (objControl[itemControl].value == result.rows.item(i).VALOR)
                                     objControl[itemControl].checked = true;
                                 jQuery(objControl[itemControl]).trigger("change");
+                                jQuery(objControl[itemControl]).trigger("change");
+                                jQuery(objControl[itemControl]).trigger("change");
+                                jQuery(objControl[itemControl]).trigger("change");
                             }
-                            else
+                            else if(objControl[itemControl].type != undefined){
                                 objControl[itemControl].value = result.rows.item(i).VALOR;
-                            //jQuery(objControl[itemControl]).trigger("change");
+                                jQuery(objControl[itemControl]).trigger("change");
+                            }
                         }
 
                         if (objControl.length == 0)
