@@ -73,24 +73,24 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 // }
                 // });
 
-                jQuery("[id*='idradiosaliascampo2930']").trigger("change");
-                jQuery("#idchecksaliascampo300513326").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo3009']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo3009']").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                });
-                jQuery("#idchecksaliascampo300513326").trigger("change");
-                jQuery("[id*='idradiosaliascampo3012']").change(function() {
-                    if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
-                        jQuery("#idaliascampo3014").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo3014").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                });
+                // jQuery("[id*='idradiosaliascampo2930']").trigger("change");
+                // jQuery("#idchecksaliascampo300513326").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo3009']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo3009']").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("#idchecksaliascampo300513326").trigger("change");
+                // jQuery("[id*='idradiosaliascampo3012']").change(function() {
+                    // if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
+                        // jQuery("#idaliascampo3014").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo3014").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
+                // });
                 jQuery("[id*='idradiosaliascampo3012']").trigger("change");
                 jQuery("#idchecksaliascampo301113351").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -154,15 +154,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo2931").attr("disabled", "true").val("").removeAttr("checked");
                     }
                 });
-                jQuery("[id*='idradiosaliascampo2929']").trigger("change");
-                jQuery("#idchecksaliascampo301113350").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                });
+                // jQuery("[id*='idradiosaliascampo2929']").trigger("change");
+                // jQuery("#idchecksaliascampo301113350").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
+                // });
                 jQuery("#idchecksaliascampo301113350").trigger("change");
                 jQuery("#idchecksaliascampo300513325").change(function() {
                     if (jQuery(this).is(":checked")) {
