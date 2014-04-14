@@ -163,24 +163,25 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         // jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").attr("disabled", "true").val("").removeAttr("checked");
                     // }
                 // });
-                jQuery("#idchecksaliascampo301113350").trigger("change");
-                jQuery("#idchecksaliascampo300513325").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                });
-                jQuery("#idchecksaliascampo300513325").trigger("change");
-                jQuery("[id*='idradiosaliascampo2979']").change(function() {
-                    if (jQuery("#idradiosaliascampo297913293").is(":checked")) {
-                        jQuery("#idaliascampo2982").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo2982").attr("disabled", "true").val("").removeAttr("checked");
-                    }
-                });
+                // jQuery("#idchecksaliascampo301113350").trigger("change");
+                // jQuery("#idchecksaliascampo300513325").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("#idchecksaliascampo300513325").trigger("change");
+                // jQuery("[id*='idradiosaliascampo2979']").change(function() {
+                    // if (jQuery("#idradiosaliascampo297913293").is(":checked")) {
+                        // jQuery("#idaliascampo2982").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo2982").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
+                // });
+				
                 jQuery("[id*='idradiosaliascampo2979']").trigger("change");
                 jQuery("#idchecksaliascampo292712962").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -375,21 +376,21 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 });
                 jQuery("#idchecksaliascampo308813755").trigger("change");
                 jQuery("#idchecksaliascampo309013757").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").removeAttr("disabled");
-                    }
-                    else {
-                        //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").val("").removeAttr("checked");
-                    }
+                    // if (jQuery(this).is(":checked")) {
+                        // //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
                 });
                 jQuery("#idchecksaliascampo309013757").trigger("change");
                 jQuery("#idchecksaliascampo308813756").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo3092'],[id*='idradiosaliascampo3091'],[id*='idchecksaliascampo3090']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo3092'],[id*='idradiosaliascampo3091'],[id*='idchecksaliascampo3090']").attr("disabled", "true").val("").removeAttr("checked");
-                    }
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo3092'],[id*='idradiosaliascampo3091'],[id*='idchecksaliascampo3090']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo3092'],[id*='idradiosaliascampo3091'],[id*='idchecksaliascampo3090']").attr("disabled", "true").val("").removeAttr("checked");
+                    // }
                 });
                 jQuery("#idchecksaliascampo308813756").trigger("change");
                 jQuery("#idchecksaliascampo309513774").change(function() {
@@ -788,9 +789,27 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idchecksaliascampo309013757").removeAttr("checked");
                         jQuery("input[name='namealiascampo3091']").attr("disabled", "disabled");
                         jQuery("input[name='namealiascampo3092']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3091']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3092']").removeAttr("checked");
                     }
                 });
 
+                jQuery("input[name='namealiascampo3005']").change(function() {
+                    if (jQuery("#idchecksaliascampo300513326").is(":checked")) {
+                        jQuery("input[name='namealiascampo3006']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3006']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3007']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3007']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3008']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3008']").removeAttr("checked");
+						jQuery("input[name='namealiascampo3009']").removeAttr("disabled");
+                    } else {
+                        jQuery("input[name='namealiascampo3006']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3007']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3008']").removeAttr("disabled");
+                    }
+                });
+				
                 //Fin validaciones Pedro
 
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
