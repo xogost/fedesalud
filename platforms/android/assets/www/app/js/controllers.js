@@ -769,10 +769,10 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 
                 jQuery("input[name='namealiascampo3011']").change(function() {
                     if (jQuery("#idchecksaliascampo301113351").is(":checked")) {
-                        jQuery("#idaliascampo3012").attr("disabled", "disabled");
-                        jQuery("#idaliascampo3012").val("");
+                        jQuery("input[name='namealiascampo3012']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3012']").removeAttr("checked");
                     } else {
-                        jQuery("#idaliascampo3012").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3012']").removeAttr("disabled");
                     }
                 });
 
@@ -807,6 +807,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("input[name='namealiascampo3006']").removeAttr("disabled");
                         jQuery("input[name='namealiascampo3007']").removeAttr("disabled");
                         jQuery("input[name='namealiascampo3008']").removeAttr("disabled");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3012']").change(function() {
+                    if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
+						jQuery("#idaliascampo3014").removeAttr("disabled", "disabled");
+                    } else {
+                        jQuery("#idaliascampo3014").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3014").val("");
                     }
                 });
 				
