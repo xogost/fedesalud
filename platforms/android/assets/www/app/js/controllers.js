@@ -60,7 +60,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo2910").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo2910").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo2910").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 // jQuery("[id*='idradiosaliascampo2909']").trigger("change");
@@ -69,7 +69,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 // jQuery("#idaliascampo2917").removeAttr("disabled");
                 // }
                 // else {
-                // jQuery("#idaliascampo2917").attr("disabled", "true").val("").removeAttr("checked");
+                // jQuery("#idaliascampo2917").attr("disabled", "true").removeAttr("checked");
                 // }
                 // });
 
@@ -79,7 +79,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         // jQuery("[id*='idradiosaliascampo3009']").removeAttr("disabled");
                     // }
                     // else {
-                        // jQuery("[id*='idradiosaliascampo3009']").attr("disabled", "true").val("").removeAttr("checked");
+                        // jQuery("[id*='idradiosaliascampo3009']").attr("disabled", "true").removeAttr("checked");
                     // }
                 // });
                 // jQuery("#idchecksaliascampo300513326").trigger("change");
@@ -88,7 +88,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         // jQuery("#idaliascampo3014").removeAttr("disabled");
                     // }
                     // else {
-                        // jQuery("#idaliascampo3014").attr("disabled", "true").val("").removeAttr("checked");
+                        // jQuery("#idaliascampo3014").attr("disabled", "true").removeAttr("checked");
                     // }
                 // });
                 jQuery("[id*='idradiosaliascampo3012']").trigger("change");
@@ -97,7 +97,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3016']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3016']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo3016']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo301113351").trigger("change");
@@ -106,7 +106,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292512947").trigger("change");
@@ -115,25 +115,27 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2979']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo297313267").trigger("change");
+                
                 jQuery("#idchecksaliascampo297313268").change(function() {
                     if (jQuery(this).is(":checked")) {
                         jQuery("[id*='idradiosaliascampo2979']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo297313268").trigger("change");
+
                 jQuery("#idchecksaliascampo308713751").change(function() {
                     if (jQuery(this).is(":checked")) {
                         jQuery("[id*='idchecksaliascampo3088']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo3088']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo3088']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo308713751").trigger("change");
@@ -142,7 +144,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3096']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo309513776").trigger("change");
@@ -151,7 +153,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo2931").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo2931").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo2931").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 // jQuery("[id*='idradiosaliascampo2929']").trigger("change");
@@ -160,7 +162,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         // jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").removeAttr("disabled");
                     // }
                     // else {
-                        // jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").attr("disabled", "true").val("").removeAttr("checked");
+                        // jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").attr("disabled", "true").removeAttr("checked");
                     // }
                 // });
                 jQuery("#idchecksaliascampo301113350").trigger("change");
@@ -169,7 +171,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo300513325").trigger("change");
@@ -178,7 +180,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo2982").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo2982").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo2982").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("[id*='idradiosaliascampo2979']").trigger("change");
@@ -187,7 +189,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo2928").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo2928").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo2928").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292712962").trigger("change");
@@ -196,7 +198,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292512946").trigger("change");
@@ -205,7 +207,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292512948").trigger("change");
@@ -214,7 +216,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292512949").trigger("change");
@@ -223,7 +225,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo2926'],[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292512950").trigger("change");
@@ -232,7 +234,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292612951").trigger("change");
@@ -241,7 +243,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292612952").trigger("change");
@@ -250,7 +252,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292612953").trigger("change");
@@ -259,7 +261,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292612954").trigger("change");
@@ -268,46 +270,46 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo2927'],[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo292612955").trigger("change");
-                jQuery("#idaliascampo2962").focusout(function() {
+                jQuery("#idaliascampo2962").change(function() {
                     if (jQuery.trim(jQuery(this).val()).length != 0 && jQuery(this).val() != "") {
                         jQuery("#idaliascampo2966").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo2966").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo2966").attr("disabled", "true").removeAttr("checked");
                     }
                 }
                 );
-                jQuery("#idaliascampo2962").trigger("focusout");
-                jQuery("#idaliascampo2963").focusout(function() {
+                jQuery("#idaliascampo2962").trigger("change");
+                jQuery("#idaliascampo2963").change(function() {
                     if (jQuery.trim(jQuery(this).val()).length != 0 && jQuery(this).val() != "") {
                         jQuery("#idaliascampo2965").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo2965").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo2965").attr("disabled", "true").removeAttr("checked");
                     }
                 }
                 );
-                jQuery("#idaliascampo2963").trigger("focusout");
-                jQuery("#idaliascampo2964").focusout(function() {
+                jQuery("#idaliascampo2963").trigger("change");
+                jQuery("#idaliascampo2964").change(function() {
                     if (jQuery.trim(jQuery(this).val()).length != 0 && jQuery(this).val() != "") {
                         jQuery("#idaliascampo2967").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo2967").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo2967").attr("disabled", "true").removeAttr("checked");
                     }
                 }
                 );
-                jQuery("#idaliascampo2964").trigger("focusout");
+                jQuery("#idaliascampo2964").trigger("change");
                 jQuery("#idchecksaliascampo297313269").change(function() {
                     if (jQuery(this).is(":checked")) {
                         jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo297313269").trigger("change");
@@ -316,7 +318,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo297313270").trigger("change");
@@ -325,7 +327,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo301913376").trigger("change");
@@ -334,7 +336,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo3090']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo3090']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo3090']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo308713752").trigger("change");
@@ -343,7 +345,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo3089").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo3089").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo3089").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo308813756").trigger("change");
@@ -352,7 +354,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo308813754").trigger("change");
@@ -361,7 +363,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo3090']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo3090']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo3090']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo308813754").trigger("change");
@@ -370,7 +372,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idchecksaliascampo3090'],[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idchecksaliascampo3090'],[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idchecksaliascampo3090'],[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo308813755").trigger("change");
@@ -379,7 +381,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").removeAttr("disabled");
                     }
                     else {
-                        //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").val("").removeAttr("checked");
+                        //jQuery("[id*='idradiosaliascampo3091'],[id*='idradiosaliascampo3092']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo309013757").trigger("change");
@@ -388,7 +390,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3092'],[id*='idradiosaliascampo3091'],[id*='idchecksaliascampo3090']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3092'],[id*='idradiosaliascampo3091'],[id*='idchecksaliascampo3090']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo3092'],[id*='idradiosaliascampo3091'],[id*='idchecksaliascampo3090']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo308813756").trigger("change");
@@ -397,7 +399,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3096']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo309513774").trigger("change");
@@ -406,7 +408,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3096']").removeAttr("disabled");
                     }
                     else {
-                        jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 jQuery("#idchecksaliascampo309513775").trigger("change");
@@ -415,7 +417,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo3097").removeAttr("disabled");
                     }
                     else {
-                        jQuery("#idaliascampo3097").attr("disabled", "true").val("").removeAttr("checked");
+                        jQuery("#idaliascampo3097").attr("disabled", "true").removeAttr("checked");
                     }
                 });
                 /*Validaciones Pedro*/
@@ -563,6 +565,8 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         }
                     }
                 });
+                jQuery("input[name='3e1name']").trigger('change');
+
                 jQuery("input[name='namealiascampo2973']").change(function() {
                     if (jQuery("#idchecksaliascampo297313267").is(":checked") || jQuery("#idchecksaliascampo297313268").is(":checked")) {
                         jQuery("input[name='namealiascampo2976']").attr("disabled", "disabled");
@@ -577,6 +581,9 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         }
                     }
                 });
+                
+                jQuery("input[name='namealiascampo2973']").trigger("change");
+
                 jQuery("input[name='namealiascampo3019']").change(function() {
                     if (jQuery("#idchecksaliascampo301913376").is(":checked")) {
                         jQuery("#idaliascampo3080").removeAttr("disabled");
@@ -585,6 +592,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idaliascampo3080").val("");
                     }
                 });
+
                 jQuery("input[name='namealiascampo3019']").change(function() {
                     if (jQuery("#idchecksaliascampo301913377").is(":checked")) {
                         jQuery("#idaliascampo3081").removeAttr("disabled");
@@ -1520,14 +1528,13 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 tx.executeSql(sql, [], function(tx, result) {
                     for (var i = 0; i < result.rows.length; i++) {
                         var objControl = document.getElementsByName(result.rows.item(i).IDCAMPO);
+
                         for (var itemControl in objControl) {
                             if (objControl[itemControl].type == 'radio') {
-                                if (objControl[itemControl].value == result.rows.item(i).VALOR)
+                                if (objControl[itemControl].value == result.rows.item(i).VALOR){
                                     objControl[itemControl].checked = true;
-                                jQuery(objControl[itemControl]).trigger("change");
-                                jQuery(objControl[itemControl]).trigger("change");
-                                jQuery(objControl[itemControl]).trigger("change");
-                                jQuery(objControl[itemControl]).trigger("change");
+                                    jQuery(objControl[itemControl]).trigger("change");
+                                }
                             }
                             else if(objControl[itemControl].type != undefined){
                                 objControl[itemControl].value = result.rows.item(i).VALOR;
@@ -1797,20 +1804,33 @@ ModuleMyApp.controller('listadoInstrumentosController', ['$scope', function($sco
                 window.location = '#/editarInstrumentouno/' + id;
             };
             $scope.queryEncuestas = function(tx) {
-                var sql = 'select ID,NOMBRE, TIPOENCUESTA from ENCUESTAS';
+                var sql = 'select ENCUESTAS.ID, ENCUESTAS.NOMBRE, ENCUESTAS.TIPOENCUESTA, DATAENCUESTAS.valor from ENCUESTAS left join DATAENCUESTAS on ENCUESTAS.ID = DATAENCUESTAS.IDENCUESTA where DATAENCUESTAS.IDCAMPO = \'namealiascampo2903\' AND ENCUESTAS.TIPOENCUESTA = 1 group by ENCUESTAS.ID, ENCUESTAS.NOMBRE, ENCUESTAS.TIPOENCUESTA ';
                 tx.executeSql(sql, [],
                         function(tx, result) {
-                            var html = '<thead><tr><th>IDENTIFICADOR</th><th>TIPO</th><th></th></tr></thead><tbody>';
+                            var html = '<thead><tr><th>IDENTIFICADOR</th><th>NOMBRE</th><th>TIPO</th><th></th></tr></thead><tbody>';
                             for (var i = 0; i < result.rows.length; i++) {
-                                if (result.rows.item(i).TIPOENCUESTA == '1') {
-                                    html += "<tr><td>" + result.rows.item(i).NOMBRE + "</td><td>Usuarios</td><td><a class='btn btn-primary btn-md' href='#/instrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
-                                } else if (result.rows.item(i).TIPOENCUESTA == '2') {
-                                    html += "<tr><td>" + result.rows.item(i).NOMBRE + "</td><td>Prescriptores</td><td><a class='btn btn-primary btn-md' href='#/instrumentodos/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
-                                }
+                                html += "<tr><td>" + result.rows.item(i).NOMBRE + "</td><td>" + result.rows.item(i).VALOR + "</td><td>Usuarios</td><td><a class='btn btn-primary btn-md' href='#/instrumentouno/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
                             }
                             html += "</tbody>";
                             //localStorage.setItem("htmlEncuestas", html);
                             jQuery("#tablaEncuestas").html(html);
+                        },
+                        function(error) {
+                            //console.log(error.code);
+                        }
+                );
+
+                var sql = 'select ENCUESTAS.ID, ENCUESTAS.NOMBRE, ENCUESTAS.TIPOENCUESTA, \'\' as VALOR from ENCUESTAS Where ENCUESTAS.TIPOENCUESTA = 2';
+                tx.executeSql(sql, [],
+                        function(tx, result) {
+                            var html = '';
+                            for (var i = 0; i < result.rows.length; i++) {
+                                html += "<tr><td>" + result.rows.item(i).NOMBRE + "</td><td>N/A</td><td>Prescriptores</td><td><a class='btn btn-primary btn-md' href='#/instrumentodos/" + result.rows.item(i).ID + "' >Editar</a></td></tr>";
+                            }
+                            html += "</tbody>";
+                            //localStorage.setItem("htmlEncuestas", html);
+                            var htmlTable = jQuery("#tablaEncuestas").html();
+                            jQuery("#tablaEncuestas").html(htmlTable + html)
                         },
                         function(error) {
                             //console.log(error.code);
