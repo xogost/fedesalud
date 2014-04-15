@@ -82,15 +82,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         // jQuery("[id*='idradiosaliascampo3009']").attr("disabled", "true").removeAttr("checked");
                     // }
                 // });
-                // jQuery("#idchecksaliascampo300513326").trigger("change");
-                // jQuery("[id*='idradiosaliascampo3012']").change(function() {
-                    // if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
-                        // jQuery("#idaliascampo3014").removeAttr("disabled");
-                    // }
-                    // else {
-                        // jQuery("#idaliascampo3014").attr("disabled", "true").removeAttr("checked");
-                    // }
-                // });
+                 //jQuery("#idchecksaliascampo300513326").trigger("change");
+                 jQuery("[id*='idradiosaliascampo3012']").change(function() {
+                     if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
+                         jQuery("#idaliascampo3014").removeAttr("disabled");
+                     }
+                     else {
+                         jQuery("#idaliascampo3014").attr("disabled", "true").removeAttr("checked");
+                   }
+                });
                 jQuery("[id*='idradiosaliascampo3012']").trigger("change");
                 jQuery("#idchecksaliascampo301113351").change(function() {
                     if (jQuery(this).is(":checked")) {
