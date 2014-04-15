@@ -776,10 +776,10 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
 
                 jQuery("input[name='namealiascampo3011']").change(function() {
                     if (jQuery("#idchecksaliascampo301113351").is(":checked")) {
-                        jQuery("#idaliascampo3012").attr("disabled", "disabled");
-                        jQuery("#idaliascampo3012").val("");
+                        jQuery("input[name='namealiascampo3012']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3012']").removeAttr("checked");
                     } else {
-                        jQuery("#idaliascampo3012").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3012']").removeAttr("disabled");
                     }
                 });
 
