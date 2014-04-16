@@ -46,11 +46,11 @@
         </div>
       </div>
 
-      <!--<div class="btn-group pull-right" yield-to="navbarAction">
-        <div class="btn btn-navbar">
-          <i class="fa fa-plus"></i> New
+      <div class="btn-group pull-right" yield-to="navbarAction">
+        <div class="" style='margin-right: 1em; line-height: 3.4em; '>
+            <span id="nameUser"></span>
         </div>
-      </div>-->
+      </div>
   </div>
 
   
@@ -78,6 +78,15 @@
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script>
     jQuery.noConflict();
+    
+    jQuery(document).ready(function(){
+        if(window.localStorage.getItem("user") != undefined){
+            var user = window.localStorage.getItem("user");
+            user = user.split(":");
+            jQuery("#nameUser").html(user[1].toUpperCase());
+        }
+    });
+    
     jQuery.fn.serializeObject = function()
     {
        var o = {};
