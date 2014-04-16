@@ -1687,6 +1687,11 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
         //En caso de error
         $scope.querySaveEncuesta = function(tx) {
             var arrayData = jQuery(".form-container").serializeObject();
+            
+            jQuery('.form-container input[type=checkbox]:checked').each(function() {
+                arrayData[jQuery(this).attr("id")] = jQuery(this).val();
+            });
+            
             //var arrayData = $scope.formData;
             console.log(arrayData);
             var usercookie = window.localStorage.getItem("user");
