@@ -65,14 +65,14 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         alert("El valor no puede ser mayor a 12 para la opcion seleccionada.");
                     }
                 });
-                jQuery("[id*='idradiosaliascampo2909']").change(function() {
-                    if (jQuery("#idradiosaliascampo290912916").is(":checked")) {
-                        jQuery("#idaliascampo2910").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo2910").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
+                // jQuery("[id*='idradiosaliascampo2909']").change(function() {
+                    // if (jQuery("#idradiosaliascampo290912916").is(":checked")) {
+                        // jQuery("#idaliascampo2910").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo2910").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
                 // jQuery("[id*='idradiosaliascampo2909']").trigger("change");
                 // jQuery("[id*='idradiosaliascampo2916']").change(function() {
                 // if (jQuery("#idradiosaliascampo291612940").is(":checked")) {
@@ -897,6 +897,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     } else {
                         jQuery("#idaliascampo3097").attr("disabled", "disabled");
                         jQuery("#idaliascampo3097").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo2909']").change(function() {
+                    if (jQuery("#idradiosaliascampo290912916").is(":checked")) {
+						jQuery("#idaliascampo2910").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo2910").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2910").val("");
                     }
                 });
 				
