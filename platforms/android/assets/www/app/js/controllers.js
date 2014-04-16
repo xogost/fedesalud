@@ -93,14 +93,14 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     // }
                 // });
                  //jQuery("#idchecksaliascampo300513326").trigger("change");
-                 jQuery("[id*='idradiosaliascampo3012']").change(function() {
-                     if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
-                         jQuery("#idaliascampo3014").removeAttr("disabled");
-                     }
-                     else {
-                         jQuery("#idaliascampo3014").attr("disabled", "true").removeAttr("checked");
-                   }
-                });
+                 // jQuery("[id*='idradiosaliascampo3012']").change(function() {
+                     // if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
+                         // jQuery("#idaliascampo3014").removeAttr("disabled");
+                     // }
+                     // else {
+                         // jQuery("#idaliascampo3014").attr("disabled", "true").removeAttr("checked");
+                   // }
+                // });
                 jQuery("[id*='idradiosaliascampo3012']").trigger("change");
                 jQuery("#idchecksaliascampo301113351").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -119,25 +119,25 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo2929']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
-                jQuery("#idchecksaliascampo292512947").trigger("change");
-                jQuery("#idchecksaliascampo297313267").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo2979']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
-                jQuery("#idchecksaliascampo297313267").trigger("change");
+                // jQuery("#idchecksaliascampo292512947").trigger("change");
+                // jQuery("#idchecksaliascampo297313267").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo2979']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("#idchecksaliascampo297313267").trigger("change");
                 
-                jQuery("#idchecksaliascampo297313268").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo2979']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
+                // jQuery("#idchecksaliascampo297313268").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo2979']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
                 jQuery("#idchecksaliascampo297313268").trigger("change");
 
                 jQuery("#idchecksaliascampo308713751").change(function() {
@@ -157,15 +157,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
-                jQuery("#idchecksaliascampo309513776").trigger("change");
-                jQuery("[id*='idradiosaliascampo2929']").change(function() {
-                    if (jQuery("#idradiosaliascampo292912970").is(":checked")) {
-                        jQuery("#idaliascampo2931").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo2931").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
+                // jQuery("#idchecksaliascampo309513776").trigger("change");
+                // jQuery("[id*='idradiosaliascampo2929']").change(function() {
+                    // if (jQuery("#idradiosaliascampo292912970").is(":checked")) {
+                        // jQuery("#idaliascampo2931").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo2931").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
                 // jQuery("[id*='idradiosaliascampo2929']").trigger("change");
                 // jQuery("#idchecksaliascampo301113350").change(function() {
                     // if (jQuery(this).is(":checked")) {
@@ -175,33 +175,33 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         // jQuery("[id*='idradiosaliascampo3012'],[id*='idradiosaliascampo3016']").attr("disabled", "true").removeAttr("checked");
                     // }
                 // });
-                jQuery("#idchecksaliascampo301113350").trigger("change");
-                jQuery("#idchecksaliascampo300513325").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
-                jQuery("#idchecksaliascampo300513325").trigger("change");
-                jQuery("[id*='idradiosaliascampo2979']").change(function() {
-                    if (jQuery("#idradiosaliascampo297913293").is(":checked")) {
-                        jQuery("#idaliascampo2982").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo2982").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
-                jQuery("[id*='idradiosaliascampo2979']").trigger("change");
-                jQuery("#idchecksaliascampo292712962").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("#idaliascampo2928").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo2928").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
+                // jQuery("#idchecksaliascampo301113350").trigger("change");
+                // jQuery("#idchecksaliascampo300513325").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo3008'],[id*='idradiosaliascampo3007'],[id*='idradiosaliascampo3006'],[id*='idradiosaliascampo3009']").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("#idchecksaliascampo300513325").trigger("change");
+                // jQuery("[id*='idradiosaliascampo2979']").change(function() {
+                    // if (jQuery("#idradiosaliascampo297913293").is(":checked")) {
+                        // jQuery("#idaliascampo2982").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo2982").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("[id*='idradiosaliascampo2979']").trigger("change");
+                // jQuery("#idchecksaliascampo292712962").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("#idaliascampo2928").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo2928").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
                 jQuery("#idchecksaliascampo292712962").trigger("change");
                 jQuery("#idchecksaliascampo292512946").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -313,33 +313,33 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 }
                 );
-                jQuery("#idaliascampo2964").trigger("change");
-                jQuery("#idchecksaliascampo297313269").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
-                jQuery("#idchecksaliascampo297313269").trigger("change");
-                jQuery("#idchecksaliascampo297313270").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
-                jQuery("#idchecksaliascampo297313270").trigger("change");
-                jQuery("#idchecksaliascampo297313271").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
+                // jQuery("#idaliascampo2964").trigger("change");
+                // jQuery("#idchecksaliascampo297313269").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("#idchecksaliascampo297313269").trigger("change");
+                // jQuery("#idchecksaliascampo297313270").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
+                // jQuery("#idchecksaliascampo297313270").trigger("change");
+                // jQuery("#idchecksaliascampo297313271").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo2974'],[id*='idradiosaliascampo2976'],[id*='idradiosaliascampo2979']").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
                 jQuery("#idchecksaliascampo301913376").trigger("change");
                 jQuery("#idchecksaliascampo308713752").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -421,15 +421,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("[id*='idradiosaliascampo3096']").attr("disabled", "true").removeAttr("checked");
                     }
                 });
-                jQuery("#idchecksaliascampo309513775").trigger("change");
-                jQuery("[id*='idradiosaliascampo3096']").change(function() {
-                    if (jQuery("#idradiosaliascampo309613782").is(":checked")) {
-                        jQuery("#idaliascampo3097").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("#idaliascampo3097").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
+                // jQuery("#idchecksaliascampo309513775").trigger("change");
+                // jQuery("[id*='idradiosaliascampo3096']").change(function() {
+                    // if (jQuery("#idradiosaliascampo309613782").is(":checked")) {
+                        // jQuery("#idaliascampo3097").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("#idaliascampo3097").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
                 /*Validaciones Pedro*/
 
                 // jQuery("#idchecksaliascampo922712961").change(function() {
@@ -806,6 +806,8 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("#idchecksaliascampo309013757").removeAttr("checked");
                         jQuery("input[name='namealiascampo3091']").attr("disabled", "disabled");
                         jQuery("input[name='namealiascampo3092']").attr("disabled", "disabled");
+						jQuery("input[name='namealiascampo3091']").removeAttr("checked");
+						jQuery("input[name='namealiascampo3092']").removeAttr("checked");
                     }
                 });
 
@@ -824,6 +826,77 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                         jQuery("input[name='namealiascampo2925']").removeAttr("checked");
 						jQuery("input[name='namealiascampo2972']").attr("disabled", "disabled");
                         jQuery("input[name='namealiascampo2972']").removeAttr("checked");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo2972']").change(function() {
+                    if (jQuery("#idradiosaliascampo297213266").is(":checked")) {
+                        jQuery("input[name='namealiascampo2974']").removeAttr("disabled");
+                    } else {
+                        jQuery("input[name='namealiascampo2974']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2974']").removeAttr("checked");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3005']").change(function() {
+                    if (jQuery("#idchecksaliascampo300513326").is(":checked")) {
+                        jQuery("input[name='namealiascampo3006']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3006']").removeAttr("checked");                        
+                        jQuery("input[name='namealiascampo3007']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3007']").removeAttr("checked");      
+                        jQuery("input[name='namealiascampo3008']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3008']").removeAttr("checked");    
+                    } else {
+						jQuery("input[name='namealiascampo3006']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3007']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo3008']").removeAttr("disabled");
+						
+                    }
+                });
+				
+                jQuery("#idchecksaliascampo292712962").change(function() {
+                    if (jQuery("#idchecksaliascampo292712962").is(":checked")) {
+						jQuery("#idaliascampo2928").removeAttr("disabled");
+						}else{
+                        jQuery("#idchecksaliascampo309013757").removeAttr("checked");
+                        jQuery("#idaliascampo2928").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2928").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo2929']").change(function() {
+                    if (jQuery("#idradiosaliascampo292912970").is(":checked")) {
+						jQuery("#idaliascampo2931").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo2931").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2931").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo2979']").change(function() {
+                    if (jQuery("#idradiosaliascampo297913293").is(":checked")) {
+						jQuery("#idaliascampo2982").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo2982").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2982").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3012']").change(function() {
+                    if (jQuery("#idradiosaliascampo301213359").is(":checked")) {
+						jQuery("#idaliascampo3014").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo3014").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3014").val("");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3096']").change(function() {
+                    if (jQuery("#idradiosaliascampo309613782").is(":checked")) {
+						jQuery("#idaliascampo3097").removeAttr("disabled");
+                    } else {
+                        jQuery("#idaliascampo3097").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3097").val("");
                     }
                 });
 				
@@ -914,12 +987,38 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 var validacion = new RegExp(/^[^0-9()]+$/);
                 if (!jQuery("#idaliascampo2903").val().match(validacion)) {
                     alert("El campo Nombres y Apellidos no debe contener números. Por favor verifique.");
+					$scope.errores = $scope.errores + 1;
                     jQuery("#idaliascampo2903").focus();
                     return false;
                 }
             }
-            //
+			
+			//años y meses menor a cero
 
+            if (jQuery("#idaliascampo3080").length == 0) {
+                //no existe el control
+            } else {
+                //validar y mostrar el mensaje
+                if (jQuery("#idaliascampo3080").val() < 1) {
+                    alert("El valor de los meses debe ser mayor de cero. Por favor verifique.");
+					$scope.errores = $scope.errores + 1;
+                    jQuery("#idaliascampo3080").focus();
+                    return false;
+                }
+            }
+			
+            if (jQuery("#idaliascampo3081").length == 0) {
+                //no existe el control
+            } else {
+                //validar y mostrar el mensaje
+                if (jQuery("#idaliascampo3081").val() <1) {
+                    alert("El valor de los años debe ser mayor de cero. Por favor verifique.");
+					$scope.errores = $scope.errores + 1;
+                    jQuery("#idaliascampo3081").focus();
+                    return false;
+                }
+            }
+			
             if (jQuery("#idaliascampo2962").length == 0) {
                 //no existe el control
             } else {
