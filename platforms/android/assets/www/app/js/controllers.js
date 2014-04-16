@@ -900,6 +900,129 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
 				
+				//Cap2 P14 Prescriptores
+                jQuery("input[name='namealiascampo3062']").change(function() {
+                    if (jQuery("#idradiosaliascampo306213683").is(":checked") && jQuery("#idradiosaliascampo306313686").is(":checked") && jQuery("#idradiosaliascampo306413689").is(":checked") && jQuery("#idradiosaliascampo306513692").is(":checked") && jQuery("#idradiosaliascampo306613695").is(":checked") ) {
+                        jQuery("#idradiosaliascampo306713696").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713696").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713697").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713697").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713698").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713698").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713699").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713699").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713700").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713700").removeAttr("checked");
+						jQuery("#idradiosaliascampo306713701").removeAttr("disabled");
+                    } else {
+						jQuery("#idradiosaliascampo306713696").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713697").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713698").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713699").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713700").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo306713701").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713701").removeAttr("checked");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3063']").change(function() {
+                    if (jQuery("#idradiosaliascampo306213683").is(":checked") && jQuery("#idradiosaliascampo306313686").is(":checked") && jQuery("#idradiosaliascampo306413689").is(":checked") && jQuery("#idradiosaliascampo306513692").is(":checked") && jQuery("#idradiosaliascampo306613695").is(":checked") ) {
+                        jQuery("#idradiosaliascampo306713696").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713696").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713697").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713697").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713698").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713698").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713699").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713699").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713700").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713700").removeAttr("checked");
+						jQuery("#idradiosaliascampo306713701").removeAttr("disabled");
+                    } else {
+						jQuery("#idradiosaliascampo306713696").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713697").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713698").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713699").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713700").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo306713701").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713701").removeAttr("checked");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3064']").change(function() {
+                    if (jQuery("#idradiosaliascampo306213683").is(":checked") && jQuery("#idradiosaliascampo306313686").is(":checked") && jQuery("#idradiosaliascampo306413689").is(":checked") && jQuery("#idradiosaliascampo306513692").is(":checked") && jQuery("#idradiosaliascampo306613695").is(":checked") ) {
+                        jQuery("#idradiosaliascampo306713696").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713696").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713697").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713697").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713698").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713698").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713699").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713699").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713700").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713700").removeAttr("checked");
+						jQuery("#idradiosaliascampo306713701").removeAttr("disabled");
+                    } else {
+						jQuery("#idradiosaliascampo306713696").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713697").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713698").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713699").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713700").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo306713701").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713701").removeAttr("checked");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3065']").change(function() {
+                    if (jQuery("#idradiosaliascampo306213683").is(":checked") && jQuery("#idradiosaliascampo306313686").is(":checked") && jQuery("#idradiosaliascampo306413689").is(":checked") && jQuery("#idradiosaliascampo306513692").is(":checked") && jQuery("#idradiosaliascampo306613695").is(":checked") ) {
+                        jQuery("#idradiosaliascampo306713696").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713696").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713697").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713697").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713698").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713698").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713699").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713699").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713700").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713700").removeAttr("checked");
+						jQuery("#idradiosaliascampo306713701").removeAttr("disabled");
+                    } else {
+						jQuery("#idradiosaliascampo306713696").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713697").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713698").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713699").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713700").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo306713701").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713701").removeAttr("checked");
+                    }
+                });
+				
+                jQuery("input[name='namealiascampo3066']").change(function() {
+                    if (jQuery("#idradiosaliascampo306213683").is(":checked") && jQuery("#idradiosaliascampo306313686").is(":checked") && jQuery("#idradiosaliascampo306413689").is(":checked") && jQuery("#idradiosaliascampo306513692").is(":checked") && jQuery("#idradiosaliascampo306613695").is(":checked") ) {
+                        jQuery("#idradiosaliascampo306713696").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713696").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713697").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713697").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713698").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713698").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713699").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713699").removeAttr("checked");
+                        jQuery("#idradiosaliascampo306713700").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713700").removeAttr("checked");
+						jQuery("#idradiosaliascampo306713701").removeAttr("disabled");
+                    } else {
+						jQuery("#idradiosaliascampo306713696").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713697").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713698").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713699").removeAttr("disabled");
+						jQuery("#idradiosaliascampo306713700").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo306713701").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo306713701").removeAttr("checked");
+                    }
+                });
+				
+				//Fin Cap2 P14 Prescriptores
+				
                 //Fin validaciones Pedro
 
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
