@@ -17,7 +17,8 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
         $scope.formData = {};
         
         $scope.upScroll = function(){
-          jQuery('.form-container').animate({ scrollTop: 0 }, 'slow');  
+            var divToScroll = document.getElementsByClassName('form-container')[0];
+            divToScroll.scrollTop = 0;
         };
         
         $scope.load = function() {
