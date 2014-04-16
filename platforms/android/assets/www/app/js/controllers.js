@@ -808,6 +808,24 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
 
+                jQuery("input[name='namealiascampo2924']").change(function() {
+                    if (jQuery("#idradiosaliascampo292412943").is(":checked") || jQuery("#idradiosaliascampo292412944").is(":checked")) {
+                        jQuery("input[name='namealiascampo2926']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2926']").removeAttr("checked");
+						jQuery("input[name='namealiascampo2973']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2973']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2925']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2972']").removeAttr("disabled");
+                    } else {
+                        jQuery("input[name='namealiascampo2926']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo2973']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo2925']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2925']").removeAttr("checked");
+						jQuery("input[name='namealiascampo2972']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2972']").removeAttr("checked");
+                    }
+                });
+				
                 //Fin validaciones Pedro
 
                 jQuery("[id*='idradiosaliascampo3096']").trigger("change");
