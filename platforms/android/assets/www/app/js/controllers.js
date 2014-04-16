@@ -15,6 +15,11 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
         }
         $scope.idEncuesta = $routeParams.id;
         $scope.formData = {};
+        
+        $scope.upScroll = function(){
+          jQuery('.form-container').animate({ scrollTop: 0 }, 'slow');  
+        };
+        
         $scope.load = function() {
             jQuery(document).ready(function() {
                 $scope.formData = {
@@ -1565,6 +1570,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
         $scope.querySaveEncuesta = function(tx) {
             var arrayData = jQuery(".form-container").serializeObject();
             //var arrayData = $scope.formData;
+            console.log(arrayData);
             var usercookie = window.localStorage.getItem("user");
             var nombreEncuesta = arrayData["nombreEncuesta"];
             var tipoEncuesta = arrayData["tipoEncuesta"];

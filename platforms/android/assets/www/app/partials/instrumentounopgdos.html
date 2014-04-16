@@ -1,119 +1,65 @@
 <style>
-.form-container { text-align: left; width: 100%; padding: 3em; margin: 0 auto;}
-  .form-container label {display: block; width: 100%; text-align: left; margin-top: 2em; margin-bottom: 2em;}
-  .radio { width: 100%; clear: both;}
-  .radio input[type='radio'], .checked input[type='checkbox']{
-    display: inline-block;
-    width: 30%;
-    float: right;
-    margin-top: 2em;
-  }
+    .form-container { text-align: left; width: 100%; padding: 3em; margin: 0 auto;}
+    .form-container label {display: block; width: 100%; text-align: left; margin-top: 2em; margin-bottom: 2em;}
+    .radio { width: 100%; clear: both;}
+    .radio input[type='radio'], .checked input[type='checkbox']{
+        display: inline-block;
+        width: 30%;
+        float: right;
+        margin-top: 2em;
+    }
 
-  .ControlLabel{
-    width: 69%;
-    display: inline-block;
-  }
+    .ControlLabel{
+        width: 69%;
+        display: inline-block;
+    }
 
-  .control {
-    width: 100%;
-    display: inline-block;
-  }
+    .control {
+        width: 100%;
+        display: inline-block;
+    }
 
-  .radio label, .checked label{
-    display: inline-block;
-    width: 69%;
-    float: left;
-    font-weight: normal;
-    line-height: 40px;
-    border-bottom: 1px dashed #9c9c9c;
-  }
+    .radio label, .checked label{
+        display: inline-block;
+        width: 69%;
+        float: left;
+        font-weight: normal;
+        line-height: 40px;
+        border-bottom: 1px dashed #9c9c9c;
+    }
 
-  div{
-    clear: both;
-  }
-  
-  .divcapitulo{
-    border: 2px #4B7BB4 solid;
-    background-color: #DCE6F2;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-  }
-  
-  .txtcapitulo{
-  margin-left: 10px;
-  margin-top: 5px;
-  }
-  
+    div{
+        clear: both;
+    }
+
+    .divcapitulo{
+        border: 2px #4B7BB4 solid;
+        background-color: #DCE6F2;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+    }
+
+    .txtcapitulo{
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
 </style>
 <form class='form-container scrollable-content' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentounopgtres');">
-<div class="formvertical">
-  <div id="tabs" class="uitabs uiwidget uiwidgetcontent uicornerall">
-    <div id="tabs0" class="uitabspanel uiwidgetcontent uicornerbottom">
-      <div class="acordion uiaccordion uiwidget uihelperreset uiaccordionicons" role="tablist">
-        <div id="aco091" class="uiaccordioncontent uihelperreset uiwidgetcontent uicornerbottom uiaccordioncontentactive" role="tabpanel">
-            <div class="divcapitulo">
-              <label for="labeladicional6163" class="txtcapitulo">
-                II. Preguntas que definen la aplicación del formulario
-              </label>
+    <div class="formvertical">
+        <div id="tabs" class="uitabs uiwidget uiwidgetcontent uicornerall">
+            <div id="tabs0" class="uitabspanel uiwidgetcontent uicornerbottom">
+                <div class="acordion uiaccordion uiwidget uihelperreset uiaccordionicons" role="tablist">
+                    <div id="aco091" class="uiaccordioncontent uihelperreset uiwidgetcontent uicornerbottom uiaccordioncontentactive" role="tabpanel">
+                        <input id='btn-submit' type="submit" value="Continuar" class="btn btn-default btn-lg" />
+                        
+                    </div>
+                </div>
             </div>
-            <div class="Rfilas">
-              <div class="labelE">
-                <label for="idaliascampo2923" class="textinfo tnormal">
-                  1. ¿Usted está en tratamiento médico actualmente o lo ha estado en el último mes?
-                </label>
-              </div>
-              <div id="idaliascampo2923" name="namealiascampo2923" class="dinamic Cchecked" title="Formulario usuarios" tipo="I" aliasid="2923" fielddiv="true">
-                <div class="radio">
-                  <input class="input inputchecked  form-control ng-pristine ng-valid needsclick" type="radio" id="idchecksaliascampo292312941" name="namealiascampo2923" value="12941" title="Formulario usuarios" ng-model="formData.namealiascampo2923">
-                  <label class="labelchecked" for="idchecksaliascampo292312941">
-                    Si
-                  </label>
-                </div>
-                <div class="radio">
-                  <input class="input inputchecked  form-control ng-pristine ng-valid needsclick" type="radio" id="idchecksaliascampo292312942" name="namealiascampo2923" value="12942" title="Formulario usuarios" ng-model="formData.namealiascampo2923">
-                  <label class="labelchecked" for="idchecksaliascampo292312942">
-                    No
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-            <div class="Rfilas">
-              <div class="labelE">
-                <label for="idaliascampo2924" class="textinfo tnormal">
-                  2. ¿En qué Régimen de seguridad social se encuentra?
-                </label>
-              </div>
-              <div id="idaliascampo2924" name="namealiascampo2924" class="dinamic Cradios" title="Formulario usuarios" tipo="I" aliasid="2924" fielddiv="true">
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo292412943" name="namealiascampo2924" value="12943" title="Formulario usuarios" ng-model="formData.namealiascampo2924">
-                  <label class="labelradio" for="idradiosaliascampo292412943">
-                    Contributivo
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo292412944" name="namealiascampo2924" value="12944" title="Formulario usuarios" ng-model="formData.namealiascampo2924">
-                  <label class="labelradio" for="idradiosaliascampo292412944">
-                    Subsidiado
-                  </label>
-                </div>
-                <div class="radio">
-                  <input type="radio" class="inputradio  form-control ng-pristine ng-valid needsclick" id="idradiosaliascampo292412945" name="namealiascampo2924" value="12945" title="Formulario usuarios" ng-model="formData.namealiascampo2924">
-                  <label class="labelradio" for="idradiosaliascampo292412945">
-                    No asegurado
-                  </label>
-                </div>
-              </div>
-            </div>
-        </div>
-    <div>
-    </div>
-    
-  </div>
-</div>
-<br/>
-<br/>
-<label for='btn-submit'>Continuar con el diligenciamiento</label>
-    <input id='btn-submit' type="submit" value="Continuar" class="btn btn-default btn-lg" />
-</form>
+            <br/>
+            <br/>
+            <label for='btn-submit'>Continuar con el diligenciamiento</label>
+            <input id='btn-submit' type="submit" value="Continuar" class="btn btn-default btn-lg" />
+            <button class='btn btn-primary' ng-click='upScroll()'>Ir al Inicio</button>
+            </form>
