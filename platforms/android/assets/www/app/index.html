@@ -11,7 +11,8 @@
   <style>
     .labelE { margin: 2em auto 2em; }
     label { font-size: 2em; }
-  </style>
+    #btn-submit { margin-top: 1em; margin-bottom: 1em; }
+  </style> 
 </head>
 <div class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar">
   <h1 class="app-name">FEDESALUD</h1>
@@ -46,11 +47,11 @@
         </div>
       </div>
 
-      <!--<div class="btn-group pull-right" yield-to="navbarAction">
-        <div class="btn btn-navbar">
-          <i class="fa fa-plus"></i> New
+      <div class="btn-group pull-right" yield-to="navbarAction">
+        <div class="" style='margin-right: 1em; line-height: 3.4em; '>
+            <span id="nameUser"></span>
         </div>
-      </div>-->
+      </div>
   </div>
 
   
@@ -78,6 +79,15 @@
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script>
     jQuery.noConflict();
+    
+    jQuery(document).ready(function(){
+        if(window.localStorage.getItem("user") != undefined){
+            var user = window.localStorage.getItem("user");
+            user = user.split(":");
+            jQuery("#nameUser").html(user[1].toUpperCase());
+        }
+    });
+    
     jQuery.fn.serializeObject = function()
     {
        var o = {};

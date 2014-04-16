@@ -8,9 +8,18 @@ var ModuleMyApp = angular.module('myApp.controllers', []);
 //=============        InstrumentoUno Controller   ================
 //=================================================================
 ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', function($scope, $routeParams) {
-
+        if(window.localStorage.getItem("user") != undefined){
+            var user = window.localStorage.getItem("user");
+            user = user.split(":");
+            jQuery("#nameUser").html(user[1].toUpperCase());
+        }
         $scope.idEncuesta = $routeParams.id;
         $scope.formData = {};
+        
+        $scope.upScroll = function(){
+          jQuery('.form-container').animate({ scrollTop: 0 }, 'slow');  
+        };
+        
         $scope.load = function() {
             jQuery(document).ready(function() {
                 $scope.formData = {
@@ -1561,6 +1570,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
         $scope.querySaveEncuesta = function(tx) {
             var arrayData = jQuery(".form-container").serializeObject();
             //var arrayData = $scope.formData;
+            console.log(arrayData);
             var usercookie = window.localStorage.getItem("user");
             var nombreEncuesta = arrayData["nombreEncuesta"];
             var tipoEncuesta = arrayData["tipoEncuesta"];
@@ -1765,7 +1775,12 @@ ModuleMyApp.controller('loginController', ['$scope', function($scope) {
 
 ModuleMyApp.controller('MenuController', ['$scope', function($scope) {
 
-        localStorage.removeItem("idEncuesta");
+        localStorage.removeItem("idEncuesta");     
+        if(window.localStorage.getItem("user") != undefined){
+            var user = window.localStorage.getItem("user");
+            user = user.split(":");
+            jQuery("#nameUser").html(user[1].toUpperCase());
+        }
         jQuery(".btn").click(function() {
             jQuery("#waiting").css("display", "block");
         });
@@ -1787,6 +1802,11 @@ ModuleMyApp.controller('logoutController', ['$scope', function($scope) {
 //=============            Listado Controller         =============
 //=================================================================
 ModuleMyApp.controller('listadoInstrumentosController', ['$scope', function($scope) {
+        if(window.localStorage.getItem("user") != undefined){
+            var user = window.localStorage.getItem("user");
+            user = user.split(":");
+            jQuery("#nameUser").html(user[1].toUpperCase());
+        }
         if (window.localStorage.getItem("user") == undefined) {
             window.location = '#/login';
         }

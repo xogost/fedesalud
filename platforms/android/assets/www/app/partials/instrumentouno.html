@@ -56,7 +56,7 @@
         margin-top: 5px;
     }
 </style>
-<form class='form-container scrollable-content' name='form' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentounopgdos');">
+<form class='form-container scrollable-content' name='form' ng-controller="instrumentounoController" ng-init="load();" ng-submit="guardar('instrumentounopgtres');">
     <div class="formvertical">
         <div id="tabs" class="uitabs uiwidget uiwidgetcontent uicornerall">
             <div id="tabs0" class="uitabspanel uiwidgetcontent uicornerbottom">
@@ -98,6 +98,7 @@
                             </label>
                             </br>
                         </div>
+                        <input id='btn-submit' type="submit" value="Continuar" class="btn btn-default btn-lg" />
                         <div class="divcapitulo">
                             <label for="labeladicional6141" class="txtcapitulo">
                                 I. Datos Generales del entrevistado
@@ -740,4 +741,5 @@
     <br/>
     <label for='btn-submit'>Continuar con el diligenciamiento</label>
     <input id='btn-submit' type="submit" value="Continuar" class="btn btn-default btn-lg" />
+    <button class='btn btn-primary' ng-click='upScroll()'>Ir al Inicio</button>
 </form>
