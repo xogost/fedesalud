@@ -101,15 +101,15 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                          // jQuery("#idaliascampo3014").attr("disabled", "true").removeAttr("checked");
                    // }
                 // });
-                jQuery("[id*='idradiosaliascampo3012']").trigger("change");
-                jQuery("#idchecksaliascampo301113351").change(function() {
-                    if (jQuery(this).is(":checked")) {
-                        jQuery("[id*='idradiosaliascampo3016']").removeAttr("disabled");
-                    }
-                    else {
-                        jQuery("[id*='idradiosaliascampo3016']").attr("disabled", "true").removeAttr("checked");
-                    }
-                });
+                // jQuery("[id*='idradiosaliascampo3012']").trigger("change");
+                // jQuery("#idchecksaliascampo301113351").change(function() {
+                    // if (jQuery(this).is(":checked")) {
+                        // jQuery("[id*='idradiosaliascampo3016']").removeAttr("disabled");
+                    // }
+                    // else {
+                        // jQuery("[id*='idradiosaliascampo3016']").attr("disabled", "true").removeAttr("checked");
+                    // }
+                // });
                 jQuery("#idchecksaliascampo301113351").trigger("change");
                 jQuery("#idchecksaliascampo292512947").change(function() {
                     if (jQuery(this).is(":checked")) {
@@ -1131,7 +1131,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 //no existe el control
             } else {
                 //validar y mostrar el mensaje
-                if (jQuery("#idaliascampo3080").val() < 1) {
+                if ( jQuery("#idaliascampo3080").prop('disabled') == false && jQuery("#idaliascampo3080").val() < 1) {
                     alert("El valor de los meses debe ser mayor de cero. Por favor verifique.");
 					$scope.errores = $scope.errores + 1;
                     jQuery("#idaliascampo3080").focus();
@@ -1143,7 +1143,7 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 //no existe el control
             } else {
                 //validar y mostrar el mensaje
-                if (jQuery("#idaliascampo3081").val() <1) {
+                if (  jQuery("#idaliascampo3081").prop('disabled') == false && jQuery("#idaliascampo3081").val() <1) {
                     alert("El valor de los años debe ser mayor de cero. Por favor verifique.");
 					$scope.errores = $scope.errores + 1;
                     jQuery("#idaliascampo3081").focus();
