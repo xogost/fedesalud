@@ -661,8 +661,10 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     } else {
                         if (jQuery("#idchecksaliascampo292512946").is(":checked") && jQuery("#idchecksaliascampo292512947").is(":checked")) {
                         } else {
-                            jQuery("input[name='namealiascampo2926']").removeAttr("disabled");
-                            jQuery("input[name='namealiascampo2927']").removeAttr("disabled");
+                            //jQuery("input[name='namealiascampo2926']").removeAttr("disabled");
+                            //jQuery("input[name='namealiascampo2927']").removeAttr("disabled");
+							jQuery("input[name='namealiascampo2926']").attr("disabled", "disabled");
+							jQuery("input[name='namealiascampo2926']").removeAttr("checked");
                         }
                     }
                 });
