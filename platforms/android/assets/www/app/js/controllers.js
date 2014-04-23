@@ -916,6 +916,259 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     }
                 });
 				
+				//Cap Preg1
+                jQuery("input[name='namealiascampo2923']").change(function() {
+                    if (jQuery("#idchecksaliascampo292312942").is(":checked")) {
+                        jQuery("input[name='namealiascampo2924']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2924']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2925']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2925']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2926']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2926']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2927']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2927']").removeAttr("checked");
+                        jQuery("#idaliascampo2928").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2928").val("");
+                        jQuery("input[name='namealiascampo2929']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2929']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2930']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2930']").removeAttr("checked");
+                        jQuery("#idaliascampo2931").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2931").val("");
+                        jQuery("#idaliascampo2932").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2932").val("");
+                        jQuery("input[name='3a1name']").attr("disabled", "disabled");
+                        jQuery("input[name='3a1name']").removeAttr("checked");
+                        jQuery("#3a2cual").attr("disabled", "disabled");
+                        jQuery("#3a2cual").val("");
+                        jQuery("input[name='3a3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3a3name']").removeAttr("checked");
+                        jQuery("#3a3cual").attr("disabled", "disabled");
+                        jQuery("#3a3cual").val("");
+						
+						
+                        jQuery("input[name='3b1name']").attr("disabled", "disabled");
+                        jQuery("input[name='3b1name']").removeAttr("checked");
+                        jQuery("#3b2cual").attr("disabled", "disabled");
+                        jQuery("#3b2cual").val("");
+						
+                        jQuery("input[name='3b3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3b3name']").removeAttr("checked");
+                        jQuery("#3b3cual").attr("disabled", "disabled");
+                        jQuery("#3b3cual").val("");
+						
+                        jQuery("input[name='3c1name']").attr("disabled", "disabled");
+                        jQuery("input[name='3c1name']").removeAttr("checked");
+                        jQuery("#3c2cual").attr("disabled", "disabled");
+                        jQuery("#3c2cual").val("");
+						
+                        jQuery("input[name='3c3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3c3name']").removeAttr("checked");
+                        jQuery("#3c3cual").attr("disabled", "disabled");
+                        jQuery("#3c3cual").val("");
+						
+                        jQuery("input[name='3d1name']").attr("disabled", "disabled");
+                        jQuery("input[name='3d1name']").removeAttr("checked");
+                        jQuery("#3d2cual").attr("disabled", "disabled");
+                        jQuery("#3d2cual").val("");
+						
+                        jQuery("input[name='3d3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3d3name']").removeAttr("checked");
+                        jQuery("#3d3cual").attr("disabled", "disabled");
+                        jQuery("#3d3cual").val("");
+						
+                        jQuery("input[name='3e1name']").attr("disabled", "disabled");
+                        jQuery("input[name='3e1name']").removeAttr("checked");
+                        jQuery("#3e2cual").attr("disabled", "disabled");
+                        jQuery("#3e2cual").val("");
+						
+                        jQuery("input[name='3e3name']").attr("disabled", "disabled");
+                        jQuery("input[name='3e3name']").removeAttr("checked");
+                        jQuery("#3e3cual").attr("disabled", "disabled");
+                        jQuery("#3e3cual").val("");
+						
+                        jQuery("input[name='namealiascampo2955']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2955']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2956']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2956']").removeAttr("checked");
+						
+                        jQuery("#idaliascampo2962").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2962").val("");
+                        jQuery("#idaliascampo2963").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2963").val("");
+                        jQuery("#idaliascampo2964").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2964").val("");
+                        jQuery("#idaliascampo2965").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2965").val("");
+                        jQuery("#idaliascampo2966").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2966").val("");
+                        jQuery("#idaliascampo2967").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2967").val("");
+						
+                        jQuery("input[name='namealiascampo2972']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2972']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2973']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2973']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2976']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2976']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2979']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2979']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo402984']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo402984']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2983']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2983']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2984']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2984']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2985']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2985']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2986']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2986']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2987']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo2987']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3004']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3004']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3005']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3005']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3006']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3006']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3007']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3007']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3008']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3008']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3009']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3009']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3010']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3010']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3011']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3011']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3012']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3012']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3016']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3016']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3017']").attr("disabled", "disabled");
+                        jQuery("input[name='namealiascampo3017']").removeAttr("checked");
+						
+                        jQuery("#idaliascampo3014").attr("disabled", "disabled");
+                        jQuery("#idaliascampo3014").val("");
+                        jQuery("#idaliascampo2982").attr("disabled", "disabled");
+                        jQuery("#idaliascampo2982").val("");
+						
+                        jQuery("#idradiosaliascampo297413272").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413272").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413273").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413273").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413274").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413274").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413275").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413275").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413276").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413276").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413277").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413277").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413278").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413278").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413279").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413279").removeAttr("checked");
+                        jQuery("#idradiosaliascampo297413280").attr("disabled", "disabled");
+                        jQuery("#idradiosaliascampo297413280").removeAttr("checked");
+						
+                    } else {
+                        jQuery("input[name='namealiascampo2924']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2924']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2925']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2925']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2930']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2930']").removeAttr("checked");
+                        jQuery("input[name='3a1name']").removeAttr("disabled");
+                        jQuery("input[name='3a1name']").removeAttr("checked");
+                        jQuery("#3a2cual").removeAttr("disabled");
+                        jQuery("#3a2cual").val("");
+                        jQuery("input[name='3a3name']").removeAttr("disabled");
+                        jQuery("input[name='3a3name']").removeAttr("checked");						
+						
+                        jQuery("input[name='3b1name']").removeAttr("disabled");
+                        jQuery("input[name='3b1name']").removeAttr("checked");
+						
+                        jQuery("input[name='3b3name']").removeAttr("disabled");
+                        jQuery("input[name='3b3name']").removeAttr("checked");
+						
+                        jQuery("input[name='3c1name']").removeAttr("disabled");
+                        jQuery("input[name='3c1name']").removeAttr("checked");
+						
+                        jQuery("input[name='3c3name']").removeAttr("disabled");
+                        jQuery("input[name='3c3name']").removeAttr("checked");
+						
+                        jQuery("input[name='3d1name']").removeAttr("disabled");
+                        jQuery("input[name='3d1name']").removeAttr("checked");
+						
+                        jQuery("input[name='3d3name']").removeAttr("disabled");
+                        jQuery("input[name='3d3name']").removeAttr("checked");
+						
+                        jQuery("input[name='3e1name']").removeAttr("disabled");
+                        jQuery("input[name='3e1name']").removeAttr("checked");
+						
+                        jQuery("input[name='3e3name']").removeAttr("disabled");
+                        jQuery("input[name='3e3name']").removeAttr("checked");
+						
+                        jQuery("input[name='namealiascampo2955']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2955']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2956']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2956']").removeAttr("checked");
+						
+                        jQuery("#idaliascampo2962").removeAttr("disabled");
+                        jQuery("#idaliascampo2962").val("");
+                        jQuery("#idaliascampo2963").removeAttr("disabled");
+                        jQuery("#idaliascampo2963").val("");
+                        jQuery("#idaliascampo2964").removeAttr("disabled");
+                        jQuery("#idaliascampo2964").val("");
+						
+                        jQuery("input[name='namealiascampo2972']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2973']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2973']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2976']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2976']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2979']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2979']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo402984']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo402984']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2983']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2983']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2984']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2984']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2985']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2985']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2986']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2986']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2987']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo2987']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3004']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3004']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3005']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3005']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3009']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3009']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3010']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3010']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3011']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3011']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3016']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3016']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo3017']").removeAttr("disabled");
+                        jQuery("input[name='namealiascampo3017']").removeAttr("checked");
+						
+                        jQuery("#idradiosaliascampo297413272").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413273").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413274").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413275").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413276").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413277").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413278").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413279").removeAttr("disabled");
+                        jQuery("#idradiosaliascampo297413280").removeAttr("disabled");
+
+                    }
+                });
+				
 				//Cap2 P14 Prescriptores
                 jQuery("input[name='namealiascampo3062']").change(function() {
                     if (jQuery("#idradiosaliascampo306213683").is(":checked") && jQuery("#idradiosaliascampo306313686").is(":checked") && jQuery("#idradiosaliascampo306413689").is(":checked") && jQuery("#idradiosaliascampo306513692").is(":checked") && jQuery("#idradiosaliascampo306613695").is(":checked") ) {
