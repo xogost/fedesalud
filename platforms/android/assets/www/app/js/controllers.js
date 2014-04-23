@@ -832,11 +832,16 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                 });
 				
                 jQuery("input[name='namealiascampo2972']").change(function() {
-                    if (jQuery("#idradiosaliascampo297213266").is(":checked")) {
-                        jQuery("input[name='namealiascampo2974']").removeAttr("disabled");
+                    if (jQuery("#idradiosaliascampo297213265").is(":checked") || jQuery("#idradiosaliascampo297213266").is(":checked") ) {
+					jQuery("input[name='namealiascampo2973']").attr("disabled", "disabled");
+					jQuery("input[name='namealiascampo2973']").removeAttr("checked");
+					jQuery("input[name='namealiascampo2974']").attr("disabled", "disabled");
+					jQuery("input[name='namealiascampo2974']").removeAttr("checked");
+					jQuery("input[name='namealiascampo2976']").attr("disabled", "disabled");
+					jQuery("input[name='namealiascampo2976']").removeAttr("checked");
                     } else {
-                        jQuery("input[name='namealiascampo2974']").attr("disabled", "disabled");
-                        jQuery("input[name='namealiascampo2974']").removeAttr("checked");
+                        jQuery("input[name='namealiascampo2974']").removeAttr("disabled");
+						jQuery("input[name='namealiascampo2976']").removeAttr("disabled");
                     }
                 });
 				
@@ -1099,18 +1104,31 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
             // Validaciones anteriores al guardado
 
             if (jQuery("#nombreEncuesta").length == 0) {
-
+			//No esta en el capitulo 1
             }
             else
             {
-                if (jQuery("#nombreEncuesta").val().length != 9) {
-                    alert("El identificador de encuesta debe tener 9 digitos. Por favor verifique.");
-                    $scope.errores = $scope.errores + 1;
-                    jQuery("#nombreEncuesta").focus();
-                    return false;
-                } else {
-                }
-            }
+			//Esta en capitulo 1
+			if (jQuery("#idaliascampo3036").length == 0) {
+			//Usuarios
+					if (jQuery("#nombreEncuesta").val().length != 9) {
+						alert("El identificador de encuesta debe tener 9 digitos. Por favor verifique.");
+						$scope.errores = $scope.errores + 1;
+						jQuery("#nombreEncuesta").focus();
+						return false;
+					} else {
+					}
+			}else{
+			//Prescriptores
+					if (jQuery("#nombreEncuesta").val().length != 10) {
+						alert("El identificador de encuesta debe tener 10 digitos. Por favor verifique.");
+						$scope.errores = $scope.errores + 1;
+						jQuery("#nombreEncuesta").focus();
+						return false;
+					} else {
+					}
+			}
+			}
 
             //Validacion de numeros en nombres
 
