@@ -1764,9 +1764,17 @@ ModuleMyApp.controller('instrumentounoController', ['$scope', '$routeParams', fu
                     var porc4 = jQuery("#idaliascampo3045").val();
                 }
 
-                var porc5 = parseInt(porc1) + parseInt(porc2) + parseInt(porc3) + parseInt(porc4);
+                if (jQuery("#idaliascampo304515").val() == '') {
+                    //Verificar si el campo esta vacio y volverlo un cero
+                    var porc5 = 0;
+                } else {
+                    //Si no es cero sumar el valor
+                    var porc5 = jQuery("#idaliascampo304515").val();
+                }
+				
+                var porcf = parseInt(porc1) + parseInt(porc2) + parseInt(porc3) + parseInt(porc4) + parseInt(porc5);
 
-                if (porc5 != 100) {
+                if (porcf != 100) {
                     //El valor es diferente del 100%
                     alert('La suma de los porcentajes de usuarios que atiende debe sumar 100%. Por favor verifique.');
                     $scope.errores = $scope.errores + 1;
@@ -2033,6 +2041,7 @@ ModuleMyApp.controller('loginController', ['$scope', function($scope) {
                 tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador30', 'Encuestador#30')");
                 tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador31', 'Encuestador#31')");
                 tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador32', 'Encuestador#32')");
+				tx.executeSql("INSERT INTO USUARIOS (NOMBRE, PASSWORD) VALUES ('Encuestador33', 'Encuestador#33')");
             }
         };
         $scope.queryCorrecto = function(tx, resultados) {

@@ -21,10 +21,10 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http', function($sc
             };
 
             $scope.queryGetSync = function(tx) {
-                var sql = 'SELECT * FROM ENCUESTAS WHERE SINCRONIZADO = 0';
+                var sql = 'SELECT * FROM ENCUESTAS '; //WHERE SINCRONIZADO = 0
                 tx.executeSql(sql, [], $scope.pushResultServer, $scope.errorDB);
 
-                var sql = 'SELECT * FROM DATAENCUESTAS WHERE SINCRONIZADO = 0';
+                var sql = 'SELECT * FROM DATAENCUESTAS '; //WHERE SINCRONIZADO = 0
                 tx.executeSql(sql, [], $scope.pushResultDataEncuestasServer, $scope.errorDB);
             };
 
@@ -35,7 +35,7 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http', function($sc
                 for (var i = result.rows.length - 1; i >= 0; i--) {
                     $http({
                         method: "GET",
-                        url: "http://198.38.92.149/fedesalud-sync/index.php/getData",
+                        url: "http://212.71.238.208/fedesalud-sync/index.php/getData",
                         params: {"data": JSON.stringify(result.rows.item(i))}
                     }).success(function(idSync) {
 
@@ -58,7 +58,7 @@ ModuleMyApp.controller('sincronizarController', ['$scope', '$http', function($sc
                 for (var i = result.rows.length - 1; i >= 0; i--) {
                     $http({
                         method: "GET",
-                        url: "http://198.38.92.149/fedesalud-sync/index.php/getData/DataEncuestas",
+                        url: "http://212.71.238.208/fedesalud-sync/index.php/getData/DataEncuestas",
                         params: {"data": JSON.stringify(result.rows.item(i))}
                     }).success(function(idSync) {
 
